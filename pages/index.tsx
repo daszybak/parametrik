@@ -5,9 +5,14 @@ import Layout from "../layouts/layout";
 
 const Home: NextPage = () => {
   return (
-    <Layout>
-      <div>Home</div>
-    </Layout>
+    <>
+      <Head>
+        <title>Parametrik Engineering</title>
+      </Head>
+      <Layout>
+        <div>Home</div>
+      </Layout>
+    </>
   );
 };
 

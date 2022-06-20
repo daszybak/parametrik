@@ -1,0 +1,45 @@
+{
+  "name": "Parametrik Engineering Web",
+  "short_name": "Parametrik Engineering",
+  "icons": [
+    {
+      "src": "/icons/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icons/apple-touch-icon-152x152-precomposed.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/icons/apple-touch-icon-144x144-precomposed.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/icons/apple-touch-icon-120x120-precomposed.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/icons/apple-touch-icon-114x114-precomposed.png",
+      "type": "image/png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "/icons/apple-touch-icon-76x76-precomposed.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/icons/apple-touch-icon-72x72-precomposed.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    }
+  ],
+  "start_url": "parametrik.hr/",
+  "display": "standalone",
+  "theme_color": "#042144",
+  "background_color": "#e6f6f5"
+}
