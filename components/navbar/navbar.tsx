@@ -51,14 +51,14 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const handleWindowScroll = () => {
-      if (window.scrollY === 0) {
-        dispatchNavbar({ type: "absolute", payload: window.scrollY });
-      }
       if (window.scrollY > navbar.Y) {
-        dispatchNavbar({ type: "hidden", payload: window.scrollY });
+        return dispatchNavbar({ type: "hidden", payload: window.scrollY });
       }
-      if (window.scrollY < navbar.Y) {
-        dispatchNavbar({ type: "fixed", payload: window.scrollY });
+      if (window.scrollY < navbar.Y && window.scrollY !== 0) {
+        return dispatchNavbar({ type: "fixed", payload: window.scrollY });
+      }
+      if (window.scrollY === 0) {
+        return dispatchNavbar({ type: "absolute", payload: window.scrollY });
       }
     };
 
@@ -67,13 +67,15 @@ const Navbar: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", handleWindowScroll);
     };
-  });
+  }, [navbar]);
 
   return (
     <nav
       className={`${styles.navbar} ${
         navbar.position === "hidden" ? styles.isHidden : ""
-      } ${navbar.position === "fixed" ? styles.isFixed : ""}`}
+      } ${navbar.position === "fixed" ? styles.isFixed : ""}
+        ${navbar.position === "absolute" ? styles.isAbsolute : ""}
+      `}
     >
       <div className={styles.container}>
         <div className={styles.logo}>

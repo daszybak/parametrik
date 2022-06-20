@@ -41,8 +41,8 @@
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
   /* rest of the vars */
-  --backgroundColor: var(--primary-light);
-  --backgroudColor-seconday: var(--white);
+  --backgroundColor: var(--white);
+  --backgroudColor-secondary: var(--primary-light);
   --backgroundColorBanner: var(--mahagony);
   --backgroundColorFooter: var(--primary-100);
   --textColor: var(--grey-900);
@@ -82,7 +82,7 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: var(--textColor);
-  background-color: var(--primary-light);
+  background-color: var(--backgroundColor);
 }
 
 p {
