@@ -5,12 +5,10 @@
   width: 100%;
   z-index: 1000;
 
-  height: 72px;
-
   .container {
-    height: 100%;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
+    padding: 2.5rem 0rem;
   }
 }
