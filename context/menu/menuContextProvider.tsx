@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 
+import { Children } from "../../utils/helpers/interfaces/interfaces";
+
 import MenuContext from "./menu";
 
 type State = {
@@ -26,11 +28,16 @@ const menuReducer = (state: State, action: Action) => {
       isOpen: true,
     };
   }
+  if (action.type === "toggle") {
+    return {
+      isOpen: !state.isOpen,
+    };
+  }
 
   throw new Error("Action unavailable");
 };
 
-const MenuContextProvider = ({ children }: ReactNode) => {
+const MenuContextProvider = ({ children }: Children) => {
   const [menu, dispatchMenu] = useReducer(menuReducer, menuInitialState);
 
   const handleMenuClose = () => {
@@ -41,10 +48,15 @@ const MenuContextProvider = ({ children }: ReactNode) => {
     dispatchMenu({ type: "open" });
   };
 
+  const handleMenuToggle = () => {
+    dispatchMenu({ type: "toggle" });
+  };
+
   const menuContext = {
     isOpen: menu.isOpen,
     handleMenuClose,
     handleMenuOpen,
+    handleMenuToggle,
   };
 
   return (

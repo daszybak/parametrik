@@ -13,68 +13,67 @@
   background-color: transparent;
   color: var(--textColor);
   position: relative;
+
+  &:hover {
+    .line {
+      background-color: var(--primary-100);
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &.isActive {
+    .top {
+      transform: rotateZ(45deg) translate(1px, 8px) scaleX(0.8);
+    }
+
+    .middle {
+      opacity: 0;
+      transform: translateX(-200%) scaleX(1.2);
+    }
+
+    .bottom {
+      transform: rotateZ(-45deg) translate(1px, -9px) scaleX(0.8);
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--textColor);
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--textColor);
+    transform: translateX(-100%);
+    transition: 0.25s 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
 }
 
 .top {
-  width: 100%;
-  height: 1px;
-  background-color: var(--textColor);
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  overflow: hidden;
-  position: relative;
-
   &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--textColor);
-    transform: translateX(-100%);
-    transition: 0.25s 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0.15s;
   }
 }
 .middle {
-  width: 100%;
-  height: 1px;
-  background-color: var(--textColor);
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  overflow: hidden;
-  position: relative;
-
   &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--textColor);
-    transform: translateX(-100%);
-    transition: 0.25s 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0.2s;
   }
 }
-.bottom {
-  width: 100%;
-  height: 1px;
-  background-color: var(--textColor);
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  overflow: hidden;
-  position: relative;
 
+.bottom {
   &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--textColor);
-    transform: translateX(-100%);
-    transition: 0.25s 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0.25s;
   }
 }

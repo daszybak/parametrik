@@ -2,10 +2,11 @@ import { createContext } from "react";
 
 const initialValue = {
   isOpen: false,
+  handleMenuToggle: () => {},
   handleMenuOpen: () => {},
   handleMenuClose: () => {},
 };
 
-const menuContext = createContext(initialValue);
+const MenuContext = createContext(initialValue);
 
-export default menuContext;
+export default MenuContext;
