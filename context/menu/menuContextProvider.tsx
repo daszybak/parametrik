@@ -1,16 +1,11 @@
 import { useReducer } from "react";
 
-import { Children } from "../../utils/helpers/interfaces/interfaces";
+import { Children, Action } from "../../utils/helpers/interfaces/interfaces";
 
 import MenuContext from "./menu";
 
 type State = {
   isOpen: boolean;
-};
-
-type Action = {
-  type: string;
-  payload?: any;
 };
 
 const menuInitialState: State = {

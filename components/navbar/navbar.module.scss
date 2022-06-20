@@ -1,14 +1,28 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  transform: translateY(0);
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out,
+    color 0.3s ease, transform 0.3s ease-in-out;
+  padding: 4rem;
 
   .container {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    padding: 2.5rem 0rem;
+  }
+
+  &.isHidden {
+    transform: translateY(-100%);
+  }
+
+  &.isFixed {
+    position: fixed;
+    background: var(--primary-200);
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
   }
 }
