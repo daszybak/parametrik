@@ -1,17 +1,11 @@
 .firstSection {
-  @media screen and (min-width: 768px) {
-    padding-top: 260px;
-  }
+  padding-top: 260px;
 
   &.navIsFixed {
-    @media screen and (min-width: 768px) {
-      padding-top: calc(130px + 130px);
-    }
+    padding-top: calc(130px + 130px);
   }
 
   &.navIsHidden {
-    @media screen and (min-width: 768px) {
-      padding-top: 130px;
-    }
+    padding-top: 130px;
   }
 }
