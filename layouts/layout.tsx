@@ -1,4 +1,4 @@
-import { Children } from "../utils/helpers/interfaces/interfaces";
+import { Children } from "../utils/interfaces/interfaces";
 
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";

@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-import { Children, Action } from "../../utils/helpers/interfaces/interfaces";
+import { Children, Action } from "../../utils/interfaces/interfaces";
 
 import MenuContext from "./menu";
 

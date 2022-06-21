@@ -1,4 +1,4 @@
-import { Children } from "../../utils/helpers/interfaces/interfaces";
+import { Children } from "../../utils/interfaces/interfaces";
 
 import styles from "./section.module.scss";
 

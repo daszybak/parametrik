@@ -1,0 +1,26 @@
+.mnav {
+  background: var(--backgroundColor);
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s,
+    height 0.3s ease-in-out;
+  padding: 50px 0;
+  height: calc(100vh - 7.3rem);
+  overflow-y: auto;
+
+  @media screen and (min-width: 768px) {
+    height: calc(100vh - 130px);
+  }
+
+  &.isActive {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s,
+      min-height 0.3s ease-in-out;
+  }
+}
