@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { useContext } from "react";
+
+import MenuContext from "../../context/menu/menu";
 import usePosition from "../../utils/hooks/usePosition";
 import MNav from "../mnav/mnav";
 
@@ -9,7 +12,8 @@ import Toggler from "../toggler/toggler";
 import styles from "./navbar.module.scss";
 
 const Navbar: React.FC = () => {
-  const position = usePosition();
+  const position = usePosition(7);
+  const { isOpen } = useContext(MenuContext);
 
   return (
     <header
@@ -17,6 +21,7 @@ const Navbar: React.FC = () => {
         position === "hidden" ? styles.isHidden : ""
       } ${position === "fixed" ? styles.isFixed : ""}
         ${position === "absolute" ? styles.isAbsolute : ""}
+        ${isOpen ? styles.isOpen : ""}
       `}
     >
       <div className={styles.container}>

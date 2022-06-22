@@ -2,11 +2,14 @@ import { Children } from "../utils/interfaces/interfaces";
 
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
-import React, { ReactNode } from "react";
+import React from "react";
+
+
 
 const Layout: React.FC<Children> = ({ children }) => {
   return (
     <>
+
       <Navbar />
       {children}
       <Footer />

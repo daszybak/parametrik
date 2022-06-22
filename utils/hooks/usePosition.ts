@@ -34,22 +34,21 @@ const elementReducer = (state: State, action: Action) => {
   throw new Error("Navbar action unavailable");
 };
 
-const usePosition = () => {
+const usePosition = (pixels: number) => {
   const [element, dispatchElement] = useReducer(
     elementReducer,
     initialElementState
   );
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
     const handleWindowScroll = () => {
       if (window.scrollY > element.Y) {
         return dispatchElement({ type: "hidden", payload: window.scrollY });
       }
-      if (window.scrollY < element.Y && window.scrollY !== 0) {
+      if (window.scrollY < element.Y && window.scrollY > pixels) {
         return dispatchElement({ type: "fixed", payload: window.scrollY });
       }
-      if (window.scrollY === 0) {
+      if (window.scrollY <= pixels) {
         return dispatchElement({ type: "absolute", payload: window.scrollY });
       }
     };
@@ -59,7 +58,7 @@ const usePosition = () => {
     return () => {
       window.removeEventListener("scroll", handleWindowScroll);
     };
-  }, [element]);
+  }, [element, pixels]);
 
   return element.position;
 };

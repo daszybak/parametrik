@@ -30,4 +30,8 @@
     left: 0;
     box-shadow: none;
   }
+
+  &.isOpen {
+    background-color: var(--backgroundColor);
+  }
 }

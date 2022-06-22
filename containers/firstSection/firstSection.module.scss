@@ -1,11 +1,13 @@
 .firstSection {
-  padding-top: 260px;
-
   &.navIsFixed {
     padding-top: calc(130px + 130px);
   }
 
   &.navIsHidden {
     padding-top: 130px;
+  }
+
+  &.navIsAbsolute {
+    padding-top: 260px;
   }
 }

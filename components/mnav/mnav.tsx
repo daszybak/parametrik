@@ -1,20 +1,14 @@
-import { useContext, useEffect } from "react";
+import { useContext, useLayoutEffect } from "react";
 
 import MenuContext from "../../context/menu/menu";
+import useBodyScroll from "../../utils/hooks/useBodyScroll";
 
 import styles from "./mnav.module.scss";
 
 const MNav = () => {
   const { isOpen } = useContext(MenuContext);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  });
+  useBodyScroll(isOpen);
 
   return (
     <nav className={`${styles.mnav} ${isOpen ? styles.isActive : ""}`}>

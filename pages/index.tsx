@@ -4,6 +4,7 @@ import Image from "next/image";
 import Layout from "../layouts/layout";
 import FirstSection from "../containers/firstSection/firstSection";
 import Section from "../containers/section/section";
+import LoadingScreen from "../components/loadingScreen/loadingScreen";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
         <title>Parametrik Engineering</title>
       </Head>
       <Layout>
+        <LoadingScreen />
         <FirstSection>
           <Section>
             <h1>First Section</h1>
