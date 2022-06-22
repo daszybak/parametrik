@@ -44,7 +44,7 @@ const usePosition = (pixels: number) => {
     const handleWindowScroll = () => {
       if (
         window.scrollY >
-        document.body.getBoundingClientRect().bottom - pixels
+        document.body.getBoundingClientRect().height - pixels
       ) {
         return dispatchElement({ type: "hidden", payload: window.scrollY });
       }

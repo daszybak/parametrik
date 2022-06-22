@@ -1,0 +1,18 @@
+[
+  {
+    "src": "/",
+    "title": "homepage"
+  },
+  {
+    "src": "/about",
+    "title": "about"
+  },
+  {
+    "src": "/contact",
+    "title": "contact"
+  },
+  {
+    "src": "/blog",
+    "title": "blog"
+  }
+]

@@ -42,7 +42,8 @@
   --extra-small-text: 0.7em;
   /* rest of the vars */
   --backgroundColor: var(--white);
-  --backgroudColor-secondary: var(--primary-light);
+  --backgroundColor-secondary: var(--primary-light);
+  --backgroundColor-tertiary: var(--black);
   --backgroundColorBanner: var(--mahagony);
   --backgroundColorFooter: var(--primary-100);
   --textColor: var(--grey-900);
@@ -186,11 +187,27 @@ small,
 
 a {
   text-decoration: none;
-  color: var(--primary-900);
+  color: var(--textColor);
+  background-color: transparent;
+  transition: color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
+
 ul {
+  list-style: none;
   list-style-type: none;
   padding: 0;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 
   li {
     padding: 0;
@@ -336,4 +353,20 @@ ul {
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--primary-900);
+}
+
+.t-2 {
+  font-size: calc(0.83333vw + 26px);
+  line-height: calc(0.41667vw + 36px);
+}
+
+.wrapper {
+  padding: 0 2.4rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 10rem;
+
+    display: flex;
+    justify-content: center;
+  }
 }

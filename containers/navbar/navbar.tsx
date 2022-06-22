@@ -7,7 +7,7 @@ import MenuContext from "../../context/menu/menu";
 import usePosition from "../../utils/hooks/usePosition";
 import MNav from "../mnav/mnav";
 
-import Toggler from "../toggler/toggler";
+import Toggler from "../../components/toggler/toggler";
 
 import styles from "./navbar.module.scss";
 

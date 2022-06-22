@@ -1,4 +1,4 @@
-import Video from "../video/video";
+import Video from "../../components/video/video";
 import usePageLoad from "../../utils/hooks/usePageLoad";
 
 import useBodyScroll from "../../utils/hooks/useBodyScroll";
@@ -6,7 +6,7 @@ import useBodyScroll from "../../utils/hooks/useBodyScroll";
 import { LOADING_TIME } from "../../utils/constants/constants";
 
 import styles from "./loadingScreen.module.scss";
-import LoadingBar from "../loadingBar/loadingBar";
+import LoadingBar from "../../components/loadingBar/loadingBar";
 
 const LoadingScreen = () => {
   const loaded = usePageLoad(LOADING_TIME);

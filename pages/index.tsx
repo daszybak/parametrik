@@ -4,7 +4,7 @@ import Image from "next/image";
 import Layout from "../layouts/layout";
 import FirstSection from "../containers/firstSection/firstSection";
 import Section from "../containers/section/section";
-import LoadingScreen from "../components/loadingScreen/loadingScreen";
+import LoadingScreen from "../containers/loadingScreen/loadingScreen";
 
 const Home: NextPage = () => {
   return (
