@@ -1,22 +1,17 @@
 import Video from "../../components/video/video";
 import usePageLoad from "../../utils/hooks/usePageLoad";
 
-import useBodyScroll from "../../utils/hooks/useBodyScroll";
+import { useContext } from "react";
 
-import { LOADING_TIME } from "../../utils/constants/constants";
+import useBodyScroll from "../../utils/hooks/useBodyScroll";
 
 import styles from "./loadingScreen.module.scss";
 import LoadingBar from "../../components/loadingBar/loadingBar";
+import PageLoadContext from "../../context/pageLoad/pageLoad";
 
 const LoadingScreen = () => {
-  const loaded = usePageLoad(LOADING_TIME);
-
-  useBodyScroll(!loaded);
-
   return (
-    <div
-      className={`${styles.loadingScreen} ${loaded ? styles.isInactive : ""}`}
-    >
+    <div className={styles.loadingScreen}>
       <div className={styles["video-container"]}>
         {/* <Video /> */}
         <LoadingBar />

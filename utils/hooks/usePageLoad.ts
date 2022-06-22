@@ -47,8 +47,8 @@ const usePageLoad = (time: number) => {
   };
 
   useEffect(() => {
-    router.events.on("routeChangeError", handlePageUnload);
-    router.events.on("routeChangeStart", handlePageUnload);
+    // router.events.on("routeChangeError", handlePageUnload);
+    // router.events.on("routeChangeStart", handlePageUnload);
 
     const wait = (time: number) => {
       return new Promise((resolve) => {
@@ -67,12 +67,12 @@ const usePageLoad = (time: number) => {
     };
 
     waitFunc();
-
-    return () => {
-      router.events.off("routeChangeError", handlePageUnload);
-      router.events.off("routeChangeStart", handlePageUnload);
-    };
   }, [router.events, time]);
+
+  // return () => {
+  //   router.events.off("routeChangeError", handlePageUnload);
+  //   router.events.off("routeChangeStart", handlePageUnload);
+  // };
 
   return page.isLoaded;
 };

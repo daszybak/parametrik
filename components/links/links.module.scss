@@ -1,18 +1,1 @@
-.fadeOutLinks {
-  color: var(--textColor);
 
-  pointer-events: none;
-
-  > * {
-    color: var(--textColor);
-    pointer-events: auto;
-    transition: all ease-in-out 0.2s;
-  }
-  &:hover > * {
-    color: var(--primary-100);
-  }
-
-  &:hover > *:hover {
-    color: var(--textColor);
-  }
-}

@@ -1,5 +1,5 @@
 .mnav {
-  background: var(--backgroundColor);
+  background: inherit;
   width: 100%;
   max-width: 100%;
   position: absolute;
@@ -23,7 +23,6 @@
     opacity: 1;
     transition: opacity 0.3s ease-in-out, visibility 0s linear 0s,
       min-height 0.3s ease-in-out;
-    border: 1px solid red;
 
     > * {
       transform: translateY(0);
@@ -32,8 +31,6 @@
 
   > * {
     transition: transform 0.3s ease-in-out;
-    transform: translateY(-24px);
+    transform: translateY(-7px);
   }
-
-
 }

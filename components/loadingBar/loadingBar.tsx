@@ -17,6 +17,8 @@ const LoadingBar = () => {
       progressRef.current.style.width = `${width}%`;
       timeout = setTimeout(() => {
         clearInterval(interval);
+        if (!progressRef || !progressRef.current) return;
+        progressRef.current.style.width = "1%";
       }, LOADING_TIME);
     }, LOADING_TIME / 100);
 

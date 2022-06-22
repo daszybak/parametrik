@@ -4,4 +4,9 @@
   margin-bottom: 2.4rem;
   cursor: pointer;
   text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
