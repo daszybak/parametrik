@@ -48,7 +48,7 @@ const usePosition = (pixels: number) => {
       if (window.scrollY > element.Y + pixels) {
         return dispatchElement({ type: "hidden", payload: window.scrollY });
       }
-      if (window.scrollY < element.Y && window.scrollY > pixels) {
+      if (window.scrollY < element.Y && element.Y - window.scrollY > pixels) {
         return dispatchElement({ type: "fixed", payload: window.scrollY });
       }
       if (window.scrollY <= pixels) {
