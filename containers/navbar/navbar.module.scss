@@ -46,11 +46,13 @@
   width: 100vw;
   background: transparent;
   z-index: 100;
+  transition: all 0.3s ease-in-out;
+
   &.isOpen {
     background: linear-gradient(
       to bottom right,
       #fff 30%,
-      rgba(200, 200, 200) 100%,
+      #a8a9ad 50%,
       #fff 70%
     );
     background-repeat: no-repeat;

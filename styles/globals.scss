@@ -395,13 +395,16 @@ ul {
   > * {
     color: var(--textColor);
     pointer-events: auto;
-    transition: all ease-in-out 0.2s;
-  }
-  &:hover > * {
-    color: var(--primary-100);
+    transition: all ease-in-out 0.22s;
   }
 
+  // sta se dogadja s ostalim
+  &:hover > * {
+    transform: translateX(-20px);
+  }
+
+  // sta na hovereanom
   &:hover > *:hover {
-    color: var(--textColor);
+    transform: translateX(0);
   }
 }
