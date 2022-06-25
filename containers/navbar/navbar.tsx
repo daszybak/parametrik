@@ -10,6 +10,7 @@ import MNav from "../mnav/mnav";
 import Toggler from "../../components/toggler/toggler";
 
 import styles from "./navbar.module.scss";
+import Logo from "../../components/logo/logo";
 
 const Navbar: React.FC = () => {
   const position = usePosition(7);
@@ -37,13 +38,7 @@ const Navbar: React.FC = () => {
           <div className={styles.logo}>
             <Link href={"/"}>
               <a onClick={handleMenuClose}>
-                <Image
-                  src={"/logo.png"}
-                  alt="Parametrik Engineering"
-                  width={220}
-                  height={45}
-                  priority={true}
-                />
+                <Logo />
               </a>
             </Link>
           </div>

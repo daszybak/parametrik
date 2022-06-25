@@ -41,6 +41,7 @@
   --yellow: #fcee21;
   --orange: #f5c316;
   --red: #e76f00;
+  --gray-e: rgb(248, 248, 248);
 
   /* fonts  */
   --headingFont: "Noto Serif", sans-serif;
@@ -50,7 +51,7 @@
   /* rest of the vars */
   --backgroundColor: var(--white);
   --backgroundColor-secondary: var(--primary-light);
-  --backgroundColor-tertiary: var(--black);
+  --backgroundColor-tertiary: var(--gray-e);
   --backgroundColorBanner: var(--mahagony);
   --backgroundColorFooter: var(--primary-100);
   --textColor: var(--grey-900);
@@ -407,4 +408,8 @@ ul {
   &:hover > *:hover {
     transform: translateX(0);
   }
+}
+
+.text-center {
+  text-align: center;
 }
