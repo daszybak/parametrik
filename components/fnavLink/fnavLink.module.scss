@@ -8,9 +8,13 @@
   line-height: 1.25em;
   text-transform: uppercase;
   letter-spacing: 0.16rem;
+  color: var(--textColor);
+
+  padding-left: 0;
+  padding-inline-start: 0;
 
   &:hover {
-    color: inherit;
+    color: var(--primary-500);
     text-decoration: none;
   }
 }
