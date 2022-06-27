@@ -32,7 +32,7 @@ const FInfo = () => {
           <div className={styles.text}>
             <div className={styles.line}>
               <a href="https://www.facebook.com/parametrik.hr">
-                <RiFacebookBoxLine />
+                <RiFacebookBoxLine className={styles.icon} />
               </a>
             </div>
           </div>

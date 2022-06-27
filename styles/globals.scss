@@ -42,6 +42,7 @@
   --orange: #f5c316;
   --red: #e76f00;
   --gray-e: rgb(248, 248, 248);
+  --blue: #00a9e0;
 
   /* fonts  */
   --headingFont: "Noto Serif", sans-serif;
@@ -92,6 +93,13 @@ body {
   line-height: 1.75;
   color: var(--textColor);
   background-color: var(--backgroundColor);
+
+  font-size: 1.4rem;
+  line-height: 1.28em;
+  letter-spacing: -0.00588em;
+
+  font-size: calc(0.3125vw + 12.5px);
+  line-height: calc(0.41667vw + 16px);
 }
 
 p {
@@ -217,6 +225,8 @@ ul {
     margin: 0;
   }
 }
+
+/* margins */
 
 .img {
   width: 100%;

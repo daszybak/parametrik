@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Copyright from "../../components/copyright/copyright";
 import FInfo from "../../components/fInfo/fInfo";
 import Logo from "../../components/logo/logo";
 import FNav from "../fnav/fnav";
@@ -15,6 +16,7 @@ const Footer = () => {
           </div>
           <FNav />
           <FInfo />
+          <Copyright />
         </div>
       </div>
     </div>

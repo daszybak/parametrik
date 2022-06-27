@@ -1,5 +1,16 @@
 .fInfo {
   position: relative;
+  margin-bottom: 10rem;
+
+  a {
+    color: var(--textColor);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--blue);
+    }
+  }
 
   .grid-l {
     display: grid;
@@ -25,6 +36,13 @@
         line-height: 1.25em;
         text-transform: uppercase;
         letter-spacing: 0.16rem;
+
+        margin-bottom: 2.4rem;
+      }
+
+      .icon {
+        width: 2.4rem;
+        height: 2.4rem;
       }
     }
   }
