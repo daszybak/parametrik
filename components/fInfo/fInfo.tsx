@@ -1,4 +1,4 @@
-import { RiFacebookBoxLine } from "react-icons/ri";
+import { RiFacebookBoxLine, RiLinkedinBoxLine } from "react-icons/ri";
 import styles from "./fInfo.module.scss";
 
 const FInfo = () => {
@@ -10,9 +10,7 @@ const FInfo = () => {
           <div className={styles["grid-sm"]}>
             <div className={styles.text}>
               <div className={styles.line}>
-                <a href="mailto:parametrik@parametrik.hr">
-                  parametrik@parametrik.hr
-                </a>
+                <a href="mailto:info@parametrik.hr">info@parametrik.hr</a>
               </div>
               <div className={styles.line}>
                 <a href="tel:+38591123456"> tel: +385 91 123456</a>
@@ -31,8 +29,8 @@ const FInfo = () => {
           <div className={styles.title}>FIND US ON</div>
           <div className={styles.text}>
             <div className={styles.line}>
-              <a href="https://www.facebook.com/parametrik.hr">
-                <RiFacebookBoxLine className={styles.icon} />
+              <a href="https://www.linkedin.com/parametrik.hr">
+                <RiLinkedinBoxLine className={styles.icon} />
               </a>
             </div>
           </div>

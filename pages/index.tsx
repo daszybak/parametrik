@@ -8,6 +8,8 @@ import FirstSection from "../containers/firstSection/firstSection";
 import Section from "../containers/section/section";
 import LoadingScreen from "../containers/loadingScreen/loadingScreen";
 import PageLoadContext from "../context/pageLoad/pageLoad";
+import Logos from "../containers/logos/logos";
+import logos from "../data/logos";
 
 const Home: NextPage = () => {
   const { isLoaded } = useContext(PageLoadContext);
@@ -26,7 +28,7 @@ const Home: NextPage = () => {
             </Section>
           </FirstSection>
           <Section>
-            <h1>Second Section</h1>
+            <Logos title="Partners" data={logos} />
           </Section>
         </Layout>
       ) : (

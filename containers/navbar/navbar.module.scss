@@ -47,6 +47,7 @@
   background: transparent;
   z-index: 100;
   transition: all 0.3s ease-in-out;
+  visibility: hidden;
 
   &.isOpen {
     background: linear-gradient(
@@ -58,6 +59,7 @@
     background-repeat: no-repeat;
     animation: placeholderShimmer infinite 4s linear;
     background-size: 200% 200%;
+    visibility: visible;
   }
   position: absolute;
   left: 0;
