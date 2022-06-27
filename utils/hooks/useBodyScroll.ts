@@ -1,7 +1,7 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 const useBodyScroll = (state: boolean) => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (state) {
       document.body.style.overflow = "hidden";
     } else {

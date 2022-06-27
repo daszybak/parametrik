@@ -11,7 +11,6 @@ import PageLoadContext from "../context/pageLoad/pageLoad";
 
 const Home: NextPage = () => {
   const { isLoaded } = useContext(PageLoadContext);
-  console.log(isLoaded);
 
   return (
     <>

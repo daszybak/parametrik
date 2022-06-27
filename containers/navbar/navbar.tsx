@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useContext, useLayoutEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 import MenuContext from "../../context/menu/menu";
 import usePosition from "../../utils/hooks/usePosition";
@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const { isOpen, handleMenuClose } = useContext(MenuContext);
   const backgroundRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (backgroundRef.current) {
       backgroundRef.current.style.top = `${
         document.body.getBoundingClientRect().top * -1

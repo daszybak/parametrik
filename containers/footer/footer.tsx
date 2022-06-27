@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FInfo from "../../components/fInfo/fInfo";
 import Logo from "../../components/logo/logo";
 import FNav from "../fnav/fnav";
 
@@ -13,6 +14,7 @@ const Footer = () => {
             <Logo />
           </div>
           <FNav />
+          <FInfo />
         </div>
       </div>
     </div>
