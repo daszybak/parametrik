@@ -17,22 +17,21 @@ const Home: NextPage = () => {
       <Head>
         <title>Parametrik Engineering</title>
       </Head>
-      <Layout>
-        {isLoaded ? (
-          <>
-            <FirstSection>
-              <Section>
-                <h1>First Section</h1>
-              </Section>
-            </FirstSection>
+
+      {isLoaded ? (
+        <Layout>
+          <FirstSection>
             <Section>
-              <h1>Second Section</h1>
+              <h1>First Section</h1>
             </Section>
-          </>
-        ) : (
-          <LoadingScreen />
-        )}
-      </Layout>
+          </FirstSection>
+          <Section>
+            <h1>Second Section</h1>
+          </Section>
+        </Layout>
+      ) : (
+        <LoadingScreen />
+      )}
     </>
   );
 };
