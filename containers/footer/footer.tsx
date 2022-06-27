@@ -15,6 +15,7 @@ const Footer = () => {
             <Logo />
           </div>
           <FNav />
+
           <FInfo />
           <Copyright />
         </div>

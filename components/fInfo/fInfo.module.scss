@@ -21,14 +21,17 @@
     .grid-sm {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100%));
-      gap: 1rem;
+      row-gap: 1rem;
       justify-content: center;
     }
 
     .item {
       display: flex;
       flex-direction: column;
-      border: 1px solid red;
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1),
+        0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 1rem;
 
       .title {
         font-size: 1.3rem;

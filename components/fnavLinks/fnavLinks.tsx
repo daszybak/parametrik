@@ -14,7 +14,11 @@ const FNavLinks = () => {
     }
   );
 
-  return <ul className={styles.links}>{renderedLinks}</ul>;
+  return (
+    <>
+      <ul className={styles.links}>{renderedLinks}</ul>
+    </>
+  );
 };
 
 export default FNavLinks;
