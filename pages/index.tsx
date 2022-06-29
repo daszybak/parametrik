@@ -10,6 +10,7 @@ import LoadingScreen from "../containers/loadingScreen/loadingScreen";
 import PageLoadContext from "../context/pageLoad/pageLoad";
 import Logos from "../containers/logos/logos";
 import logos from "../data/logos";
+import Presentation from "../components/presentation/presentation";
 
 const Home: NextPage = () => {
   const { isLoaded } = useContext(PageLoadContext);
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
         <Layout>
           <FirstSection>
             <Section>
-              <h1>First Section</h1>
+              <Presentation />
             </Section>
           </FirstSection>
           <Section>
