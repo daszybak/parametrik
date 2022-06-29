@@ -1,0 +1,52 @@
+.presentation {
+  position: relative;
+  width: 1080px;
+  height: 720px;
+
+  .presentationContainer {
+    width: 1080px;
+    height: 720px;
+
+    display: grid;
+
+    grid-template-columns: repeat(36, 1fr);
+    grid-template-rows: repeat(36, 1fr);
+
+    .video {
+      background-color: blue;
+      color: white;
+
+      grid-column: 1 / span 24;
+      grid-row: 1 / span 16;
+    }
+    .box {
+      background-color: black;
+      color: white;
+
+      grid-column: 15 / span 8;
+      grid-row: span 4 / -8;
+
+      border-radius: 10px;
+
+      & + .box {
+        grid-column: 21 / span 8;
+        grid-row: span 4 / -13;
+
+        & + .box {
+          grid-column: 26 / span 8;
+          grid-row: span 4 / -18;
+
+          & + .box {
+            grid-column: 28 / span 8;
+            grid-row: span 4 / -23;
+
+            & + .box {
+              grid-column: 33 / span 8;
+              grid-row: span 4 / -28;
+            }
+          }
+        }
+      }
+    }
+  }
+}

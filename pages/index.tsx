@@ -25,9 +25,12 @@ const Home: NextPage = () => {
         <Layout>
           <FirstSection>
             <Section>
-              <Presentation />
+              <h1>First section</h1>
             </Section>
           </FirstSection>
+          <Section>
+            <Presentation />
+          </Section>
           <Section>
             <Logos title="Partners" data={logos} />
           </Section>
