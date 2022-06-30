@@ -34,7 +34,7 @@ const videoReducer = (
       isLoaded: true,
     };
   }
-  if (action.type === "STARTED") {
+  if (action.type === "FINISHED") {
     return {
       ...state,
       isStarted: true,
