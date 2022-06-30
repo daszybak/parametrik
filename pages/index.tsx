@@ -11,11 +11,9 @@ import Logos from "../containers/logos/logos";
 import logos from "../data/logos";
 import Presentation from "../components/presentation/presentation";
 import VideoLoadContext from "../context/videoLoad/videoLoad";
-import { log } from "console";
 
 const Home: NextPage = () => {
   const { isFinished } = useContext(VideoLoadContext);
-  log(isFinished);
 
   return (
     <>
