@@ -20,6 +20,7 @@ const LoadingVideo = () => {
     const handleVideoLoaded = async () => {
       if (!video) return;
       handleVideoLoadedCxt();
+      video.defaultMuted = true;
       await video.play();
       handleVideoStarted();
       video.addEventListener("ended", handleVideoEnded);
@@ -38,7 +39,7 @@ const LoadingVideo = () => {
   });
 
   return (
-    <video height="720" width="1280" ref={videoContainer}>
+    <video height="720" width="1280" muted ref={videoContainer}>
       <source src="/videos/loading3sec.mp4" type="video/mp4" />
     </video>
   );
