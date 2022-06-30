@@ -39,7 +39,7 @@ const LoadingVideo = () => {
   });
 
   return (
-    <video height="720" width="1280" muted ref={videoContainer}>
+    <video height="auto" width="100%" muted ref={videoContainer}>
       <source src="/videos/loading3sec.mp4" type="video/mp4" />
     </video>
   );
