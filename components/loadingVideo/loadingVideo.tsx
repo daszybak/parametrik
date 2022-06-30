@@ -17,10 +17,10 @@ const LoadingVideo = () => {
     const handleVideoEnded = () => {
       handleVideoFinished();
     };
-    const handleVideoLoaded = () => {
+    const handleVideoLoaded = async () => {
       if (!video) return;
       handleVideoLoadedCxt();
-      video.play();
+      await video.play();
       handleVideoStarted();
       video.addEventListener("ended", handleVideoEnded);
     };
