@@ -8,12 +8,13 @@ import styles from "./loadingScreen.module.scss";
 import LoadingBar from "../../components/loadingBar/loadingBar";
 import PageLoadContext from "../../context/pageLoad/pageLoad";
 import Video from "../../components/video/video";
+import LoadingVideo from "../../components/loadingVideo/loadingVideo";
 
 const LoadingScreen = () => {
   return (
     <div className={styles.loadingScreen}>
       <div className={styles["video-container"]}>
-        <Video />
+        <LoadingVideo />
       </div>
     </div>
   );

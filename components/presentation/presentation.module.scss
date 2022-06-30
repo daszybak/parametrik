@@ -1,4 +1,9 @@
 .presentation {
+  @media screen and (min-width: 1300px) {
+    display: block;
+  }
+  display: none;
+
   position: relative;
   width: 1080px;
   height: 720px;

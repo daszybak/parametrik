@@ -7,13 +7,13 @@ import Layout from "../layouts/layout";
 import FirstSection from "../containers/firstSection/firstSection";
 import Section from "../containers/section/section";
 import LoadingScreen from "../containers/loadingScreen/loadingScreen";
-import PageLoadContext from "../context/pageLoad/pageLoad";
 import Logos from "../containers/logos/logos";
 import logos from "../data/logos";
 import Presentation from "../components/presentation/presentation";
+import VideoLoadContext from "../context/videoLoad/videoLoad";
 
 const Home: NextPage = () => {
-  const { isLoaded } = useContext(PageLoadContext);
+  const { isFinished } = useContext(VideoLoadContext);
 
   return (
     <>
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <title>Parametrik Engineering</title>
       </Head>
 
-      {isLoaded ? (
+      {isFinished ? (
         <Layout>
           <FirstSection>
             <Section>

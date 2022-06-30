@@ -3,15 +3,15 @@ import type { AppProps } from "next/app";
 
 import MuiThemeProvider from "../utils/helpers/themeProvider";
 import MenuContextProvider from "../context/menu/menuContextProvider";
-import PageLoadContextProvider from "../context/pageLoad/pageLoadContextProvider";
+import VideoLoadContextProvider from "../context/videoLoad/videoLoadContextProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <MuiThemeProvider>
       <MenuContextProvider>
-        <PageLoadContextProvider>
+        <VideoLoadContextProvider>
           <Component {...pageProps} />
-        </PageLoadContextProvider>
+        </VideoLoadContextProvider>
       </MenuContextProvider>
     </MuiThemeProvider>
   );
