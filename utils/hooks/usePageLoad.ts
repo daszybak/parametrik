@@ -35,6 +35,8 @@ const usePageLoad = (time: number) => {
   const [page, dispatchPage] = useReducer(pageReducer, initialPageValue);
 
   const handlePageLoad = () => {
+    console.log("loaded");
+
     dispatchPage({ type: "loaded" });
   };
 
@@ -50,7 +52,7 @@ const usePageLoad = (time: number) => {
     // router.events.on("routeChangeError", handlePageUnload);
     // router.events.on("routeChangeStart", handlePageUnload);
 
-    const wait = (time: number) => {
+    const wait = () => {
       return new Promise((resolve) => {
         setTimeout(() => {
           handlePageLoad();
@@ -60,7 +62,10 @@ const usePageLoad = (time: number) => {
 
     const waitFunc = async () => {
       try {
-        await wait(time);
+        console.log("time", time);
+
+        await wait();
+        console.log("waited");
       } catch (error) {
         console.error(error);
       }

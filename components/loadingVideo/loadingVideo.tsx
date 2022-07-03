@@ -1,10 +1,11 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import VideoLoadContext from "../../context/videoLoad/videoLoad";
 import useWindowSize from "../../utils/hooks/useWindowSize";
 
 import styles from "./loadingVideo.module.scss";
 
 const LoadingVideo = () => {
+  const [videoLoad, setVideoLoad] = useState(false);
   const videoContainer = useRef<HTMLVideoElement>(null);
   const width = useWindowSize().width;
 
@@ -18,28 +19,55 @@ const LoadingVideo = () => {
     const video = videoContainer.current;
 
     const handleVideoEnded = () => {
+      console.log("video ended");
+
       handleVideoFinished();
+      console.log("video ended");
     };
-    const handleVideoLoaded = async () => {
+
+    const handleVideoCanPlay = async () => {
+      console.log("video can play");
+
       if (!video) return;
       handleVideoLoadedCxt();
       video.defaultMuted = true;
       await video.play();
+      console.log("video played");
+
       handleVideoStarted();
       video.addEventListener("ended", handleVideoEnded);
     };
 
+    const handleVideoLoaded = async () => {
+      console.log("video loaded");
+      if (!video) return;
+
+      video.addEventListener("canplay", handleVideoCanPlay);
+    };
+
     if (video) {
-      video.addEventListener("loadeddata", handleVideoLoaded);
+      if (!videoLoad) {
+        console.log("videoLoad: false");
+
+        video.load();
+        setVideoLoad(true);
+        video.addEventListener("loadeddata", handleVideoLoaded);
+      }
     }
 
     return () => {
       if (video) {
         video.removeEventListener("loadeddata", handleVideoLoaded);
+        video.removeEventListener("canplay", handleVideoCanPlay);
         video.removeEventListener("ended", handleVideoEnded);
       }
     };
-  }, [handleVideoStarted, handleVideoLoadedCxt, handleVideoFinished]);
+  }, [
+    handleVideoStarted,
+    handleVideoLoadedCxt,
+    handleVideoFinished,
+    videoLoad,
+  ]);
 
   return (
     <video
