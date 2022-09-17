@@ -10,10 +10,11 @@ import LoadingScreen from "../containers/loadingScreen/loadingScreen";
 import Logos from "../containers/logos/logos";
 import logos from "../data/logos";
 import Presentation from "../components/presentation/presentation";
-import VideoLoadContext from "../context/videoLoad/videoLoad";
+import PageLoadContext from "../context/pageLoad/pageLoad";
 
 const Home: NextPage = () => {
-  const { isFinished } = useContext(VideoLoadContext);
+  const { isLoaded } = useContext(PageLoadContext);
+  console.log(isLoaded);
 
   return (
     <>
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
         <title>Parametrik Engineering</title>
       </Head>
 
-      {isFinished ? (
+      {isLoaded ? (
         <Layout>
           <FirstSection>
             <Section>

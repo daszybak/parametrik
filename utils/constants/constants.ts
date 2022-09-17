@@ -1,1 +1,1 @@
-export const LOADING_TIME = 1000;
+export const LOADING_TIME = 3500;

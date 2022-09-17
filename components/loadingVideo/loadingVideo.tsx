@@ -5,6 +5,7 @@ import useWindowSize from '../../utils/hooks/useWindowSize';
 import styles from './loadingVideo.module.scss';
 
 const LoadingVideo = () => {
+  const [videoLoad, setVideoLoad] = useState(false);
   const videoContainer = useRef<HTMLVideoElement>(null);
   const width = useWindowSize().width;
 
@@ -18,13 +19,21 @@ const LoadingVideo = () => {
     const video = videoContainer.current;
 
     const handleVideoEnded = () => {
+      console.log('video ended');
+
       handleVideoFinished();
+      console.log('video ended');
     };
-    const handleVideoLoaded = async () => {
+
+    const handleVideoCanPlay = async () => {
+      console.log('video can play');
+
       if (!video) return;
       handleVideoLoadedCxt();
       video.defaultMuted = true;
       await video.play();
+      console.log('video played');
+
       handleVideoStarted();
       video.addEventListener('ended', handleVideoEnded);
     };
@@ -39,7 +48,12 @@ const LoadingVideo = () => {
         video.removeEventListener('ended', handleVideoEnded);
       }
     };
-  }, [handleVideoStarted, handleVideoLoadedCxt, handleVideoFinished]);
+  }, [
+    handleVideoStarted,
+    handleVideoLoadedCxt,
+    handleVideoFinished,
+    videoLoad,
+  ]);
 
   return (
     <video

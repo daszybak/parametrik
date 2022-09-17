@@ -1,6 +1,7 @@
 import usePageLoad from "../../utils/hooks/usePageLoad";
+import Image from "next/image";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import useBodyScroll from "../../utils/hooks/useBodyScroll";
 
@@ -11,10 +12,18 @@ import Video from "../../components/video/video";
 import LoadingVideo from "../../components/loadingVideo/loadingVideo";
 
 const LoadingScreen = () => {
+  const { isLoaded } = useContext(PageLoadContext);
+
   return (
-    <div className={styles.loadingScreen}>
+    <div className={`${styles.loadingScreen}`}>
       <div className={styles["video-container"]}>
-        <LoadingVideo />
+        <Image
+          src="/videos/loading3sec-unscreen.gif"
+          alt="Car sheets connecting"
+          width={640}
+          height={360}
+          priority={true}
+        />
       </div>
     </div>
   );

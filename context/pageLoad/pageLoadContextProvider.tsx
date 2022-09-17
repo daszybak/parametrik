@@ -9,17 +9,10 @@ const PageLoadContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [videoFinished, setVideoFinished] = useState(false);
   const isLoaded = usePageLoad(LOADING_TIME);
-
-  const handleVideoFinished = () => {
-    setVideoFinished(true);
-  };
 
   const pageContext = {
     isLoaded,
-    videoFinished,
-    handleVideoFinished,
   };
   return (
     <PageLoadContext.Provider value={pageContext}>
