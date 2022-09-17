@@ -1,8 +1,8 @@
-import { useContext, useEffect, useRef } from "react";
-import VideoLoadContext from "../../context/videoLoad/videoLoad";
-import useWindowSize from "../../utils/hooks/useWindowSize";
+import { useContext, useEffect, useRef } from 'react';
+import VideoLoadContext from '../../context/videoLoad/videoLoad';
+import useWindowSize from '../../utils/hooks/useWindowSize';
 
-import styles from "./loadingVideo.module.scss";
+import styles from './loadingVideo.module.scss';
 
 const LoadingVideo = () => {
   const videoContainer = useRef<HTMLVideoElement>(null);
@@ -26,17 +26,17 @@ const LoadingVideo = () => {
       video.defaultMuted = true;
       await video.play();
       handleVideoStarted();
-      video.addEventListener("ended", handleVideoEnded);
+      video.addEventListener('ended', handleVideoEnded);
     };
 
     if (video) {
-      video.addEventListener("loadeddata", handleVideoLoaded);
+      video.addEventListener('loadeddata', handleVideoLoaded);
     }
 
     return () => {
       if (video) {
-        video.removeEventListener("loadeddata", handleVideoLoaded);
-        video.removeEventListener("ended", handleVideoEnded);
+        video.removeEventListener('loadeddata', handleVideoLoaded);
+        video.removeEventListener('ended', handleVideoEnded);
       }
     };
   }, [handleVideoStarted, handleVideoLoadedCxt, handleVideoFinished]);
@@ -44,7 +44,7 @@ const LoadingVideo = () => {
   return (
     <video
       height="auto"
-      width={typeof width !== "undefined" && width < 1280 ? "100%" : 1280}
+      width={typeof width !== 'undefined' && width < 1280 ? '100%' : 1280}
       muted
       ref={videoContainer}
     >
