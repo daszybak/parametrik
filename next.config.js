@@ -1,11 +1,9 @@
+const { i18n } = require('./next-i18next.config');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
 module.exports = withBundleAnalyzer({
-  reactStrictMode: false,
-  experimental: { appDir: true },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  reactStrictMode: true,
+  i18n,
 });
