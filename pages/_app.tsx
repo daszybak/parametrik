@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { MantineProvider, ColorScheme } from '@mantine/core';
 import { mantineTheme } from 'mantine-theme';
 import Layout from './layout';
-import nextI18NextConfig from '../next-i18next.config';
+//import nextI18NextConfig from '../next-i18next.config';
 
 function _App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;

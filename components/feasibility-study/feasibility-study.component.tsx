@@ -5,7 +5,7 @@ interface FeasibilityStudyProps {}
 
 const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => (
   <Section>
-    <SectionTitle align="center">Feasibility study</SectionTitle>;
+    <SectionTitle align="center">Feasibility study</SectionTitle>
   </Section>
 );
 
