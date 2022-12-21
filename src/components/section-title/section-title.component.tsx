@@ -11,15 +11,15 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children, align, ...other }
 
   return (
     <span>
-      <Link
-        href={`#${children}`}
-        style={{
-          textDecoration: 'none',
-          color: 'inherit',
-          display: 'inline',
-        }}
-      >
-        <Flex justify={align}>
+      <Flex justify={align}>
+        <Link
+          href={`#${children}`}
+          style={{
+            textDecoration: 'none',
+            color: 'inherit',
+            display: 'inline',
+          }}
+        >
           <Title
             id={children}
             className={classes.title}
@@ -30,8 +30,8 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children, align, ...other }
           >
             {children}
           </Title>
-        </Flex>
-      </Link>
+        </Link>
+      </Flex>
     </span>
   );
 };

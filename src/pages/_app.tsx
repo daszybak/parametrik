@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { MantineProvider, ColorScheme } from '@mantine/core';
 import { mantineTheme } from 'mantine-theme';
 import MenuContextProvider from 'src/context/menu/menuContextProvider';
+import { PageLoadContextProvider } from 'src/context/page-load-context-provider/page-load-context-provider';
 import Layout from './layout';
 //import nextI18NextConfig from '../next-i18next.config';
 
@@ -19,11 +20,13 @@ function _App(props: AppProps & { colorScheme: ColorScheme }) {
       </Head>
 
       <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>
-        <MenuContextProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </MenuContextProvider>
+        <PageLoadContextProvider>
+          <MenuContextProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </MenuContextProvider>
+        </PageLoadContextProvider>
       </MantineProvider>
     </>
   );

@@ -39,6 +39,7 @@ const Title: React.FC<TitleProps> = () => {
           color: theme.white,
           fontSize: '1.5rem',
         }}
+        className={classes.title}
       >
         {finished === true ? (
           //@ts-ignore
