@@ -17,7 +17,7 @@ const Menu: React.FC<MenuProps> = () => {
       <Transition mounted={open} transition="slide-left" timingFunction="ease">
         {(styles) => <Flex style={{ ...styles }}>Menu</Flex>}
       </Transition>
-      <Burger onClick={handleToggleMenu} opened={open} color={theme.colors.blue[4]} />
+      <Burger onClick={handleToggleMenu} opened={open} color={theme.colors.gray[4]} size="lg" />
     </>
   );
 };

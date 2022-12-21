@@ -38,6 +38,7 @@ export const mantineTheme: MantineThemeOverride = {
     ],
   },
   black: '#042144',
+  white: '#fff',
   fontFamily: 'Roboto',
   defaultGradient: {
     from: '#e9b7ce',
