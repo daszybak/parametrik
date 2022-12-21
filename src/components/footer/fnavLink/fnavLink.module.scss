@@ -1,0 +1,36 @@
+.link {
+  display: block;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.16rem;
+  color: var(--textColor);
+
+  padding-left: 0;
+  padding-inline-start: 0;
+
+  &:hover {
+    color: var(--blue);
+    &::before {
+      transform: scale(1.2);
+    }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.5rem solid var(--primary-500);
+    margin-right: 0.5rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,20 @@
+.copyright {
+  font-size: 91%;
+  hr {
+    margin: 0;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-500);
+  }
+
+  a {
+    color: var(--textColor);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--blue);
+    }
+  }
+}
