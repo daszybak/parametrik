@@ -1,3 +1,4 @@
+import { Transition } from '@mantine/core';
 import { useContext } from 'react';
 import Footer from 'src/components/footer/footer.component';
 import LoadingScreen from 'src/components/loading-screen/loading-screen.component';
@@ -13,15 +14,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      {loaded ? (
-        <>
-          <Navbar />
-          {children}
-          <Footer />
-        </>
-      ) : (
-        <LoadingScreen />
-      )}
+      <Navbar />
+      {children}
+      <Footer />
+
+      <Transition transition="fade" mounted={!loaded}>
+        {(styles) => <LoadingScreen style={styles} />}
+      </Transition>
     </>
   );
 };
