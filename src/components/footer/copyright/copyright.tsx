@@ -8,7 +8,7 @@ const Copyright = () => (
       }}
     />
     <Text size="sm" align="center">
-      Parametrik Engineering, 2022. Sva prava pridržana. | Design by
+      Parametrik Engineering, 2023. Sva prava pridržana. | Design by
       <Anchor href="https://www.karlodelmis.com/" target="_blank" rel="noopener noreferrer">
         {' '}
         karlodelmis.com

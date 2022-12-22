@@ -9,6 +9,7 @@ export const useStyles = createStyles(
   ) => ({
     section: {
       marginTop: params && params.first === true ? '8rem' : '3rem',
+      marginBottom: '5rem',
     },
   })
 );

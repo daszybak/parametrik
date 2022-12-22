@@ -15,12 +15,12 @@ export const shine = keyframes({
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const useStyles = createStyles((theme: MantineTheme) => ({
   navbar: {
-    padding: '0 2rem',
     // backgroundColor: theme.colors.gold,
     position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
+    zIndex: 100,
     // animation: `${shine} infinite 6s linear`,
     // backgroundRepeat: 'no-repeat',
     // // background: `linear-gradient(

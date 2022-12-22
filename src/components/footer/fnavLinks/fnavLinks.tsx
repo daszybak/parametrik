@@ -1,4 +1,4 @@
-import { Anchor, Flex, FlexProps } from '@mantine/core';
+import { Anchor, Flex, FlexProps, Title } from '@mantine/core';
 import { links } from 'src/constants';
 
 interface FnNavLinksProps extends FlexProps {}
@@ -14,9 +14,19 @@ const FNavLinks: React.FC<FnNavLinksProps> = (props) => {
   ));
 
   return (
-    <Flex wrap="wrap" gap="3rem" align="center" {...props}>
-      {renderedLinks}
-    </Flex>
+    <>
+      <Title
+        order={3}
+        style={{
+          marginBottom: '2rem',
+        }}
+      >
+        Links
+      </Title>
+      <Flex wrap="wrap" gap="3rem" align="center" {...props}>
+        {renderedLinks}
+      </Flex>
+    </>
   );
 };
 

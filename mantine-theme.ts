@@ -1,4 +1,9 @@
-import { MantineThemeOverride } from '@mantine/core';
+import {
+  ContainerStylesParams,
+  MantineTheme,
+  MantineThemeOverride,
+  TitleStylesParams,
+} from '@mantine/core';
 
 export const mantineTheme: MantineThemeOverride = {
   colors: {
@@ -80,5 +85,21 @@ export const mantineTheme: MantineThemeOverride = {
     sm: 14,
     xs: 14,
   },
-  components: {},
+  components: {
+    Container: {
+      styles: (theme: MantineTheme, params: ContainerStylesParams) => ({
+        root: {
+          padding: params.fluid ? '0 4.5rem' : '0 1rem',
+        },
+      }),
+    },
+    Title: {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      styles: (theme: MantineTheme, params: TitleStylesParams) => ({
+        root: {
+          textTransform: 'uppercase',
+        },
+      }),
+    },
+  },
 };

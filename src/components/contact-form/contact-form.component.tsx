@@ -1,7 +1,8 @@
+import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Button, Textarea, TextInput } from '@mantine/core';
+import { Button, Textarea, TextInput, Title } from '@mantine/core';
 import { useStyles } from './contact-form.styles';
 
 const contactFormInputs = z.object({
@@ -18,10 +19,10 @@ const contactFormInputs = z.object({
 
 type ContactFormInputs = z.infer<typeof contactFormInputs>;
 
-interface ContactFormProps {}
+interface ContactFormProps extends React.ComponentPropsWithoutRef<'form'> {}
 
-const ContactForm: React.FC<ContactFormProps> = () => {
-  const { classes } = useStyles();
+const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
+  const { classes, cx } = useStyles();
   const { handleSubmit, register } = useForm<ContactFormInputs>({
     resolver: zodResolver(contactFormInputs),
   });
@@ -33,14 +34,28 @@ const ContactForm: React.FC<ContactFormProps> = () => {
 
   return (
     //create form with inputs from contactFormInputs
-    <form onSubmit={handleSubmit(onSubmit)} className={classes.formContainer}>
-      <TextInput label="Name" {...register('name')} />
-      <TextInput label="company" {...register('company')} />
-      <TextInput label="email" {...register('email')} />
-      <TextInput label="phone" {...register('phone')} />
-      <Textarea label="message" {...register('message')} />
-      <Button type="submit">SUBMIT</Button>
-    </form>
+    <>
+      <Title
+        order={3}
+        style={{
+          marginBottom: '2rem',
+        }}
+      >
+        Contact Us
+      </Title>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className={cx(classes.formContainer, className)}
+        {...other}
+      >
+        <TextInput label="Name" {...register('name')} />
+        <TextInput label="company" {...register('company')} />
+        <TextInput label="email" {...register('email')} />
+        <TextInput label="phone" {...register('phone')} />
+        <Textarea label="message" {...register('message')} />
+        <Button type="submit">SUBMIT</Button>
+      </form>
+    </>
   );
 };
 

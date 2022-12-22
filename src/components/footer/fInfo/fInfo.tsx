@@ -1,9 +1,12 @@
 import { Anchor, Title } from '@mantine/core';
+import React from 'react';
 import { RiLinkedinBoxLine } from 'react-icons/ri';
 import Logo from 'src/components/logo/logo.component';
 import styles from './fInfo.module.scss';
 
-const FInfo = () => (
+interface FInfoProps extends React.ComponentPropsWithRef<'div'> {}
+
+const FInfo: React.FC<FInfoProps> = () => (
   <div className={styles.fInfo}>
     <div className={styles['grid-l']}>
       <Logo />

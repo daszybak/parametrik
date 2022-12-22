@@ -8,6 +8,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     borderRadius: theme.radius.md,
     border: `1px solid ${theme.colors.gray[3]}`,
     textDecoration: 'none',
+    marginBottom: '2rem',
 
     //hover
     '&:hover': {

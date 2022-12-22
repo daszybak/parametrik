@@ -11,22 +11,16 @@ const Footer: React.FC<FooterProps> = () => {
   const { classes } = useStyles();
 
   return (
-    <div className={classes.footer}>
-      <Container fluid>
-        <div className="wrapper">
-          <div className="text-center">
-            <ContactForm />
-            <FNavLinks
-              style={{
-                marginBottom: '5rem',
-              }}
-            />
-            <FInfo />
-            <Copyright />
-          </div>
+    <Container fluid className={classes.footer}>
+      <div className="wrapper">
+        <div className="text-center">
+          <ContactForm className={classes.marginB5} />
+          <FNavLinks className={classes.marginB5} />
+          <FInfo className={classes.marginB5} />
+          <Copyright />
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
 

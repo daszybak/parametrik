@@ -10,7 +10,13 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children, align, ...other }
   const { classes } = useStyles();
 
   return (
-    <span>
+    <>
+      <div
+        id={children}
+        style={{
+          transform: 'translateY(-2rem)',
+        }}
+      />
       <Flex justify={align}>
         <Link
           href={`#${children}`}
@@ -21,10 +27,9 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children, align, ...other }
           }}
         >
           <Title
-            id={children}
             className={classes.title}
             style={{
-              display: 'inline',
+              display: 'block',
             }}
             {...other}
           >
@@ -32,7 +37,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children, align, ...other }
           </Title>
         </Link>
       </Flex>
-    </span>
+    </>
   );
 };
 
