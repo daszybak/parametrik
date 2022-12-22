@@ -1,42 +1,22 @@
-import { RiHomeLine, RiGroupLine, RiMailLine, RiDiscussLine } from 'react-icons/ri';
-import FNavLink from '../fnavLink/fnavLink';
-import styles from './fnavLinks.module.scss';
+import { Anchor, Flex, FlexProps } from '@mantine/core';
+import { links } from 'src/constants';
 
-const links = [
-  {
-    src: '/',
-    title: 'homepage',
-    icon: <RiHomeLine />,
-  },
-  {
-    src: '/about',
-    title: 'about',
-    icon: <RiGroupLine />,
-  },
-  {
-    src: '/contact',
-    title: 'contact',
-    icon: <RiMailLine />,
-  },
-  {
-    src: '/blog',
-    title: 'blog',
-    icon: <RiDiscussLine />,
-  },
-];
+interface FnNavLinksProps extends FlexProps {}
 
-const FNavLinks = () => {
-  // eslint-disable-next-line react/no-unused-prop-types
-  const renderedLinks = links.map(({ src, title }: { src: string; title: string }) => (
-    <li key={src}>
-      <FNavLink src={src} title={title} />
-    </li>
+const FNavLinks: React.FC<FnNavLinksProps> = (props) => {
+  const renderedLinks = links.map(({ href, title, icon }) => (
+    <Anchor key={href} href={href} size="xl" transform="uppercase">
+      <Flex align="center" gap="md">
+        {icon}
+        {title}
+      </Flex>
+    </Anchor>
   ));
 
   return (
-    <>
-      <ul className={styles.links}>{renderedLinks}</ul>
-    </>
+    <Flex wrap="wrap" gap="3rem" align="center" {...props}>
+      {renderedLinks}
+    </Flex>
   );
 };
 

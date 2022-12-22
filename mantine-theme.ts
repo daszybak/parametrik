@@ -74,7 +74,7 @@ export const mantineTheme: MantineThemeOverride = {
     },
   },
   fontSizes: {
-    xl: 18,
+    xl: 24,
     lg: 18,
     md: 15,
     sm: 14,

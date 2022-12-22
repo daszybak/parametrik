@@ -1,7 +1,7 @@
 import Router from 'next/router';
 import { createContext, useEffect, useState } from 'react';
 
-export const LOADING_TIME = 3000;
+export const LOADING_TIME = 2900;
 
 export const PageLoadContext = createContext({
   loaded: false,

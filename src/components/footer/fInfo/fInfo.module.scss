@@ -1,52 +1,40 @@
 .fInfo {
   position: relative;
-  margin-bottom: 10rem;
-
-  a {
-    color: var(--textColor);
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: var(--blue);
-    }
-  }
+  margin-bottom: 5rem;
 
   .grid-l {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-columns: 325px 325px 325px;
     justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: 325px;
+
+      row-gap: 2rem;
+      justify-content: center;
+
+      .logo {
+        justify-self: end;
+      }
+    }
 
     .grid-sm {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100%));
       row-gap: 1rem;
-      justify-content: center;
     }
 
     .item {
       display: flex;
       flex-direction: column;
-      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1),
-        0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1), 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       padding: 1rem;
+    }
 
-      .title {
-        font-size: 1.3rem;
-        font-weight: 500;
-        line-height: 1.25em;
-        text-transform: uppercase;
-        letter-spacing: 0.16rem;
-
-        margin-bottom: 2.4rem;
-      }
-
-      .icon {
-        width: 2.4rem;
-        height: 2.4rem;
-      }
+    .title {
+      margin-bottom: 2rem;
     }
   }
 }

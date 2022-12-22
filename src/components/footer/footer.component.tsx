@@ -1,29 +1,33 @@
 import { Container } from '@mantine/core';
-import Logo from 'src/components/logo/logo.component';
 import ContactForm from '../contact-form/contact-form.component';
 import Copyright from './copyright/copyright';
 import FInfo from './fInfo/fInfo';
-import FNav from './fnav/fnav';
-
-import styles from './footer.module.scss';
+import FNavLinks from './fnavLinks/fnavLinks';
+import { useStyles } from './footer.styles';
 
 interface FooterProps {}
 
-const Footer: React.FC<FooterProps> = () => (
-  <Container size="xl" className={styles.footer}>
-    <div className="wrapper">
-      <div className="text-center">
-        <div className={styles.logo}>
-          <ContactForm />
-          <Logo />
-        </div>
-        <FNav />
+const Footer: React.FC<FooterProps> = () => {
+  const { classes } = useStyles();
 
-        <FInfo />
-        <Copyright />
-      </div>
+  return (
+    <div className={classes.footer}>
+      <Container fluid>
+        <div className="wrapper">
+          <div className="text-center">
+            <ContactForm />
+            <FNavLinks
+              style={{
+                marginBottom: '5rem',
+              }}
+            />
+            <FInfo />
+            <Copyright />
+          </div>
+        </div>
+      </Container>
     </div>
-  </Container>
-);
+  );
+};
 
 export default Footer;

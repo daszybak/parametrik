@@ -15,7 +15,7 @@ export const shine = keyframes({
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const useStyles = createStyles((theme: MantineTheme) => ({
   navbar: {
-    padding: '0 1rem',
+    padding: '0 2rem',
     // backgroundColor: theme.colors.gold,
     position: 'fixed',
     top: 0,
