@@ -14,9 +14,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      <Navbar />
-      {children}
-      <Footer />
+      {loaded ? (
+        <>
+          <Navbar />
+          {children}
+          <Footer />
+        </>
+      ) : null}
 
       <Transition transition="fade" mounted={!loaded}>
         {(styles) => <LoadingScreen style={styles} />}

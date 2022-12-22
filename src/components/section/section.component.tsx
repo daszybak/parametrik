@@ -28,21 +28,29 @@ const Section: React.FC<SectionProps> = ({ children, id, first }) => {
   }, [interesecting]);
 
   return (
-    <div id={id} key={id} ref={ref} className={classes.sectionHeight}>
-      <Transition
-        transition="fade"
-        duration={first ? 0 : TRANSITION_DURATION}
-        mounted={first ? true : interesected}
-      >
-        {(styles) => (
-          <section>
-            <Container fluid className={classes.section} style={styles} id={id} key={id}>
-              {children}
-            </Container>
-          </section>
-        )}
-      </Transition>
-    </div>
+    <>
+      <div
+        style={{
+          transform: 'translateY(-2rem)',
+        }}
+        id={id}
+      />
+      <div key={id} ref={ref} className={classes.sectionHeight}>
+        <Transition
+          transition="fade"
+          duration={first ? 0 : TRANSITION_DURATION}
+          mounted={first ? true : interesected}
+        >
+          {(styles) => (
+            <section>
+              <Container fluid className={classes.section} style={styles} id={id} key={id}>
+                {children}
+              </Container>
+            </section>
+          )}
+        </Transition>
+      </div>
+    </>
   );
 };
 

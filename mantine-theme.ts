@@ -6,6 +6,12 @@ import {
 } from '@mantine/core';
 
 export const mantineTheme: MantineThemeOverride = {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  globalStyles: (theme: MantineTheme) => ({
+    body: {
+      overflowX: 'hidden',
+    },
+  }),
   colors: {
     blue: [
       '#8290a2',

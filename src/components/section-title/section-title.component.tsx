@@ -10,34 +10,26 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children, align, ...other }
   const { classes } = useStyles();
 
   return (
-    <>
-      <div
-        id={children}
+    <Flex justify={align}>
+      <Link
+        href={`#${children}`}
         style={{
-          transform: 'translateY(-2rem)',
+          textDecoration: 'none',
+          color: 'inherit',
+          display: 'inline',
         }}
-      />
-      <Flex justify={align}>
-        <Link
-          href={`#${children}`}
+      >
+        <Title
+          className={classes.title}
           style={{
-            textDecoration: 'none',
-            color: 'inherit',
-            display: 'inline',
+            display: 'block',
           }}
+          {...other}
         >
-          <Title
-            className={classes.title}
-            style={{
-              display: 'block',
-            }}
-            {...other}
-          >
-            {children}
-          </Title>
-        </Link>
-      </Flex>
-    </>
+          {children}
+        </Title>
+      </Link>
+    </Flex>
   );
 };
 
