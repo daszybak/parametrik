@@ -8,8 +8,12 @@ export const useStyles = createStyles(
     }
   ) => ({
     section: {
-      marginTop: params && params.first === true ? '8rem' : '3rem',
-      marginBottom: '5rem',
+      marginTop: params && params.first === true ? '8rem' : '0',
+      marginBottom: params && params.first === true ? '0' : '5rem',
+      height: '100%',
+    },
+    sectionHeight: {
+      minHeight: '100vh',
     },
   })
 );

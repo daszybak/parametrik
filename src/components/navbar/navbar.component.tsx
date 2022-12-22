@@ -11,12 +11,14 @@ const Navbar: React.FC<NavbarProps> = () => {
   const { classes } = useStyles();
 
   return (
-    <Container fluid className={classes.navbar}>
-      <Flex justify="space-between" align="center">
-        <Logo />
-        <Menu />
-      </Flex>
-    </Container>
+    <header>
+      <Container fluid className={classes.navbar}>
+        <Flex justify="space-between" align="center">
+          <Logo />
+          <Menu />
+        </Flex>
+      </Container>
+    </header>
   );
 };
 export default Navbar;

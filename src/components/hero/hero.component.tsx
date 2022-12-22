@@ -10,14 +10,8 @@ const Hero: React.FC<HeroProps> = () => {
   const { classes } = useStyles();
 
   return (
-    <Section first>
-      <Flex
-        direction="column"
-        align="center"
-        style={{
-          height: '100vh',
-        }}
-      >
+    <Section id="Hero" first>
+      <Flex direction="column" align="center">
         <Image
           className={classes.backgroundImage}
           src="/hero.jpg"

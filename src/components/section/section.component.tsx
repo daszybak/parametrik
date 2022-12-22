@@ -3,17 +3,20 @@ import { useIntersection, useIsomorphicEffect } from '@mantine/hooks';
 import { useState } from 'react';
 import { useStyles } from './section.styles';
 
+const TRANSITION_DURATION = 1000;
+
 interface SectionProps {
   children: React.ReactNode;
   first?: boolean;
+  id: string;
 }
 
-const Section: React.FC<SectionProps> = ({ children, first }) => {
+const Section: React.FC<SectionProps> = ({ children, id, first }) => {
   const { classes } = useStyles({
     first,
   });
   const { ref, entry } = useIntersection({
-    rootMargin: '-50px',
+    rootMargin: '-150px',
     threshold: 0,
     root: null,
   });
@@ -21,20 +24,27 @@ const Section: React.FC<SectionProps> = ({ children, first }) => {
   const [interesected, setIntersected] = useState<boolean>(false);
   useIsomorphicEffect(() => {
     if (interesected) return;
+    console.log('interesecting', interesecting);
+
     setIntersected(interesecting);
   }, [interesecting]);
 
   return (
-    <>
-      <div ref={ref} />
-      <Transition transition="fade" mounted={first ? true : interesected}>
+    <div id={id} key={id} ref={ref} className={classes.sectionHeight}>
+      <Transition
+        transition="fade"
+        duration={TRANSITION_DURATION}
+        mounted={first ? true : interesected}
+      >
         {(styles) => (
-          <Container fluid className={classes.section} style={{ ...styles }}>
-            {children}
-          </Container>
+          <section>
+            <Container fluid className={classes.section} style={{ ...styles }} id={id} key={id}>
+              {children}
+            </Container>
+          </section>
         )}
       </Transition>
-    </>
+    </div>
   );
 };
 

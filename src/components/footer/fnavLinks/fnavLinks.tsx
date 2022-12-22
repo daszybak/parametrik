@@ -23,9 +23,11 @@ const FNavLinks: React.FC<FnNavLinksProps> = (props) => {
       >
         Links
       </Title>
-      <Flex wrap="wrap" gap="3rem" align="center" {...props}>
-        {renderedLinks}
-      </Flex>
+      <nav>
+        <Flex wrap="wrap" gap="3rem" align="center" {...props}>
+          {renderedLinks}
+        </Flex>
+      </nav>
     </>
   );
 };

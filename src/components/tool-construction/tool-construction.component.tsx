@@ -4,10 +4,14 @@ import Section from '../section/section.component';
 interface ToolConstructionProps {}
 
 // eslint-disable-next-line max-len
-const ToolConstruction: React.FC<ToolConstructionProps> = () => (
-  <Section>
-    <SectionTitle align="center">Tool Construction</SectionTitle>
-  </Section>
-);
+const ToolConstruction: React.FC<ToolConstructionProps> = () => {
+  const name = 'Tool Construction';
+
+  return (
+    <Section id={name}>
+      <SectionTitle align="center">{name}</SectionTitle>
+    </Section>
+  );
+};
 
 export default ToolConstruction;

@@ -3,10 +3,14 @@ import Section from 'src/components/section/section.component';
 
 interface DetailConceptPlanProps {}
 
-const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => (
-  <Section>
-    <SectionTitle align="end">Detail Concept Plan</SectionTitle>
-  </Section>
-);
+const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
+  const name = 'Detail Concept Plan';
+
+  return (
+    <Section id={name}>
+      <SectionTitle align="end">Detail Concept Plan</SectionTitle>
+    </Section>
+  );
+};
 
 export default DetailConceptPlan;

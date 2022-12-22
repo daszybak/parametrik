@@ -16,11 +16,13 @@ const Menu: React.FC<MenuProps> = () => {
     <>
       <Transition mounted={open} transition="slide-left" timingFunction="ease">
         {(styles) => (
-          <Flex style={{ ...styles }}>
-            <Anchor size="lg" className={classes.link}>
-              Menu
-            </Anchor>
-          </Flex>
+          <nav>
+            <Flex style={{ ...styles }}>
+              <Anchor size="lg" className={classes.link}>
+                Menu
+              </Anchor>
+            </Flex>
+          </nav>
         )}
       </Transition>
       <Burger onClick={handleToggleMenu} opened={open} color={theme.colors.gray[4]} size="lg" />
