@@ -1,5 +1,6 @@
 import { Title as MantineTitle } from '@mantine/core';
-import { useContext, useState } from 'react';
+import { useRouter } from 'next/router';
+import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PageLoadContext } from 'src/context/page-load-context-provider/page-load-context-provider';
 import TypeIt from 'typeit-react';
@@ -9,10 +10,18 @@ interface TitleProps {}
 
 // eslint-disable-next-line arrow-body-style
 const Title: React.FC<TitleProps> = () => {
-  const { classes, theme } = useStyles();
+  const { classes, theme, cx } = useStyles();
   const { t } = useTranslation();
   const { loaded } = useContext(PageLoadContext);
-  const [finished, setFinished] = useState(false);
+  const [finishedA, setFinishedA] = useState<boolean>(false);
+  const { locale } = useRouter();
+  const [changedLocale, setChangedLocale] = useState<string | boolean>(locale!);
+
+  useEffect(() => {
+    if (locale !== undefined && changedLocale !== locale) {
+      setChangedLocale(true);
+    }
+  }, [setChangedLocale, locale]);
 
   return (
     <>
@@ -27,8 +36,10 @@ const Title: React.FC<TitleProps> = () => {
           <TypeIt
             options={{
               afterComplete: (instance: any) => {
-                instance.destroy();
-                setFinished(true);
+                const cursor = instance.getElement().querySelector('.ti-cursor');
+
+                cursor.remove();
+                setFinishedA(true);
               },
               lifeLike: true,
               waitUntilVisible: true,
@@ -45,20 +56,38 @@ const Title: React.FC<TitleProps> = () => {
           color: theme.white,
           fontSize: '1.5rem',
         }}
-        className={classes.title}
+        className={cx(classes.title)}
       >
-        {finished === true ? (
-          //@ts-ignore
-          <TypeIt
-            as="p"
-            options={{
-              afterComplete: (instance: any) => instance.destroy(),
-              lifeLike: true,
-              waitUntilVisible: true,
-            }}
-          >
-            {t<string>('common:slogan')}
-          </TypeIt>
+        {finishedA === true ? (
+          <>
+            {/* //@ts-ignore */}
+            <div className={cx(classes.gridItem, { [classes.invisible]: changedLocale === true })}>
+              <TypeIt
+                as="p"
+                options={{
+                  afterComplete: (instance: any) => {
+                    const cursor = instance.getElement().querySelector('.ti-cursor');
+
+                    cursor.remove();
+                  },
+                  lifeLike: true,
+                  waitUntilVisible: true,
+                  html: true,
+                  breakLines: false,
+                }}
+              >
+                {t<string>('common:slogan')}
+              </TypeIt>
+            </div>
+            <p
+              className={cx({ [classes.invisible]: changedLocale !== true })}
+              style={{
+                zIndex: 1,
+              }}
+            >
+              {t<string>('common:slogan')}
+            </p>
+          </>
         ) : null}
       </div>
     </>

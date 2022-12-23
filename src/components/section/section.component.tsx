@@ -31,7 +31,7 @@ const Section: React.FC<SectionProps> = ({ children, id, first }) => {
     <>
       <div
         style={{
-          transform: 'translateY(-2rem)',
+          transform: 'translateY(-7rem)',
         }}
         id={id}
       />

@@ -104,6 +104,7 @@ export const mantineTheme: MantineThemeOverride = {
       styles: (theme: MantineTheme, params: TitleStylesParams) => ({
         root: {
           textTransform: 'uppercase',
+          letterSpacing: '0.05em',
         },
       }),
     },

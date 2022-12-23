@@ -21,6 +21,9 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     left: 0,
     right: 0,
     zIndex: 100,
+    backgroundColor: theme.colors.blue[4],
+    // add cool blur
+    opacity: 0.95,
     // animation: `${shine} infinite 6s linear`,
     // backgroundRepeat: 'no-repeat',
     // // background: `linear-gradient(

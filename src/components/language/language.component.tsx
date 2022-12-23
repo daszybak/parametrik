@@ -32,6 +32,7 @@ const Language: React.FC<LanguageProps> = (props) => {
       asPath,
       {
         locale: newLocale?.code || '',
+        shallow: false,
       }
     );
   };

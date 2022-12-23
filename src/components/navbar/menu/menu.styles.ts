@@ -4,6 +4,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   link: {
     textDecoration: 'none',
     color: theme.colors.gray[0],
+    letterSpacing: '0.04em',
 
     //transition
     transition: 'all 0.2s ease-in-out',

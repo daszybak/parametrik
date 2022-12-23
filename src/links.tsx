@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FcWorkflow } from 'react-icons/fc';
 import { FaProjectDiagram } from 'react-icons/fa';
@@ -25,14 +24,10 @@ export const links = [
 export const useLinks = () => {
   const { t } = useTranslation();
 
-  const memoLinks = useMemo(
-    () =>
-      links.map((link) => ({
-        ...link,
-        title: t<string>(`common:navbar.${link.title}`),
-      })),
-    []
-  );
+  const memoLinks = links.map((link) => ({
+    ...link,
+    title: t<string>(`common:navbar.${link.title}`),
+  }));
 
   return memoLinks;
 };
