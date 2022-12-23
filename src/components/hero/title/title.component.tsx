@@ -1,5 +1,6 @@
 import { Title as MantineTitle } from '@mantine/core';
 import { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { PageLoadContext } from 'src/context/page-load-context-provider/page-load-context-provider';
 import TypeIt from 'typeit-react';
 import { useStyles } from './title.styles';
@@ -9,6 +10,7 @@ interface TitleProps {}
 // eslint-disable-next-line arrow-body-style
 const Title: React.FC<TitleProps> = () => {
   const { classes, theme } = useStyles();
+  const { t } = useTranslation();
   const { loaded } = useContext(PageLoadContext);
   const [finished, setFinished] = useState(false);
 
@@ -55,7 +57,7 @@ const Title: React.FC<TitleProps> = () => {
               waitUntilVisible: true,
             }}
           >
-            Your success is our mission.
+            {t<string>('common:slogan')}
           </TypeIt>
         ) : null}
       </div>

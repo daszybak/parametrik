@@ -1,0 +1,72 @@
+{
+  "workflow-text": {
+      "text1":"We have specialized in assisting automotive companies with the sheet metal development process which is essential for the construction of cars.",
+
+      "text2": "Our specialty lies in:"
+},
+
+  "workflow-areas": {
+      "feasibility-study":"feasibility study",
+      "detail-method-plan":"detail method plan",
+      "tool-construction":"tool construction",
+      "final-part":"final part"
+
+
+    
+ },
+  "feasibility-study-text": {
+     "text2": "We use AutoForm software to simulate the entire production process, from the initial blank shape to the final part. This allows us to optimize the process parameters and reduce the cost of production.",
+
+    "text2-2": "Our team of experienced engineers can provide you with the best possible solutions for your sheet metal forming needs. "
+  },
+    
+  "feasibility-study-process": {
+    "part-positioning":"part positioning",
+    "creating-geometry":"creating geometry",
+    "simulation":"simulation and post process analysis",
+    "preliminary-method":"preliminary method plan",
+    "simulation-report":"simulation report",
+    "change-request":"change request",
+    "more":"more examples"
+
+  
+  
+},
+
+  "detail-method-plan":{
+      "text3":"After the feasibility studies are conducted and components are optimized and approved follows a development of a detailed method plan for each sheet metal part",
+      "creating-punch":"creating punch",
+      "creating-blankholder":"creating blankholder",
+      "creating-die":"creating die",
+      "defining-blank-size":"defining blank size",
+      "trim-plan":"trim plan & form operations"
+    
+  },
+
+
+  
+  "tool-construction": {
+    "text4": "Using optimized surfaces and curves from a detailed method plan we start with the tool construction for die-stamping presses"
+  },
+"tool-construction-process":{
+    "usingCAD": "using CAD surfaces as input",
+    "creating-parts":"creating active parts",
+    "creating-post":"creating lower post & upper holding pad",
+    "creating-die":"creating lower & upper die",
+    "final-product":"final product",
+    "tool-in":"tool in designated press"  
+   },
+
+
+
+  
+"about-us":{
+    "about-us":"about us",
+    "project-lead-con":"project lead tool construction",
+    "project-lead-sim":"project lead simulation & method planning",
+    "location":"location",
+  
+  "text5":"We specialized in engineering for automotive companies and as such, we worked on projects for various OEMs:"}
+
+  
+}

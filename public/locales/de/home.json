@@ -1,0 +1,72 @@
+{
+  "workflow-text": {
+      "text1":"Wir haben uns darauf spezialisiert, Automobilunternehmen bei der Entwicklung von Blechteilen zu unterstützen, die für den Bau von Autos essentiell sind.",
+
+      "text2": "Unsere Spezialität liegt in:"
+},
+
+  "workflow-areas": {
+      "feasibility-study":"Machbarkeitsstudie",
+      "detail-method-plan":"serien Methoden",
+      "tool-construction":"Werkzeug konstruktion",
+      "final-part":"fertig Bauteil"
+
+
+    
+ },
+  "feasibility-study-text": {
+     "text2": "Wir verwenden die AutoForm-Software, um den gesamten Produktionsprozess von der ursprünglichen Theoretische Platine bis zum endgültigen Teil zu simulieren. Dadurch können wir die Prozessparameter optimieren und die Produktionskosten reduzieren.",
+
+    "text2-2": "Unser Team erfahrener Ingenieure kann Ihnen die bestmöglichen Lösungen für Ihre Bedürfnisse im Blechumformungsbereich bieten. "
+  },
+    
+  "feasibility-study-process": {
+    "part-positioning":"Bauteil positionierung",
+    "creating-geometry":"Erstellung von Geometrie",
+    "simulation":"Simulation und Nachbearbeitungsanalyse",
+    "preliminary-method":"Vorläufiger Methodenplan",
+    "simulation-report":"Simulationsbericht",
+    "change-request":"Änderungsanfrage",
+    "more":"mehr Beispiele"
+
+  
+  
+},
+
+  "detail-method-plan":{
+      "text3":"Nachdem die Machbarkeitsstudien durchgeführt und die Komponenten optimiert und genehmigt wurden, erfolgt die Entwicklung eines detaillierten Methodenplans für jedes Blechteil.",
+      "creating-punch":"Ziehstempel erstellen",
+      "creating-blankholder":"Blechhalter erstellen",
+      "creating-die":"Ziehmatrize erstellen ",
+      "defining-blank-size":"Theoretische Platine festlegen",
+      "trim-plan":"Beschneid und Form Operationen erstellen"
+    
+  },
+
+
+  
+  "tool-construction": {
+    "text4": "Wir beginnen mit der Werkzeugkonstruktion für Stanzpressen, indem wir optimierte Flächen und Kurven aus einem detaillierten Methodenplan verwenden."
+  },
+"tool-construction-process":{
+    "usingCAD": "CAD-Flächen als Eingabe verwenden",
+    "creating-parts":"Aktivteile erstellen",
+    "creating-post":"Scheidaufsatz und Niederhalter erstellen",
+    "creating-die":"Unterteil und Oberteil Guss erstellen",
+    "final-product":"Fertig Werkzeug Ansicht",
+    "tool-in":"Werkzeug in die Presse"  
+   },
+
+
+
+  
+"about-us":{
+    "about-us":"Über uns",
+    "project-lead-con":"Leiter Werkzeug Konstruktion",
+    "project-lead-sim":"Leiter Simulation & Methodenplanung",
+    "location":"Standort",
+  
+  "text5":"Wir haben uns auf die Ingenieursarbeit für Automobilunternehmen spezialisiert und haben daher an Projekten für verschiedene OEMs gearbeitet:"}
+
+  
+}

@@ -1,3 +1,6 @@
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { DEFAULT_LOCALE } from 'src/components/constants';
 import DetailConceptPlan from 'src/components/detail-concept-plan/detail-concept-plan';
 import FeasibilityStudy from 'src/components/feasibility-study/feasibility-study.component';
 import Hero from 'src/components/hero/hero.component';
@@ -19,5 +22,11 @@ const Home: React.FC<HomeProps> = () => (
     <Location />
   </>
 );
+
+export const getStaticProps: GetStaticProps = async ({ locale = DEFAULT_LOCALE }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common', 'home'])),
+  },
+});
 
 export default Home;

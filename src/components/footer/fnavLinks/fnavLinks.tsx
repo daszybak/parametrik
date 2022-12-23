@@ -1,5 +1,5 @@
 import { Anchor, Flex, FlexProps, Title } from '@mantine/core';
-import { links } from 'src/constants';
+import { links } from 'src/links';
 
 interface FnNavLinksProps extends FlexProps {}
 

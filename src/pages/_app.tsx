@@ -6,7 +6,7 @@ import { mantineTheme } from 'mantine-theme';
 import MenuContextProvider from 'src/context/menu/menuContextProvider';
 import { PageLoadContextProvider } from 'src/context/page-load-context-provider/page-load-context-provider';
 import Layout from './layout';
-//import nextI18NextConfig from '../next-i18next.config';
+import nextI18NextConfig from '../../next-i18next.config';
 
 function _App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -32,4 +32,4 @@ function _App(props: AppProps & { colorScheme: ColorScheme }) {
   );
 }
 
-export default appWithTranslation(_App /*nextI18NextConfig*/);
+export default appWithTranslation(_App, nextI18NextConfig);

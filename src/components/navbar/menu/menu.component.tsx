@@ -1,5 +1,7 @@
 import { Anchor, Burger, Flex, Transition } from '@mantine/core';
 import { useState } from 'react';
+import Language from 'src/components/language/language.component';
+import { useLinks } from 'src/links';
 import { useStyles } from './menu.styles';
 
 interface MenuProps {}
@@ -7,20 +9,28 @@ interface MenuProps {}
 const Menu: React.FC<MenuProps> = () => {
   const { classes, theme } = useStyles();
   const [open, setOpen] = useState(false);
+  const links = useLinks();
 
   const handleToggleMenu = () => {
     setOpen((opened) => !opened);
   };
+
+  const renderedLinks = links.map(({ href, title }) => (
+    <Anchor key={href} href={href} size="lg" transform="uppercase" className={classes.link}>
+      {title}
+    </Anchor>
+  ));
 
   return (
     <>
       <Transition mounted={open} transition="slide-left" timingFunction="ease">
         {(styles) => (
           <nav>
-            <Flex style={{ ...styles }}>
-              <Anchor size="lg" className={classes.link} transform="uppercase">
-                Menu
-              </Anchor>
+            <Flex style={{ ...styles }} justify="space-between" gap="2rem" align="center">
+              <>
+                {renderedLinks}
+                <Language size="lg" className={classes.link} transform="uppercase" />
+              </>
             </Flex>
           </nav>
         )}

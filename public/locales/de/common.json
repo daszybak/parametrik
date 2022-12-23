@@ -1,0 +1,22 @@
+{
+  "slogan": "Ihr Erfolg ist unsere Mission",
+  "navbar": {
+    "workflow": "Arbeitsablauf",
+    "portfolio": "Portfolio",
+    "about-us": "Über uns"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "find-us-on": "finden Sie uns auf",
+    "all-rights-reserved": "Alle Rechte vorbehalten"
+  },
+  "contact-form": {
+    "contact-us": "Kontaktieren Sie uns",
+    "name": "Name",
+    "company": "Firma",
+    "email": "E-mail-Adresse",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "submit": "senden"
+  }
+}

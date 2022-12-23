@@ -1,0 +1,22 @@
+{
+  "slogan": "your success is our mission",
+  "navbar": {
+    "workflow": "workflow",
+    "portfolio": "portfolio",
+    "about-us": "about us"
+  },
+  "footer": {
+    "contact": "contact",
+    "find-us-on": "find us on",
+    "all-rights-reserved": "all rights reserved"
+  },
+  "contact-form": {
+    "contact-us": "contact us",
+    "name": "name",
+    "company": "company",
+    "email": "e-mail",
+    "phone": "phone",
+    "message": "message",
+    "submit": "submit"
+  }
+}
