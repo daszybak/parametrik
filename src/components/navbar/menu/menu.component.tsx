@@ -18,7 +18,7 @@ const Menu: React.FC<MenuProps> = () => {
         {(styles) => (
           <nav>
             <Flex style={{ ...styles }}>
-              <Anchor size="lg" className={classes.link}>
+              <Anchor size="lg" className={classes.link} transform="uppercase">
                 Menu
               </Anchor>
             </Flex>
