@@ -11,7 +11,6 @@ export const getServerSideProps: GetServerSideProps = async ({ locale = DEFAULT_
     projects: (await client.fetch('*[_type == "project"]')) || [],
     ...(await serverSideTranslations(locale, ['common', 'home'])),
   },
-  revalidate: 60,
 });
 
 export default Portfolio;
