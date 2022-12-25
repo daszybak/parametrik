@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE } from 'src/components/constants';
 import DetailConceptPlan from 'src/components/detail-concept-plan/detail-concept-plan';
@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = () => (
   </>
 );
 
-export const getStaticProps: GetStaticProps = async ({ locale = DEFAULT_LOCALE }) => ({
+export const getServerSideProps: GetServerSideProps = async ({ locale = DEFAULT_LOCALE }) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common', 'home'])),
   },

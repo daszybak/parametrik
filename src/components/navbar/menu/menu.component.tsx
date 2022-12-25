@@ -1,4 +1,5 @@
 import { Anchor, Burger, Flex, Transition } from '@mantine/core';
+import Link from 'next/link';
 import { useState } from 'react';
 import Language from 'src/components/language/language.component';
 import { useLinks } from 'src/links';
@@ -16,9 +17,11 @@ const Menu: React.FC<MenuProps> = () => {
   };
 
   const renderedLinks = links.map(({ href, title }) => (
-    <Anchor key={href} href={href} size="lg" transform="uppercase" className={classes.link}>
-      {title}
-    </Anchor>
+    <Link key={href} href={href}>
+      <Anchor size="lg" transform="uppercase" className={classes.link}>
+        {title}
+      </Anchor>
+    </Link>
   ));
 
   return (
