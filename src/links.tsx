@@ -10,7 +10,7 @@ export const links = [
     icon: <FcWorkflow />,
   },
   {
-    href: '/#portfolio',
+    href: '/portfolio',
     title: 'portfolio',
     icon: <FaProjectDiagram />,
   },

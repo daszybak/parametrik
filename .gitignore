@@ -41,3 +41,6 @@ storybook-static
 # storybook
 storybook-static
 node_modules
+
+# igonre .env file
+.env
