@@ -5,7 +5,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   footer: {
     paddingTop: '5rem',
     paddingBottom: '2rem',
-    backgroundColor: theme.colors.gray[0],
+    backgroundColor: theme.colors.gray[2],
     minHeight: '100vh',
   },
   marginB5: { marginBottom: '10rem' },

@@ -27,5 +27,12 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
       borderRight: `1px dashed ${theme.colors.blue[2]}`,
     },
   },
-  gridItem: {},
+  gridItem: {
+    padding: '1rem',
+
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+  },
+  marginB3: { marginBottom: '3rem' },
 }));
