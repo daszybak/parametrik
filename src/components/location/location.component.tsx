@@ -19,16 +19,27 @@ const Location: React.FC<LocationProps> = () => {
   if (typeof window !== 'undefined') Globe = require('react-globe.gl').default;
 
   return (
-    <Section id={name}>
+    <Section
+      id={name}
+      last
+      style={{
+        backgroundColor: theme.colors.gray[0],
+        paddingTop: '2rem',
+      }}
+    >
       <SectionTitle align="center">{name}</SectionTitle>
       <Flex justify="center">
         <Globe
           ref={globeEl}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
           backgroundColor={theme.colors.gray[0]}
-          width={width * 0.8}
+          width={width}
           onGlobeReady={() => {
-            globeEl.current?.pointOfView({ lat: 45.1, lng: 15.2, altitude: 1.8 }, 5000);
+            // eslint-disable-next-line max-len
+            globeEl.current?.pointOfView(
+              { lat: 45.1, lng: 15.2, altitude: width < 1000 ? 3 : 1.8 },
+              5000
+            );
             const controls = globeEl.current?.controls();
             if (controls) {
               controls.enableZoom = false;

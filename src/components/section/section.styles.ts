@@ -5,11 +5,12 @@ export const useStyles = createStyles(
     theme: MantineTheme,
     params: {
       first?: boolean;
+      last?: boolean;
     }
   ) => ({
     section: {
       marginTop: params && params.first === true ? '8rem' : '0',
-      marginBottom: params && params.first === true ? '0' : '5rem',
+      marginBottom: params && params.last === true ? '0' : '8rem',
       height: '100%',
     },
     sectionHeight: {

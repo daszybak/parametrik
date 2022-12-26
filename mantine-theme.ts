@@ -92,6 +92,14 @@ export const mantineTheme: MantineThemeOverride = {
     xs: 14,
   },
   components: {
+    Button: {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      styles: (theme: MantineTheme) => ({
+        label: {
+          letterSpacing: '0.1em',
+        },
+      }),
+    },
     Container: {
       styles: (theme: MantineTheme, params: ContainerStylesParams) => ({
         root: {

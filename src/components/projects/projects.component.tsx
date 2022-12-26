@@ -1,6 +1,6 @@
-import { Title } from '@mantine/core';
 import { useContext } from 'react';
 import { ProjectsContext } from 'src/context/projects/projects-context-provider.component';
+import SectionTitle from '../section-title/section-title.component';
 import Section from '../section/section.component';
 import Project from './project/project.component';
 
@@ -15,7 +15,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
   return (
     <Section first id="Projects">
-      <Title order={1}>Projects</Title>
+      <SectionTitle>Projects</SectionTitle>
       {renderedProjects}
     </Section>
   );

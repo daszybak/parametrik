@@ -5,15 +5,17 @@ import { useStyles } from './section.styles';
 
 const TRANSITION_DURATION = 1000;
 
-interface SectionProps {
+interface SectionProps extends React.ComponentPropsWithRef<'div'> {
   children: React.ReactNode;
   first?: boolean;
   id: string;
+  last?: boolean;
 }
 
-const Section: React.FC<SectionProps> = ({ children, id, first }) => {
-  const { classes } = useStyles({
+const Section: React.FC<SectionProps> = ({ children, id, first, last, className, ...other }) => {
+  const { classes, cx } = useStyles({
     first,
+    last,
   });
   const { ref, entry } = useIntersection({
     rootMargin: '-150px',
@@ -35,7 +37,7 @@ const Section: React.FC<SectionProps> = ({ children, id, first }) => {
         }}
         id={id}
       />
-      <div key={id} ref={ref} className={classes.sectionHeight}>
+      <div key={id} ref={ref} className={cx(classes.sectionHeight, className)} {...other}>
         <Transition
           transition="fade"
           duration={first ? 0 : TRANSITION_DURATION}

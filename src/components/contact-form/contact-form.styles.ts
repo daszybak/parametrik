@@ -7,9 +7,24 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   formContainer: {
     textTransform: 'uppercase',
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gridTemplateRows: '1fr 1fr 1fr',
+    gridTemplateColumns: 'auto auto',
+    gridTemplateRows: 'repeat(4, 83px)',
     rowGap: '2rem',
     gridAutoFlow: 'column',
+    columnGap: '2rem',
+    margin: '0 auto',
+
+    alignItems: 'end',
+
+    '@media (max-width: 768px)': {
+      margin: 0,
+      gridTemplateColumns: 'auto',
+    },
+  },
+  gridRow1: {
+    gridRow: '1 / 2',
+  },
+  gridRow4: {
+    gridRow: '4 / 5',
   },
 }));

@@ -10,14 +10,13 @@ const FInfo: React.FC<FInfoProps> = () => (
   <div className={styles.fInfo}>
     <div className={styles['grid-l']}>
       <Logo />
-
       <div className={styles.item}>
         <Title order={4} className={styles.title}>
           CONTACT
         </Title>
         <div className={styles['grid-sm']}>
           <Anchor href="mailto:info@parametrik.hr">info@parametrik.hr</Anchor>
-          <Anchor href="tel:+38591123456"> tel: +385 91 123456</Anchor>
+          <Anchor href="tel:+ 38516011520"> tel: + 385 (0)1 6011 520</Anchor>
           Parametrik d.o.o. <br />
           HR-10000 Zagreb <br />
           Zagrebačka cesta 143a

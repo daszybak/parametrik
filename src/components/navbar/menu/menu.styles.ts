@@ -8,6 +8,8 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
 
     //transition
     transition: 'all 0.2s ease-in-out',
+    textTransform: 'uppercase',
+    fontSize: theme.fontSizes.lg,
 
     //hover
     '&:hover': {
