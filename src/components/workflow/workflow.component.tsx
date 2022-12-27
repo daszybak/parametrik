@@ -30,7 +30,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
           height: '100%',
         }}
         align="center"
-        gap="10rem"
+        justify="space-around"
       >
         <div className={classes.playerWrapper}>
           <video
@@ -49,7 +49,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
               {t<string>('home:workflow-areas.feasibility-study')}
             </Title>
             <Image
-              src="/workflow/Picture1.jpg"
+              src="/workflow/Picture4.jpg"
               alt={t<string>('home:workflow-areas.feasibility-study')}
               width={200}
               height={160}
@@ -58,11 +58,11 @@ const Workflow: React.FC<WorkflowProps> = () => {
           </div>
           <div className={cx(classes.gridItem)}>
             <Title order={4} className={classes.gridItemTitle}>
-              {t<string>('home:workflow-areas.feasibility-study')}
+              {t<string>('home:workflow-areas.detail-method-plan')}
             </Title>
             <Image
-              src="/workflow/Picture1.jpg"
-              alt={t<string>('home:workflow-areas.feasibility-study')}
+              src="/workflow/Picture2.jpg"
+              alt={t<string>('home:workflow-areas.detail-method-plan')}
               width={200}
               height={160}
               className={classes.border}
@@ -70,11 +70,11 @@ const Workflow: React.FC<WorkflowProps> = () => {
           </div>
           <div className={cx(classes.gridItem)}>
             <Title order={4} className={classes.gridItemTitle}>
-              {t<string>('home:workflow-areas.feasibility-study')}
+              {t<string>('home:workflow-areas.tool-construction')}
             </Title>
             <Image
               src="/workflow/Picture1.jpg"
-              alt={t<string>('home:workflow-areas.feasibility-study')}
+              alt={t<string>('home:workflow-areas.tool-construction')}
               width={200}
               height={160}
               className={classes.border}
@@ -82,38 +82,29 @@ const Workflow: React.FC<WorkflowProps> = () => {
           </div>
           <div className={cx(classes.gridItem)}>
             <Title order={4} className={classes.gridItemTitle}>
-              {t<string>('home:workflow-areas.feasibility-study')}
+              {t<string>('home:workflow-areas.final-part')}
             </Title>
             <Image
-              src="/workflow/Picture1.jpg"
-              alt={t<string>('home:workflow-areas.feasibility-study')}
+              src="/workflow/Picture5.jpg"
+              alt={t<string>('home:workflow-areas.final-part')}
               width={200}
               height={160}
               className={classes.border}
             />
           </div>
-          <div className={cx(classes.gridItem)}>
-            <Title order={4} className={classes.gridItemTitle}>
-              {t<string>('home:workflow-areas.feasibility-study')}
-            </Title>
+
+          <div
+            className={cx(classes.gridItem)}
+            style={{
+              gridColumn: '2 / 3',
+              gridRow: '2 / 4',
+            }}
+          >
             <Image
-              src="/workflow/Picture1.jpg"
-              alt={t<string>('home:workflow-areas.feasibility-study')}
-              width={200}
-              height={160}
-              className={classes.border}
-            />
-          </div>
-          <div className={cx(classes.gridItem)}>
-            <Title order={4} className={classes.gridItemTitle}>
-              {t<string>('home:workflow-areas.feasibility-study')}
-            </Title>
-            <Image
-              src="/workflow/Picture1.jpg"
-              alt={t<string>('home:workflow-areas.feasibility-study')}
-              width={200}
-              height={160}
-              className={classes.border}
+              src="/workflow/Pic9.jpg"
+              alt={t<string>('home:workflow-areas.final-part')}
+              width={300}
+              height={150}
             />
           </div>
         </div>

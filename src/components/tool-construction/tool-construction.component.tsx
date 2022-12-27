@@ -25,7 +25,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
       <Grid className={classes.marginB3}>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:tool-construction-process.usingCAD')}
           </Title>
           <Flex
@@ -53,7 +57,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:tool-construction-process.creating-post')}
           </Title>
           <Flex
@@ -74,7 +82,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <BsArrowReturnLeft className={cx(classes.arrow, classes.arrow2)} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:tool-construction-process.creating-post')}
           </Title>
           <Flex
@@ -104,7 +116,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:tool-construction-process.creating-die')}
           </Title>
           <Flex
@@ -134,7 +150,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:tool-construction-process.final-product')}
           </Title>
           <Flex
@@ -154,7 +174,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:tool-construction-process.tool-in')}
           </Title>
           <Flex

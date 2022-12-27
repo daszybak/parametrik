@@ -32,12 +32,7 @@ const Section: React.FC<SectionProps> = ({ children, id, first, last, className,
   return (
     <>
       <div key={id} ref={ref} className={cx(classes.sectionHeight, className)} {...other}>
-        <div
-          style={{
-            transform: 'translateY(-7rem)',
-          }}
-          id={id.replaceAll(' ', '-').toLowerCase()}
-        />
+        <div className={classes.id} id={id.replaceAll(' ', '-').toLowerCase()} />
         <Transition
           transition="fade"
           duration={first ? 0 : TRANSITION_DURATION}

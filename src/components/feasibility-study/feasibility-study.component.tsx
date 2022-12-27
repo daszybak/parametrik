@@ -32,7 +32,11 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
       <Grid className={classes.marginB3}>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:feasibility-study-process.part-positioning')}
           </Title>
           <Flex
@@ -52,7 +56,11 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:feasibility-study-process.creating-geometry')}
           </Title>
           <Flex
@@ -73,7 +81,11 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <BsArrowReturnLeft className={cx(classes.arrow, classes.arrow2)} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:feasibility-study-process.simulation')}
           </Title>
           <Flex
@@ -110,7 +122,11 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:feasibility-study-process.preliminary-method')}
           </Title>
           <Flex
@@ -131,7 +147,11 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:feasibility-study-process.simulation-report')}
           </Title>
           <Flex
@@ -171,7 +191,11 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:feasibility-study-process.change-request')}
           </Title>
           <Flex

@@ -18,7 +18,8 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   border: {
     border: `1px solid ${theme.colors.blue[2]}`,
     borderRadius: '50%',
-    boxShadow: theme.shadows.md,
+    // small shadow bottom
+    boxShadow: '1px 0 0 2px rgba(0, 0, 0, 0.05)',
   },
   grid: {
     display: 'grid',
@@ -28,10 +29,18 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     gridTemplateRows: 'repeat(3, 1fr)',
     gridAutoFlow: 'column',
     rowGap: '1rem',
-    columnGap: '2rem',
+    columnGap: '5rem',
+    justifyItems: 'center',
+    justifyContent: 'center',
   },
   gridItem: {
     overflow: 'hidden',
+    width: '100%',
+
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   gridItemTitle: {
     marginBottom: '1rem',
@@ -39,5 +48,6 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     border: `1px solid ${theme.colors.gray[4]}`,
     textAlign: 'center',
     borderRadius: theme.radius.sm,
+    width: '100%',
   },
 }));

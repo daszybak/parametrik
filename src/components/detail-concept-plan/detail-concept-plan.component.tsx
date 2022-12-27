@@ -25,7 +25,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
       <Grid className={classes.marginB3}>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:feasibility-study-process.part-positioning')}
           </Title>
           <Flex
@@ -45,7 +49,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:detail-method-plan.creating-punch')}
           </Title>
           <Flex
@@ -66,7 +74,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <BsArrowReturnLeft className={cx(classes.arrow, classes.arrow2)} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:detail-method-plan.creating-blankholder')}
           </Title>
           <Flex
@@ -96,7 +108,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:detail-method-plan.creating-die')}
           </Title>
           <Flex
@@ -117,7 +133,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         </Grid.Item>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:detail-method-plan.defining-blank-size')}
           </Title>
           <Flex
@@ -146,7 +166,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
             {t<string>('home:detail-method-plan.trim-plan')}
           </Title>
           <Flex

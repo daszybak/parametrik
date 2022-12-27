@@ -14,4 +14,11 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   arrow2: {
     top: '80%',
   },
+  itemTitle: {
+    marginBottom: '1rem',
+    backgroundColor: theme.colors.gray[2],
+    border: `1px solid ${theme.colors.gray[4]}`,
+    textAlign: 'center',
+    borderRadius: theme.radius.sm,
+  },
 }));

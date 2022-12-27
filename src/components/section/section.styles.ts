@@ -14,7 +14,10 @@ export const useStyles = createStyles(
       height: '100%',
     },
     sectionHeight: {
-      minHeight: '100vh',
+      minHeight: 'calc(100vh - 8rem)',
+    },
+    id: {
+      transform: 'translateY(-7rem)',
     },
   })
 );
