@@ -9,7 +9,7 @@ export const useStyles = createStyles(
     }
   ) => ({
     section: {
-      marginTop: params && params.first === true ? '8rem' : '0',
+      marginTop: '8rem',
       marginBottom: params && params.last === true ? '0' : '8rem',
       height: '100%',
     },

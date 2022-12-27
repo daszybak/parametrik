@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE } from 'src/components/constants';
-import DetailConceptPlan from 'src/components/detail-concept-plan/detail-concept-plan';
+import DetailConceptPlan from 'src/components/detail-concept-plan/detail-concept-plan.component';
 import FeasibilityStudy from 'src/components/feasibility-study/feasibility-study.component';
 import Hero from 'src/components/hero/hero.component';
 import Location from 'src/components/location/location.component';

@@ -8,7 +8,7 @@ import Section from 'src/components/section/section.component';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { links } from 'src/links';
 import { BsArrowReturnLeft } from 'react-icons/bs';
-import { useStyles } from './tool-construction.styles';
+import { useStyles } from './detail-concept-plan.styles';
 import Grid from '../grid/grid.component';
 
 interface DetailConceptPlanProps {}
@@ -16,45 +16,17 @@ interface DetailConceptPlanProps {}
 const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
   const { classes, cx } = useStyles();
   const { t } = useTranslation();
-  const name = 'tool-construction';
+  const name = 'detail-method-plan';
 
   return (
     <Section id={name}>
       <SectionTitle align="center">{t<string>(`home:workflow-areas.${name}`)}</SectionTitle>
-      <Text className={classes.marginB3}>{t<string>('home:tool-construction.text4')}</Text>
+      <Text className={classes.marginB3}>{t<string>('home:detail-method-plan.text3')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
           <Title order={4} transform="capitalize" className={classes.marginB2}>
-            {t<string>('home:tool-construction-process.usingCAD')}
-          </Title>
-          <Flex
-            justify="center"
-            align="center"
-            style={{
-              height: '100%',
-            }}
-          >
-            <Flex gap="2rem">
-              <Image
-                src="/tool-construction/01_CAD_Surfaces01.JPG"
-                alt={t<string>('home:tool-construction-process.usingCAD')}
-                width={240}
-                height={200}
-              />
-              <Image
-                src="/tool-construction/01_CAD_Surfaces02.JPG"
-                alt={t<string>('home:tool-construction-process.usingCAD')}
-                width={200}
-                height={160}
-              />
-            </Flex>
-          </Flex>
-        </Grid.Item>
-        <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
-            {t<string>('home:tool-construction-process.creating-post')}
+            {t<string>('home:feasibility-study-process.part-positioning')}
           </Title>
           <Flex
             justify="center"
@@ -64,18 +36,38 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
             }}
           >
             <Image
-              src="/tool-construction/02_Active_parts.jpg"
-              alt={t<string>('home:tool-construction-process.creating-parts')}
+              src="/detail-concept-plan/Serijskametoda-01_Pozicioniranje.JPG"
+              alt={t<string>('home:feasibility-study-process.part-positioning')}
+              width={240}
+              height={200}
+            />
+          </Flex>
+        </Grid.Item>
+        <Grid.Item>
+          <AiOutlineArrowRight className={classes.arrow} />
+          <Title order={4} transform="capitalize" className={classes.marginB2}>
+            {t<string>('home:detail-method-plan.creating-punch')}
+          </Title>
+          <Flex
+            justify="center"
+            align="center"
+            style={{
+              height: '100%',
+            }}
+          >
+            <Image
+              src="/detail-concept-plan/Serijskametoda-02_KreiranjeStempela.JPG"
+              alt={t<string>('home:detail-method-plan.creating-punch')}
               width={240}
               // 240 divided by 4 /3
-              height={180}
+              height={210}
             />
           </Flex>
         </Grid.Item>
         <Grid.Item>
           <BsArrowReturnLeft className={cx(classes.arrow, classes.arrow2)} />
           <Title order={4} transform="capitalize" className={classes.marginB2}>
-            {t<string>('home:tool-construction-process.creating-post')}
+            {t<string>('home:detail-method-plan.creating-blankholder')}
           </Title>
           <Flex
             justify="center"
@@ -86,45 +78,15 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           >
             <Flex align="center" gap="2rem">
               <Image
-                src="/tool-construction/03_lower_upper_01.jpg"
-                alt={t<string>('home:tool-construction-process.creating-post')}
-                width={180}
+                src="/detail-concept-plan/Serijskametoda-03_KreiranjeBlechhaltera.JPG"
+                alt={t<string>('home:detail-method-plan.creating-punch')}
+                width={160}
                 // 240 divided by 4 /3
-                height={140}
+                height={130}
               />
               <Image
-                src="/tool-construction/03_lower_upper_02.jpg"
-                alt={t<string>('home:tool-construction-process.creating-post')}
-                width={180}
-                // 240 divided by 4 /3
-                height={140}
-              />
-            </Flex>
-          </Flex>
-        </Grid.Item>
-        <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
-          <Title order={4} transform="capitalize" className={classes.marginB2}>
-            {t<string>('home:tool-construction-process.creating-die')}
-          </Title>
-          <Flex
-            justify="center"
-            align="center"
-            style={{
-              height: '100%',
-            }}
-          >
-            <Flex align="center" gap="2rem">
-              <Image
-                src="/tool-construction/04_Lowerdie.jpg"
-                alt={t<string>('home:tool-construction-process.creating-post')}
-                width={220}
-                // 240 divided by 4 /3
-                height={180}
-              />
-              <Image
-                src="/tool-construction/04_Upperdie.jpg"
-                alt={t<string>('home:tool-construction-process.creating-post')}
+                src="/detail-concept-plan/Serijskametoda-03_KreiranjeBlechhalterasaSickama.JPG"
+                alt={t<string>('home:detail-method-plan.creating-punch')}
                 width={220}
                 // 240 divided by 4 /3
                 height={180}
@@ -135,7 +97,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
         <Grid.Item>
           <AiOutlineArrowRight className={classes.arrow} />
           <Title order={4} transform="capitalize" className={classes.marginB2}>
-            {t<string>('home:tool-construction-process.final-product')}
+            {t<string>('home:detail-method-plan.creating-die')}
           </Title>
           <Flex
             justify="center"
@@ -145,17 +107,18 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
             }}
           >
             <Image
-              src="/tool-construction/05_Finalproduct.jpg"
-              alt={t<string>('home:tool-construction-process.final-product')}
-              width={240}
+              src="/detail-concept-plan/Serijskametoda-04_Matrize_mit_Sicken.JPG"
+              alt={t<string>('home:detail-method-plan.creating-die')}
+              width={260}
               // 240 divided by 4 /3
-              height={180}
+              height={220}
             />
           </Flex>
         </Grid.Item>
         <Grid.Item>
+          <AiOutlineArrowRight className={classes.arrow} />
           <Title order={4} transform="capitalize" className={classes.marginB2}>
-            {t<string>('home:tool-construction-process.tool-in')}
+            {t<string>('home:detail-method-plan.defining-blank-size')}
           </Title>
           <Flex
             justify="center"
@@ -164,12 +127,51 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
               height: '100%',
             }}
           >
-            <Image
-              src="/tool-construction/06_Finalproduct_inpress.jpg"
-              alt={t<string>('home:tool-construction-process.tool-in')}
-              width={230}
-              height={180}
-            />
+            <Flex align="center" gap="2rem">
+              <Image
+                src="/detail-concept-plan/Serijskametoda-05_Definiranje_Platine.JPG"
+                alt={t<string>('home:detail-method-plan.defining-blank-size')}
+                width={160}
+                // 240 divided by 4 /3
+                height={130}
+              />
+              <Image
+                src="/detail-concept-plan/Serijskametoda-06_OdlazniBauteil.JPG"
+                alt={t<string>('home:detail-method-plan.defining-blank-size')}
+                width={220}
+                // 240 divided by 4 /3
+                height={180}
+              />
+            </Flex>
+          </Flex>
+        </Grid.Item>
+        <Grid.Item>
+          <Title order={4} transform="capitalize" className={classes.marginB2}>
+            {t<string>('home:detail-method-plan.trim-plan')}
+          </Title>
+          <Flex
+            justify="center"
+            align="center"
+            style={{
+              height: '100%',
+            }}
+          >
+            <Flex align="center" gap="2rem">
+              <Image
+                src="/detail-concept-plan/Serijskametoda-07_Trimplan.JPG"
+                alt={t<string>('home:detail-method-plan.trim-plan')}
+                width={220}
+                // 240 divided by 4 /3
+                height={180}
+              />
+              <Image
+                src="/detail-concept-plan/Serijskametoda-08_Restrike.JPG"
+                alt={t<string>('home:detail-method-plan.trim-plan')}
+                width={160}
+                // 240 divided by 4 /3
+                height={130}
+              />
+            </Flex>
           </Flex>
         </Grid.Item>
       </Grid>
