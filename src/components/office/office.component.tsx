@@ -18,7 +18,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, ...other }) => {
   const { classes } = useStyles();
 
   const renderedImages = images.map((image) =>
-    image.src ? <Image src={image.src} alt={image.alt} /> : null
+    image.src ? <Image {...image} src={image.src} /> : null
   );
 
   return (

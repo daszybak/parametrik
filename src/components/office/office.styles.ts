@@ -31,6 +31,45 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     //3 columns, 3 rows auto size
     gridTemplateColumns: 'repeat(3, 200px)',
     gridTemplateRows: 'repeat(3, auto)',
-    gap: '2rem',
+    gap: '1rem',
+
+    '& > *:nth-of-type(1)': {
+      gridRow: '1 / 3',
+      gridColumn: '1',
+      alignSelf: 'center',
+    },
+    '& > *:nth-of-type(2)': {
+      gridRow: '1',
+      gridColumn: '2 / 3',
+    },
+    '& > *:nth-of-type(3)': {
+      gridRow: '2 / 3',
+      gridColumn: '2 / 3',
+    },
+    '& > *:nth-of-type(4)': {
+      gridRow: '2 / 3',
+      gridColumn: '3 / 4',
+      marginLeft: -50,
+    },
+    '& > *:nth-of-type(5)': {
+      gridRow: '3',
+      gridColumn: '1 / 3',
+      justifySelf: 'center',
+    },
+    '& > *:nth-of-type(6)': {
+      gridColumn: '3',
+      gridRow: '3 / 4',
+      justifySelf: 'start',
+      marginLeft: -50,
+      marginTop: -50,
+    },
+
+    '& > *': {
+      transition: 'transform 0.2s ease-in-out',
+
+      '&:hover': {
+        transform: 'scale(1.05)',
+      },
+    },
   },
 }));
