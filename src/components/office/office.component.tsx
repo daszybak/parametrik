@@ -1,18 +1,34 @@
 import { Flex, Text, Title } from '@mantine/core';
-import { ImageProps } from 'next/image';
+import Image, { ImageProps } from 'next/image';
 import { useTranslation } from 'react-i18next';
-import ImageGallery from '../image-gallery/image-gallery.component';
 import SectionTitle from '../section-title/section-title.component';
 import Section from '../section/section.component';
 import Oems from './oems/oems.component';
 import { useStyles } from './office.styles';
 
-const IMAGE_PROPS: Partial<ImageProps> & {
+type ImageType = Partial<ImageProps> & {
   alt: string;
-} = {
-  width: 200,
-  // 200 / 4/3 = 150
-  height: 150,
+};
+
+interface ImageGalleryProps extends React.ComponentPropsWithoutRef<'div'> {
+  images: ImageType[];
+}
+
+const ImageGallery: React.FC<ImageGalleryProps> = ({ images, ...other }) => {
+  const { classes } = useStyles();
+
+  const renderedImages = images.map((image) =>
+    image.src ? <Image src={image.src} alt={image.alt} /> : null
+  );
+
+  return (
+    <div className={classes.grid} {...other}>
+      {renderedImages}
+    </div>
+  );
+};
+
+const IMAGE_PROPS: ImageType = {
   alt: 'Parametrik Engineering Office',
   blurDataURL: '/office/IMG_9075.jpg',
   placeholder: 'blur',
@@ -36,7 +52,7 @@ const Office: React.FC<OfficeProps> = () => {
           '@media (max-width: 1200px)': {
             flexDirection: 'column',
           },
-          marginBottom: '8rem',
+          marginBottom: '10rem',
         }}
       >
         <Flex
@@ -65,32 +81,40 @@ const Office: React.FC<OfficeProps> = () => {
           }}
           images={[
             {
-              src: '/office/IMG_9075.jpg',
+              src: '/office/IMG_9091.jpg',
               ...IMAGE_PROPS,
+              width: 200,
+              height: 150,
             },
             {
               src: '/office/IMG_9082.jpg',
               ...IMAGE_PROPS,
+              width: 200,
+              height: 150,
             },
             {
-              src: '/office/IMG_9083.jpg',
+              src: '/office/IMG_9086.jpg',
               ...IMAGE_PROPS,
-            },
-            {
-              src: '/office/IMG_9087_2.jpg',
-              ...IMAGE_PROPS,
-            },
-            {
-              src: '/office/IMG_9090.jpg',
-              ...IMAGE_PROPS,
+              height: 200,
+              width: 150,
             },
             {
               src: '/office/IMG_9075.jpg',
               ...IMAGE_PROPS,
+              width: 200,
+              height: 150,
             },
             {
-              src: '/office/IMG_9091.jpg',
+              src: '/office/IMG_9087_2.jpg',
               ...IMAGE_PROPS,
+              width: 200,
+              height: 100,
+            },
+            {
+              src: '/office/IMG_9089.jpg',
+              ...IMAGE_PROPS,
+              width: 150,
+              height: 200,
             },
           ]}
         />

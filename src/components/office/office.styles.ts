@@ -26,4 +26,11 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
       transform: 'scale(1.05, 1.07) skewX(-15deg)',
     },
   },
+  grid: {
+    display: 'grid',
+    //3 columns, 3 rows auto size
+    gridTemplateColumns: 'repeat(3, 200px)',
+    gridTemplateRows: 'repeat(3, auto)',
+    gap: '2rem',
+  },
 }));
