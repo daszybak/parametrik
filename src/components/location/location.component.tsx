@@ -52,14 +52,14 @@ const Location: React.FC<LocationProps> = () => {
           //@ts-ignore
           labelText={(d) => d.name}
           //@ts-ignore
-          labelSize={1.2}
+          labelSize={1.4}
           //@ts-ignore
           labelDotRadius={0.5}
           labelColor="#FF0000"
-          labelResolution={2}
+          labelResolution={3}
           labelsData={[
             {
-              name: 'Zagreb',
+              name: 'Zagreb, Croatia',
               latitude: 45.815,
               longitude: 15.9819,
             },

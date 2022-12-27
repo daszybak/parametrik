@@ -11,7 +11,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     height: '100%',
     objectFit: 'cover',
     objectPosition: 'center',
-    zIndex: -1,
+    zIndex: 0,
     position: 'absolute',
     top: 0,
     left: 0,

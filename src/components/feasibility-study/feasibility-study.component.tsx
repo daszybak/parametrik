@@ -119,6 +119,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
             />
           </Flex>
         </Grid.Item>
+
         <Grid.Item>
           <HiArrowRight className={classes.arrow} />
           <Title
@@ -127,31 +128,6 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
             className={cx(classes.marginB2, classes.itemTitle)}
           >
             {t<string>('home:feasibility-study-process.preliminary-method')}
-          </Title>
-          <Flex
-            justify="center"
-            align="center"
-            style={{
-              height: '100%',
-            }}
-          >
-            <Image
-              src="/feasibility-study/03_Changerequest.jpg"
-              alt="Change request"
-              width={200}
-              // 240 divided by 4 /3
-              height={200}
-            />
-          </Flex>
-        </Grid.Item>
-        <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
-          <Title
-            order={4}
-            transform="capitalize"
-            className={cx(classes.marginB2, classes.itemTitle)}
-          >
-            {t<string>('home:feasibility-study-process.simulation-report')}
           </Title>
           <Flex
             justify="center"
@@ -225,6 +201,31 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
                   alt: 'Simulation report',
                 },
               ]}
+            />
+          </Flex>
+        </Grid.Item>
+        <Grid.Item>
+          <HiArrowRight className={classes.arrow} />
+          <Title
+            order={4}
+            transform="capitalize"
+            className={cx(classes.marginB2, classes.itemTitle)}
+          >
+            {t<string>('home:feasibility-study-process.simulation-report')}
+          </Title>
+          <Flex
+            justify="center"
+            align="center"
+            style={{
+              height: '100%',
+            }}
+          >
+            <Image
+              src="/feasibility-study/03_Changerequest.jpg"
+              alt="Change request"
+              width={200}
+              // 240 divided by 4 /3
+              height={200}
             />
           </Flex>
         </Grid.Item>

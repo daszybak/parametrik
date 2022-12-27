@@ -1,16 +1,4 @@
-import { createStyles, keyframes, MantineTheme } from '@mantine/core';
-
-export const shine = keyframes({
-  '0%': {
-    backgroundPosition: '100% 100%',
-  },
-  '50%': {
-    backgroundPosition: '0 0',
-  },
-  '100%': {
-    backgroundPosition: '100% 100%',
-  },
-});
+import { createStyles, MantineTheme } from '@mantine/core';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const useStyles = createStyles((theme: MantineTheme) => ({
@@ -24,15 +12,6 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     backgroundColor: theme.colors.blue[4],
     // add cool blur
     opacity: 0.95,
-    // animation: `${shine} infinite 6s linear`,
-    // backgroundRepeat: 'no-repeat',
-    // // background: `linear-gradient(
-    // //     to bottom right,
-    // //     transparent 30%,
-    // //     #a8a9ad 50%,
-    // //     transparent 70%
-    // //   )`,
-    // backgroundSize: '400% 400%',
   },
 }));
 

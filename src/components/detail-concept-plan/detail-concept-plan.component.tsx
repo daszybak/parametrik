@@ -19,7 +19,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
 
   return (
     <Section id={name}>
-      <SectionTitle align="end">{t<string>(`home:workflow-areas.${name}`)}</SectionTitle>
+      <SectionTitle align="center">{t<string>(`home:workflow-areas.${name}`)}</SectionTitle>
       <Text className={classes.marginB3}>{t<string>('home:detail-method-plan.text3')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>

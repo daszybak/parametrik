@@ -27,7 +27,7 @@
   },
 
   "detail-method-plan": {
-    "text3": "After the feasibility studies are conducted and components are optimized and approved follows a development of a detailed method plan for each sheet metal part",
+    "text3": "After the feasibility studies are conducted and components are optimized and approved follows a development of a detailed method plan for each sheet metal part.",
     "creating-punch": "creating punch",
     "creating-blankholder": "creating blankholder",
     "creating-die": "creating die",
@@ -36,7 +36,7 @@
   },
 
   "tool-construction": {
-    "text4": "Using optimized surfaces and curves from a detailed method plan we start with the tool construction for die-stamping presses"
+    "text4": "Using optimized surfaces and curves from a detailed method plan we start with the tool construction for die-stamping presses."
   },
   "tool-construction-process": {
     "usingCAD": "using CAD surfaces as input",
