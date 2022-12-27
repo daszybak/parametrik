@@ -13,6 +13,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   },
   arrow2: {
     top: '80%',
+    transform: 'rotate(180deg)',
   },
   itemTitle: {
     marginBottom: '1rem',

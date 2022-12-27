@@ -5,9 +5,8 @@ import { useTranslation } from 'react-i18next';
 import SectionTitle from 'src/components/section-title/section-title.component';
 import Section from 'src/components/section/section.component';
 // import Arrow from '../arrow/arrow.component';
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import { links } from 'src/links';
-import { BsArrowReturnLeft } from 'react-icons/bs';
+import { HiArrowUturnRight, HiArrowRight } from 'react-icons/hi2';
 import { useStyles } from './detail-concept-plan.styles';
 import Grid from '../grid/grid.component';
 
@@ -24,7 +23,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
       <Text className={classes.marginB3}>{t<string>('home:detail-method-plan.text3')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -48,7 +47,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -73,7 +72,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <BsArrowReturnLeft className={cx(classes.arrow, classes.arrow2)} />
+          <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
           <Title
             order={4}
             transform="capitalize"
@@ -107,7 +106,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -132,7 +131,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -210,7 +209,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           <Button variant="filled">
             <Flex align="center" gap="1rem">
               More examples
-              <AiOutlineArrowRight />
+              <HiArrowRight />
             </Flex>
           </Button>
         </Link>

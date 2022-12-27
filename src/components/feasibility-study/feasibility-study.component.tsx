@@ -4,10 +4,9 @@ import { useTranslation } from 'react-i18next';
 import SectionTitle from 'src/components/section-title/section-title.component';
 import Section from 'src/components/section/section.component';
 // import Arrow from '../arrow/arrow.component';
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import Link from 'next/link';
 import { links } from 'src/links';
-import { BsArrowReturnLeft } from 'react-icons/bs';
+import { HiArrowUturnRight, HiArrowRight } from 'react-icons/hi2';
 import { useStyles } from './feasibility-study.styles';
 import ImageGallery from '../image-gallery/image-gallery.component';
 import Grid from '../grid/grid.component';
@@ -31,7 +30,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
       <Text className={classes.marginB3}>{t<string>('home:feasibility-study-text.text2')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -55,7 +54,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -80,7 +79,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <BsArrowReturnLeft className={cx(classes.arrow, classes.arrow2)} />
+          <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
           <Title
             order={4}
             transform="capitalize"
@@ -121,7 +120,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -146,7 +145,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <AiOutlineArrowRight className={classes.arrow} />
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
@@ -241,7 +240,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           <Button variant="filled">
             <Flex align="center" gap="1rem">
               More examples
-              <AiOutlineArrowRight />
+              <HiArrowRight />
             </Flex>
           </Button>
         </Link>

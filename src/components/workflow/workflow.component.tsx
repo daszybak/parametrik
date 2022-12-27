@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from 'src/components/section-title/section-title.component';
 import Section from 'src/components/section/section.component';
+import { HiArrowDown, HiArrowUturnUp } from 'react-icons/hi2';
 import { useStyles } from './workflow.styles';
 
 interface WorkflowProps {}
@@ -55,6 +56,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
               height={160}
               className={classes.border}
             />
+            <HiArrowDown className={classes.arrow} />
           </div>
           <div className={cx(classes.gridItem)}>
             <Title order={4} className={classes.gridItemTitle}>
@@ -67,6 +69,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
               height={160}
               className={classes.border}
             />
+            <HiArrowDown className={classes.arrow} />
           </div>
           <div className={cx(classes.gridItem)}>
             <Title order={4} className={classes.gridItemTitle}>
@@ -79,6 +82,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
               height={160}
               className={classes.border}
             />
+            <HiArrowUturnUp className={classes.arrow} />
           </div>
           <div className={cx(classes.gridItem)}>
             <Title order={4} className={classes.gridItemTitle}>
@@ -91,8 +95,8 @@ const Workflow: React.FC<WorkflowProps> = () => {
               height={160}
               className={classes.border}
             />
+            <HiArrowDown className={classes.arrow} />
           </div>
-
           <div
             className={cx(classes.gridItem)}
             style={{

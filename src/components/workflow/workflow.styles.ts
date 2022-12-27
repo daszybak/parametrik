@@ -41,6 +41,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    position: 'relative',
   },
   gridItemTitle: {
     marginBottom: '1rem',
@@ -49,5 +50,11 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     textAlign: 'center',
     borderRadius: theme.radius.sm,
     width: '100%',
+  },
+  arrow: {
+    position: 'absolute',
+    right: '5%',
+    bottom: '2%',
+    fontSize: '2rem',
   },
 }));
