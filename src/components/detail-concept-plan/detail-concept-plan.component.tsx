@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Flex, Text, Title } from '@mantine/core';
+import { Button, Flex, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from 'src/components/section-title/section-title.component';
 import Section from 'src/components/section/section.component';
@@ -20,7 +20,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
 
   return (
     <Section id={name}>
-      <SectionTitle align="center">{t<string>(`home:workflow-areas.${name}`)}</SectionTitle>
+      <SectionTitle align="end">{t<string>(`home:workflow-areas.${name}`)}</SectionTitle>
       <Text className={classes.marginB3}>{t<string>('home:detail-method-plan.text3')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>
@@ -177,7 +177,19 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
       </Grid>
       <Flex justify="space-between">
         <div />
-        <Link href={links.filter((link) => link.title === 'portfolio')[0].href}>More examples</Link>
+        <Link
+          href={links.filter((link) => link.title === 'portfolio')[0].href}
+          style={{
+            textDecoration: 'none',
+          }}
+        >
+          <Button variant="filled">
+            <Flex align="center" gap="1rem">
+              More examples
+              <AiOutlineArrowRight />
+            </Flex>
+          </Button>
+        </Link>
       </Flex>
     </Section>
   );

@@ -15,7 +15,7 @@ export const links = [
     icon: <FaProjectDiagram />,
   },
   {
-    href: '/#Office',
+    href: '/#office',
     title: 'about-us',
     icon: <RiTeamFill />,
   },

@@ -36,7 +36,7 @@ const Office: React.FC<OfficeProps> = () => {
           '@media (max-width: 1200px)': {
             flexDirection: 'column',
           },
-          marginBottom: '3rem',
+          marginBottom: '8rem',
         }}
       >
         <Flex

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Flex, Text, Title } from '@mantine/core';
+import { Button, Flex, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from 'src/components/section-title/section-title.component';
 import Section from 'src/components/section/section.component';
@@ -208,7 +208,19 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
       </Grid>
       <Flex justify="space-between">
         <div />
-        <Link href={links.filter((link) => link.title === 'portfolio')[0].href}>More examples</Link>
+        <Link
+          href={links.filter((link) => link.title === 'portfolio')[0].href}
+          style={{
+            textDecoration: 'none',
+          }}
+        >
+          <Button variant="filled">
+            <Flex align="center" gap="1rem">
+              More examples
+              <AiOutlineArrowRight />
+            </Flex>
+          </Button>
+        </Link>
       </Flex>
     </Section>
   );

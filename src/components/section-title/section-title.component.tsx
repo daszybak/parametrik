@@ -12,7 +12,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children, align, ...other }
   return (
     <Flex justify={align}>
       <Link
-        href={`#${children}`}
+        href={`#${children.replaceAll(' ', '-').toLowerCase()}`}
         style={{
           textDecoration: 'none',
           color: 'inherit',
