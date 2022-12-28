@@ -3,7 +3,7 @@ import { createStyles, MantineTheme } from '@mantine/core';
 export const useStyles = createStyles((theme: MantineTheme) => ({
   link: {
     textDecoration: 'none',
-    color: theme.colors.gray[0],
+    color: theme.colors.green[4],
     letterSpacing: '0.04em',
 
     //transition
@@ -13,7 +13,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
 
     //hover
     '&:hover': {
-      color: theme.colors.gray[2],
+      color: theme.colors.green[9],
       transform: 'translateY(-2px)',
       textDecoration: 'none',
     },

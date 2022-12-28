@@ -36,7 +36,7 @@ const Menu: React.FC<MenuProps> = () => {
           </nav>
         )}
       </Transition>
-      <Burger onClick={handleToggleMenu} opened={open} color={theme.colors.gray[4]} size="lg" />
+      <Burger onClick={handleToggleMenu} opened={open} color={theme.colors.green[4]} size="lg" />
     </>
   );
 };
