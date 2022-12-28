@@ -9,8 +9,8 @@ export const useStyles = createStyles(
     }
   ) => ({
     section: {
-      marginTop: '8rem',
-      marginBottom: params && params.last === true ? '0' : '8rem',
+      paddingTop: '8rem',
+      paddingBottom: params && params.last === true ? '0' : '8rem',
       height: '100%',
     },
     sectionHeight: {

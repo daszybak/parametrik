@@ -14,7 +14,12 @@ const Workflow: React.FC<WorkflowProps> = () => {
   const name = 'workflow';
 
   return (
-    <Section id={name}>
+    <Section
+      id={name}
+      style={{
+        marginTop: '8rem',
+      }}
+    >
       <SectionTitle>{t<string>(`common:navbar.${name}`)}</SectionTitle>
       <Text
         style={{
