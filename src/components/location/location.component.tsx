@@ -55,7 +55,7 @@ const Location: React.FC<LocationProps> = () => {
           labelSize={1.4}
           //@ts-ignore
           labelDotRadius={0.5}
-          labelColor={() => '#FF0000'}
+          labelColor={() => '#fff'}
           labelResolution={3}
           labelsData={[
             {

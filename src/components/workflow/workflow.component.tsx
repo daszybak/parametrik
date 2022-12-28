@@ -51,14 +51,11 @@ const Workflow: React.FC<WorkflowProps> = () => {
               {t<string>('home:workflow-areas.feasibility-study')}
             </Title>
             <Image
-              src="/workflow/Picture4.jpg"
+              src="/workflow/Picture4.png"
               alt={t<string>('home:workflow-areas.feasibility-study')}
               width={200}
               height={160}
               className={classes.border}
-              style={{
-                padding: '0.5rem',
-              }}
             />
             <HiArrowDown className={classes.arrow} />
           </div>
@@ -72,9 +69,6 @@ const Workflow: React.FC<WorkflowProps> = () => {
               width={200}
               height={160}
               className={classes.border}
-              style={{
-                padding: '0.5rem',
-              }}
             />
             <HiArrowDown className={classes.arrow} />
           </div>
@@ -95,16 +89,15 @@ const Workflow: React.FC<WorkflowProps> = () => {
             <Title order={4} className={classes.gridItemTitle}>
               {t<string>('home:workflow-areas.final-part')}
             </Title>
-            <Image
-              src="/workflow/Picture5.png"
-              alt={t<string>('home:workflow-areas.final-part')}
-              width={200}
-              height={160}
-              className={classes.border}
-              style={{
-                padding: '0.5rem',
-              }}
-            />
+            <div>
+              <Image
+                src="/workflow/Picture5.png"
+                alt={t<string>('home:workflow-areas.final-part')}
+                width={200}
+                height={160}
+                className={classes.border}
+              />
+            </div>
             <HiArrowDown className={classes.arrow} />
           </div>
           <div
