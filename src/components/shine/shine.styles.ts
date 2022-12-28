@@ -15,7 +15,7 @@ export const shine = keyframes({
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const useStyles = createStyles((theme: MantineTheme) => ({
   shine: {
-    animation: `${shine} infinite 15s linear`,
+    // animation: `${shine} infinite 15s linear`,
     backgroundRepeat: 'no-repeat',
     background: `linear-gradient(
         to bottom right,
@@ -23,7 +23,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
         #a8a9ad 50%,
         transparent 60%
       )`,
-    backgroundSize: '200% 200%',
+    backgroundSize: '100% 100%',
     zIndex: -10,
   },
 }));
