@@ -1,16 +1,19 @@
 import { Flex } from '@mantine/core';
 import Image from 'next/image';
-import Section from '../section/section.component';
+import { useContext } from 'react';
+import { HeroContext } from 'src/context/hero/heroContextProvider';
+import { SectionWithoutTransition } from '../section/section.component';
 import { useStyles } from './hero.styles';
 import Title from './title/title.component';
 
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
+  const { heroRef } = useContext(HeroContext);
   const { classes } = useStyles();
 
   return (
-    <Section id="Hero" first>
+    <SectionWithoutTransition id="Hero" first ref={heroRef}>
       <Flex direction="column" align="center">
         <Image
           className={classes.backgroundImage}
@@ -21,8 +24,9 @@ const Hero: React.FC<HeroProps> = () => {
         />
         <Title />
       </Flex>
-    </Section>
+    </SectionWithoutTransition>
   );
 };
+Hero.displayName = 'Hero';
 
 export default Hero;

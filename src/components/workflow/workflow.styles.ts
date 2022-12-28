@@ -45,11 +45,14 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   },
   gridItemTitle: {
     marginBottom: '1rem',
-    backgroundColor: theme.colors.gray[2],
-    border: `1px solid ${theme.colors.gray[4]}`,
+    // backgroundColor: theme.colors.gray[2],
+    // border: `1px solid ${theme.colors.gray[4]}`,
+    backgroundColor: theme.colors.blue[5],
+    border: `1px solid ${theme.colors.blue[7]}`,
     textAlign: 'center',
     borderRadius: theme.radius.sm,
     width: '100%',
+    color: theme.white,
   },
   arrow: {
     position: 'absolute',

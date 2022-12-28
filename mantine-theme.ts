@@ -29,7 +29,7 @@ export const mantineTheme: MantineThemeOverride = {
       '#4dc3ba',
       '#33bab1',
       '#1ab2a7',
-      '#00a99d',
+      '#3c6e71',
       '#00988d',
       '#00877e',
       '#00766e',
@@ -87,7 +87,7 @@ export const mantineTheme: MantineThemeOverride = {
   fontSizes: {
     xl: 24,
     lg: 18,
-    md: 15,
+    md: 18,
     sm: 14,
     xs: 14,
   },

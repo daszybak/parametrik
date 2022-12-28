@@ -17,8 +17,8 @@ interface ImageGalleryProps extends React.ComponentPropsWithoutRef<'div'> {
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images, ...other }) => {
   const { classes } = useStyles();
 
-  const renderedImages = images.map((image) =>
-    image.src ? <Image {...image} src={image.src} /> : null
+  const renderedImages = images.map((image, index) =>
+    image.src ? <Image {...image} src={image.src} key={index} /> : null
   );
 
   return (

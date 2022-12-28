@@ -9,9 +9,11 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     left: 0,
     right: 0,
     zIndex: 100,
-    backgroundColor: theme.colors.blue[4],
+    // backgroundColor: theme.colors.blue[4],
+    backgroundColor: 'transparent',
     // add cool blur
     opacity: 0.95,
+    height: 100,
   },
 }));
 

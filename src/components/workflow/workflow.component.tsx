@@ -19,6 +19,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
       <Text
         style={{
           marginBottom: '3rem',
+          width: '50%',
         }}
       >
         {t<string>('home:workflow-text.text1')}
@@ -55,6 +56,9 @@ const Workflow: React.FC<WorkflowProps> = () => {
               width={200}
               height={160}
               className={classes.border}
+              style={{
+                padding: '0.5rem',
+              }}
             />
             <HiArrowDown className={classes.arrow} />
           </div>
@@ -63,11 +67,14 @@ const Workflow: React.FC<WorkflowProps> = () => {
               {t<string>('home:workflow-areas.detail-method-plan')}
             </Title>
             <Image
-              src="/workflow/Picture2.jpg"
+              src="/workflow/Picture2.png"
               alt={t<string>('home:workflow-areas.detail-method-plan')}
               width={200}
               height={160}
               className={classes.border}
+              style={{
+                padding: '0.5rem',
+              }}
             />
             <HiArrowDown className={classes.arrow} />
           </div>
@@ -89,11 +96,14 @@ const Workflow: React.FC<WorkflowProps> = () => {
               {t<string>('home:workflow-areas.final-part')}
             </Title>
             <Image
-              src="/workflow/Picture5.jpg"
+              src="/workflow/Picture5.png"
               alt={t<string>('home:workflow-areas.final-part')}
               width={200}
               height={160}
               className={classes.border}
+              style={{
+                padding: '0.5rem',
+              }}
             />
             <HiArrowDown className={classes.arrow} />
           </div>

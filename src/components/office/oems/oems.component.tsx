@@ -13,20 +13,20 @@ const Oems: React.FC<OemsProps> = () => {
   const { classes } = useStyles();
 
   const firstRowImages = [
-    '/oems/Audi.svg',
-    '/oems/BMW.svg',
-    '/oems/Jaguar.svg',
-    '/oems/Land_Rover.svg',
-    '/oems/Škoda.svg',
-    '/oems/VW.svg',
+    '/oems2/Audi.svg',
+    '/oems2/BMW.svg',
+    '/oems2/Jaguar.svg',
+    '/oems2/Land_Rover.svg',
+    '/oems2/Škoda.svg',
+    '/oems2/VW.svg',
   ].map((image) => <BrandImage key={image} image={image} />);
 
   const secondRowImages = [
-    '/oems/Bentley.svg',
-    '/oems/Lamborghini.svg',
-    '/oems/Mercedes_Daimler.svg',
-    '/oems/Porsche.svg',
-    '/oems/Volvo.svg',
+    '/oems2/Bentley.svg',
+    '/oems2/Lamborghini.svg',
+    '/oems2/Mercedes-Benz.svg',
+    '/oems2/Porsche.svg',
+    '/oems2/Volvo.svg',
   ].map((image) => <BrandImage key={image} image={image} />);
 
   return (

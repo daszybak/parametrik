@@ -11,13 +11,13 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
 
     h1: {
       textShadow: '0px 4px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px rgba(255, 255, 255, 0.5)',
-      color: theme.colors.gray[2],
+      color: theme.colors.green[4],
       letterSpacing: '0.1em',
     },
 
     p: {
       textShadow: '0px 1px 1px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(255, 255, 255, 0.5)',
-      color: theme.colors.gray[2],
+      color: theme.colors.green[4],
       letterSpacing: '0.1em',
     },
   },
