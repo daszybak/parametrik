@@ -17,8 +17,11 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   },
   itemTitle: {
     marginBottom: '1rem',
-    backgroundColor: theme.colors.gray[2],
-    border: `1px solid ${theme.colors.gray[4]}`,
+    // backgroundColor: theme.colors.gray[2],
+    // border: `1px solid ${theme.colors.gray[4]}`,
+    backgroundColor: theme.colors.blue[5],
+    border: `1px solid ${theme.colors.blue[7]}`,
+    color: theme.white,
     textAlign: 'center',
     borderRadius: theme.radius.sm,
   },

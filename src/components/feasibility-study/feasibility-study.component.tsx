@@ -46,7 +46,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
             }}
           >
             <Image
-              src="/feasibility-study/01_Part_Positioning.jpg"
+              src="/feasibility-study/01_Part_Positioning.png"
               alt="Part Positioning"
               width={240}
               height={150}
@@ -70,7 +70,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
             }}
           >
             <Image
-              src="/feasibility-study/02_Creation-of-geometry.jpg"
+              src="/feasibility-study/02_Creation-of-geometry.png"
               alt="Creation of geometry"
               width={240}
               // 240 divided by 4 /3
@@ -100,19 +100,19 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
               }}
               images={[
                 {
-                  src: '/feasibility-study/02_Simulation-and-post-process-analysis01.jpg',
+                  src: '/feasibility-study/02_Simulation-and-post-process-analysis01.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                 },
                 {
-                  src: '/feasibility-study/02_Simulation-and-post-process-analysis02.jpg',
+                  src: '/feasibility-study/02_Simulation-and-post-process-analysis02.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                 },
                 {
-                  src: '/feasibility-study/02_Simulation-and-post-process-analysis03.jpg',
+                  src: '/feasibility-study/02_Simulation-and-post-process-analysis03.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                 },
                 {
-                  src: '/feasibility-study/02_Simulation-and-post-process-analysis04.jpg',
+                  src: '/feasibility-study/02_Simulation-and-post-process-analysis04.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                 },
               ]}
@@ -142,22 +142,22 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
               }}
               images={[
                 {
-                  src: '/feasibility-study/04_2DConceptplan01.jpg',
+                  src: '/feasibility-study/04_2DConceptplan01.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                   alt: '2D Concept plan',
                 },
                 {
-                  src: '/feasibility-study/04_2DConceptplan02.jpg',
+                  src: '/feasibility-study/04_2DConceptplan02.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                   alt: '2D Concept plan',
                 },
                 {
-                  src: '/feasibility-study/04_2DConceptplan03.jpg',
+                  src: '/feasibility-study/04_2DConceptplan03.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                   alt: '2D Concept plan',
                 },
                 {
-                  src: '/feasibility-study/04_2DConceptplan04.jpg',
+                  src: '/feasibility-study/04_2DConceptplan04.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                   alt: '2D Concept plan',
                 },
@@ -186,17 +186,17 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
               }}
               images={[
                 {
-                  src: '/feasibility-study/05_SimReport01.jpg',
+                  src: '/feasibility-study/05_SimReport01.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                   alt: 'Simulation report',
                 },
                 {
-                  src: '/feasibility-study/05_SimReport02.jpg',
+                  src: '/feasibility-study/05_SimReport02.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                   alt: 'Simulation report',
                 },
                 {
-                  src: '/feasibility-study/05_SimReport03.jpg',
+                  src: '/feasibility-study/05_SimReport03.png',
                   ...SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS,
                   alt: 'Simulation report',
                 },
@@ -221,7 +221,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
             }}
           >
             <Image
-              src="/feasibility-study/03_Changerequest.jpg"
+              src="/feasibility-study/03_Changerequest.png"
               alt="Change request"
               width={200}
               // 240 divided by 4 /3

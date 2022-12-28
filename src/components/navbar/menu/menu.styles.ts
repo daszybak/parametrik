@@ -3,7 +3,7 @@ import { createStyles, MantineTheme } from '@mantine/core';
 export const useStyles = createStyles((theme: MantineTheme) => ({
   link: {
     textDecoration: 'none',
-    color: theme.colors.green[4],
+    color: theme.colors.green[8],
     letterSpacing: '0.04em',
 
     //transition
