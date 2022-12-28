@@ -29,7 +29,7 @@ export const mantineTheme: MantineThemeOverride = {
       '#4dc3ba',
       '#33bab1',
       '#1ab2a7',
-      '#3c6e71',
+      '#327E7B',
       '#00988d',
       '#00877e',
       '#00766e',
