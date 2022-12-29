@@ -5,8 +5,8 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     position: 'relative',
     // backgroundColor: theme.colors.gray[0],
     // border: `1px solid ${theme.colors.gray[3]}`,
-    backgroundColor: theme.colors.blue[4],
-    border: `1px solid ${theme.colors.blue[7]}`,
+    backgroundColor: theme.colors.green[4],
+    border: `1px solid ${theme.colors.green[6]}`,
     padding: theme.spacing.md,
     borderRadius: theme.radius.md,
     textDecoration: 'none',
@@ -15,7 +15,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
 
     //hover
     '&:hover': {
-      backgroundColor: theme.colors.blue[5],
+      backgroundColor: theme.colors.green[5],
     },
   },
 }));

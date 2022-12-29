@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import GlobeGL, { GlobeMethods } from 'react-globe.gl';
-import { Flex, useMantineTheme } from '@mantine/core';
+import { Flex } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import SectionTitle from '../section-title/section-title.component';
 import Section from '../section/section.component';
@@ -11,7 +11,6 @@ interface LocationProps {}
 const Location: React.FC<LocationProps> = () => {
   const name = 'Location';
   const { width } = useViewportSize();
-  const theme = useMantineTheme();
   const globeEl = useRef<GlobeMethods | undefined>();
 
   let Globe: typeof GlobeGL = () => null;
@@ -23,7 +22,7 @@ const Location: React.FC<LocationProps> = () => {
       id={name}
       last
       style={{
-        backgroundColor: theme.colors.gray[0],
+        backgroundColor: 'transparent',
         paddingTop: '2rem',
       }}
     >
@@ -32,7 +31,7 @@ const Location: React.FC<LocationProps> = () => {
         <Globe
           ref={globeEl}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-          backgroundColor={theme.colors.gray[0]}
+          backgroundColor="rgba(0, 0, 0, 0)"
           width={width}
           onGlobeReady={() => {
             // eslint-disable-next-line max-len

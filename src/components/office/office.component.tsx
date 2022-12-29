@@ -120,7 +120,7 @@ const Office: React.FC<OfficeProps> = () => {
         />
       </Flex>
       <Title
-        order={3}
+        order={4}
         weight="bold"
         style={{
           marginBottom: '3rem',

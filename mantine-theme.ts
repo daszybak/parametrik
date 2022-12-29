@@ -25,15 +25,15 @@ export const mantineTheme: MantineThemeOverride = {
       '#021122',
     ],
     green: [
-      '#66cbc4',
-      '#4dc3ba',
-      '#33bab1',
-      '#1ab2a7',
+      '#d6e5e5',
+      '#adcbca',
+      '#84b2b0',
+      '#5b9895',
       '#327E7B',
-      '#00988d',
-      '#00877e',
-      '#00766e',
-      '#00655e',
+      '#286562',
+      '#193f3e',
+      '#0f2625',
+      '#050d0c',
     ],
     gold: [
       '#B3860A',
@@ -76,7 +76,7 @@ export const mantineTheme: MantineThemeOverride = {
       },
       h4: {
         // 18px in rem
-        fontSize: '1.375rem',
+        fontSize: '1.255rem',
         // 22px in rem
         fontWeight: 500,
       },

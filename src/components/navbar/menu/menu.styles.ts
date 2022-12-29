@@ -5,6 +5,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     textDecoration: 'none',
     color: theme.colors.green[8],
     letterSpacing: '0.04em',
+    fontWeight: 500,
 
     //transition
     transition: 'all 0.2s ease-in-out',
@@ -17,6 +18,10 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
       color: theme.colors.green[8],
       transform: 'translateY(-2px)',
       textDecoration: 'none',
+    },
+
+    '&[data-intersecting="false"]': {
+      color: theme.colors.green[0],
     },
 
     //hover active link visited no underline
