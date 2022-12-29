@@ -55,8 +55,6 @@ const MenuContextProvider = ({ children }: Children) => {
 
   useEffect(() => {
     events.on('routeChangeStart', () => {
-      console.log('routeChangeStart');
-
       dispatchMenu({ type: 'close' });
     });
   }, []);

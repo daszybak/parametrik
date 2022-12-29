@@ -59,5 +59,6 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     right: '5%',
     bottom: '2%',
     fontSize: '2rem',
+    color: theme.colors.green[8],
   },
 }));

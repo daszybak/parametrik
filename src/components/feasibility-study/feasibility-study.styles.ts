@@ -10,6 +10,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     top: '50%',
     transform: 'translate(0, -50%)',
     fontSize: '2rem',
+    color: theme.colors.green[8],
   },
   arrow2: {
     top: '80%',
