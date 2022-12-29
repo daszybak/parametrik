@@ -13,7 +13,6 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     backgroundColor: 'transparent',
     // add cool blur
     opacity: 0.95,
-    height: 100,
   },
 }));
 
