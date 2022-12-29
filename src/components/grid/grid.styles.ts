@@ -6,7 +6,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     // 3 columns, 2 rows same size
     gridTemplateColumns: 'repeat(3, 1fr)',
     gridTemplateRows: 'repeat(2, 1fr)',
-    margin: '0 -1rem',
+    margin: '0 auto',
 
     // innher borders nth-type selector
     '& > *:nth-of-type(1)': {

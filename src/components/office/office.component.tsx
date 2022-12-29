@@ -1,6 +1,8 @@
 import { Flex, Text, Title } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import Image, { ImageProps } from 'next/image';
 import { useTranslation } from 'react-i18next';
+import CarouselWrapper, { GALLERY_IMAGE } from '../carousel/carousel.component';
 import SectionTitle from '../section-title/section-title.component';
 import Section from '../section/section.component';
 import Oems from './oems/oems.component';
@@ -34,12 +36,52 @@ const IMAGE_PROPS: ImageType = {
   placeholder: 'blur',
 };
 
+const images = [
+  {
+    src: '/office/IMG_9091.jpg',
+    ...IMAGE_PROPS,
+    width: 200,
+    height: 150,
+  },
+  {
+    src: '/office/IMG_9082.jpg',
+    ...IMAGE_PROPS,
+    width: 200,
+    height: 150,
+  },
+  {
+    src: '/office/IMG_9086.jpg',
+    ...IMAGE_PROPS,
+    height: 200,
+    width: 150,
+  },
+  {
+    src: '/office/IMG_9075.jpg',
+    ...IMAGE_PROPS,
+    width: 200,
+    height: 150,
+  },
+  {
+    src: '/office/IMG_9087_2.jpg',
+    ...IMAGE_PROPS,
+    width: 200,
+    height: 100,
+  },
+  {
+    src: '/office/IMG_9089.jpg',
+    ...IMAGE_PROPS,
+    width: 150,
+    height: 200,
+  },
+];
+
 interface OfficeProps {}
 
 const Office: React.FC<OfficeProps> = () => {
   const { classes } = useStyles();
   const { t } = useTranslation();
   const name = 'Office';
+  const { width } = useViewportSize();
 
   return (
     <Section id={name}>
@@ -51,6 +93,7 @@ const Office: React.FC<OfficeProps> = () => {
         sx={{
           '@media (max-width: 1200px)': {
             flexDirection: 'column',
+            gap: '5rem',
           },
           marginBottom: '10rem',
         }}
@@ -74,46 +117,19 @@ const Office: React.FC<OfficeProps> = () => {
           <Title order={3}>Leon Zavacki</Title>
           <Text>{t<string>('home:about-us.project-lead-sim')}</Text>
         </Flex>
-        <ImageGallery
-          images={[
-            {
-              src: '/office/IMG_9091.jpg',
-              ...IMAGE_PROPS,
-              width: 200,
-              height: 150,
-            },
-            {
-              src: '/office/IMG_9082.jpg',
-              ...IMAGE_PROPS,
-              width: 200,
-              height: 150,
-            },
-            {
-              src: '/office/IMG_9086.jpg',
-              ...IMAGE_PROPS,
-              height: 200,
-              width: 150,
-            },
-            {
-              src: '/office/IMG_9075.jpg',
-              ...IMAGE_PROPS,
-              width: 200,
-              height: 150,
-            },
-            {
-              src: '/office/IMG_9087_2.jpg',
-              ...IMAGE_PROPS,
-              width: 200,
-              height: 100,
-            },
-            {
-              src: '/office/IMG_9089.jpg',
-              ...IMAGE_PROPS,
-              width: 150,
-              height: 200,
-            },
-          ]}
-        />
+        {width > 900 ? (
+          <ImageGallery images={images} />
+        ) : (
+          <div
+            style={{
+              width: GALLERY_IMAGE.SLIDE_WIDTH,
+              height: GALLERY_IMAGE.SLIDE_HEIGHT,
+              position: 'relative',
+            }}
+          >
+            <CarouselWrapper images={images} />
+          </div>
+        )}
       </Flex>
       <Title
         order={4}
