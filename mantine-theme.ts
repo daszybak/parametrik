@@ -8,6 +8,11 @@ import {
 export const mantineTheme: MantineThemeOverride = {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   globalStyles: (theme: MantineTheme) => ({
+    html: {
+      '@media (max-width: 900px)': {
+        fontSize: '14px',
+      },
+    },
     body: {
       overflowX: 'hidden',
     },
@@ -103,6 +108,11 @@ export const mantineTheme: MantineThemeOverride = {
       styles: (theme: MantineTheme, params: ContainerStylesParams) => ({
         root: {
           padding: params.fluid ? '0 4.5rem' : '0 1rem',
+
+          '@media (max-width: 900px)': {
+            paddingLeft: '2rem',
+            paddingRight: '2rem',
+          },
         },
       }),
     },

@@ -14,6 +14,10 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
       textShadow: '0px 4px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px rgba(255, 255, 255, 0.5)',
       color: theme.colors.green[4],
       letterSpacing: '0.1em',
+
+      '@media (max-width: 600px)': {
+        letterSpacing: '0',
+      },
     },
 
     p: {

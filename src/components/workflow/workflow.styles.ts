@@ -8,12 +8,34 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     // paddingTop: '75%',
     width: '600px',
     height: '600px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   reactPlayer: {
     position: 'absolute',
-    top: 0,
-    left: 0,
+
     boxShadow: theme.shadows.lg,
+  },
+  image: {
+    width: '200px',
+    height: '160px',
+    position: 'relative',
+
+    '@media (max-width: 800px)': {
+      width: '120px',
+      height: '96px',
+    },
+  },
+  bigImage: {
+    width: '300px',
+    height: '150px',
+    position: 'relative',
+
+    '@media (max-width: 800px)': {
+      width: '150px',
+      height: '75px',
+    },
   },
   border: {
     border: `1px solid ${theme.colors.blue[2]}`,
@@ -32,6 +54,10 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     columnGap: '5rem',
     justifyItems: 'center',
     justifyContent: 'center',
+
+    '@media (max-width: 800px)': {
+      columnGap: '1rem',
+    },
   },
   gridItem: {
     overflow: 'hidden',
@@ -60,5 +86,21 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     bottom: '2%',
     fontSize: '2rem',
     color: theme.colors.green[8],
+  },
+  flexContainer: {
+    height: '100%',
+
+    '@media (max-width: 1650px)': {
+      flexDirection: 'column',
+      gap: '5rem',
+    },
+  },
+
+  text: {
+    marginBottom: '3rem',
+    width: '50%',
+    '@media (max-width: 1650px)': {
+      width: '100%',
+    },
   },
 }));
