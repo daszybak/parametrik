@@ -34,6 +34,13 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     gridTemplateRows: 'repeat(3, auto)',
     gap: '1rem',
 
+    '@media (max-width: 900px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'start',
+      justifyContent: 'center',
+    },
+
     '& > *:nth-of-type(1)': {
       gridRow: '1 / 3',
       gridColumn: '1',

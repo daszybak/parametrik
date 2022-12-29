@@ -9,11 +9,12 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     minHeight: '100vh',
   },
   marginB5: { marginBottom: '10rem' },
+  marginT5: { marginTop: '10rem' },
   contactForm: {
     marginBottom: '10rem',
     width: '80%',
 
-    '@media (max-width: 768px)': {
+    '@media (max-width: 100px)': {
       width: '100%',
     },
   },

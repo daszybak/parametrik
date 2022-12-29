@@ -18,7 +18,8 @@ const FNavLinks: React.FC<FnNavLinksProps> = (props) => {
       <Title
         order={3}
         style={{
-          marginBottom: '2rem',
+          margin: '2rem 0',
+          marginTop: '5rem',
         }}
       >
         Links

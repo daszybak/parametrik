@@ -10,7 +10,7 @@ interface LocationProps {}
 // eslint-disable-next-line max-len
 const Location: React.FC<LocationProps> = () => {
   const name = 'Location';
-  const { width } = useViewportSize();
+  const { width, height } = useViewportSize();
   const globeEl = useRef<GlobeMethods | undefined>();
 
   let Globe: typeof GlobeGL = () => null;
@@ -33,10 +33,11 @@ const Location: React.FC<LocationProps> = () => {
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
           backgroundColor="rgba(0, 0, 0, 0)"
           width={width}
+          height={height < 768 ? height / 2 : height}
           onGlobeReady={() => {
             // eslint-disable-next-line max-len
             globeEl.current?.pointOfView(
-              { lat: 45.1, lng: 15.2, altitude: width < 1000 ? 3 : 1.8 },
+              { lat: 45.1, lng: 15.2, altitude: width < 1000 ? (width < 700 ? 6 : 3) : 1.8 },
               5000
             );
             const controls = globeEl.current?.controls();

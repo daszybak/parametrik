@@ -8,6 +8,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     display: 'inline-block',
     position: 'relative',
     zIndex: 10,
+    whiteSpace: 'nowrap',
 
     h1: {
       textShadow: '0px 4px 2px rgba(255, 255, 255, 0.5), 2px 2px 2px rgba(255, 255, 255, 0.5)',

@@ -2,7 +2,7 @@ import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Button, Textarea, TextInput, Title } from '@mantine/core';
+import { Button, Flex, Textarea, TextInput, Title } from '@mantine/core';
 import { useStyles } from './contact-form.styles';
 
 const contactFormInputs = z.object({
@@ -57,92 +57,85 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
       >
         Contact Us
       </Title>
-
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className={cx(classes.formContainer, className)}
-        {...other}
-      >
-        <TextInput
-          label="Name"
-          {...register('name')}
-          className={classes.gridRow1}
-          error={errors.name?.message}
-          styles={{
-            error: {
-              position: 'absolute',
-            },
-          }}
-        />
-        <TextInput
-          label="company"
-          {...register('company')}
-          className={classes.gridRow1}
-          error={errors.company?.message}
-          styles={{
-            error: {
-              position: 'absolute',
-            },
-          }}
-        />
-        <TextInput
-          label="email"
-          {...register('email')}
-          style={{
-            gridRow: '2',
-            gridColumn: 1,
-          }}
-          error={errors.email?.message}
-          styles={{
-            error: {
-              position: 'absolute',
-            },
-          }}
-        />
-        <TextInput
-          label="phone"
-          {...register('phone')}
-          style={{
-            gridRow: '3',
-            gridColumn: 1,
-          }}
-          error={errors.phone?.message}
-          styles={{
-            error: {
-              position: 'absolute',
-            },
-          }}
-        />
-        <Textarea
-          label="message"
-          minRows={7}
-          {...register('message')}
-          error={errors.message?.message}
-          style={{
-            gridRow: '2 / 4',
-            gridColumn: 2,
-            height: '100%',
-          }}
-          styles={{
-            error: {
-              position: 'absolute',
-            },
-          }}
-        />
-        <Button
-          type="submit"
-          style={{
-            gridRow: ' 4',
-            gridColumn: '1 /3',
-            justifySelf: 'center',
-            alignSelf: 'center',
-            maxWidth: '400px',
-            width: '40%',
-          }}
+      <Flex justify="center" align="center" direction="column">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className={cx(classes.formContainer, className)}
+          {...other}
         >
-          SUBMIT
-        </Button>
-      </form>
+          <TextInput
+            label="Name"
+            {...register('name')}
+            error={errors.name?.message}
+            styles={{
+              error: {
+                position: 'absolute',
+              },
+            }}
+            className={classes.gridItem}
+          />
+          <TextInput
+            label="email"
+            {...register('email')}
+            error={errors.email?.message}
+            styles={{
+              error: {
+                position: 'absolute',
+              },
+            }}
+            className={classes.gridItem}
+          />
+          <TextInput
+            label="company"
+            {...register('company')}
+            error={errors.company?.message}
+            styles={{
+              error: {
+                position: 'absolute',
+              },
+            }}
+            className={classes.gridItem4}
+          />
+          <TextInput
+            label="phone"
+            {...register('phone')}
+            error={errors.phone?.message}
+            styles={{
+              error: {
+                position: 'absolute',
+              },
+            }}
+            style={{
+              alignSelf: 'end',
+            }}
+            className={classes.gridItem}
+          />
+          <Textarea
+            label="message"
+            minRows={6}
+            {...register('message')}
+            error={errors.message?.message}
+            className={classes.gridItem5}
+            styles={{
+              error: {
+                position: 'absolute',
+              },
+            }}
+          />
+          <Button
+            type="submit"
+            style={{
+              justifySelf: 'center',
+              alignSelf: 'center',
+              maxWidth: '400px',
+              width: '40%',
+            }}
+            className={classes.gridItem6}
+          >
+            SUBMIT
+          </Button>
+        </form>
+      </Flex>
     </>
   );
 };

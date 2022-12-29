@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = () => {
         <div className="wrapper">
           <div className="text-center">
             <ContactForm className={cx(classes.marginB5, classes.contactForm)} />
-            <FNavLinks className={classes.marginB5} />
+            <FNavLinks className={cx(classes.marginB5)} />
             <FInfo className={classes.marginB5} />
             <Copyright />
           </div>

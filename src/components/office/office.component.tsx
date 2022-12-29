@@ -75,10 +75,6 @@ const Office: React.FC<OfficeProps> = () => {
           <Text>{t<string>('home:about-us.project-lead-sim')}</Text>
         </Flex>
         <ImageGallery
-          // rows={3}
-          style={{
-            width: '700px',
-          }}
           images={[
             {
               src: '/office/IMG_9091.jpg',

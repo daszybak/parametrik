@@ -30,7 +30,7 @@ const Oems: React.FC<OemsProps> = () => {
   ].map((image) => <BrandImage key={image} image={image} />);
 
   return (
-    <div>
+    <div className={classes.oem}>
       <div className={classes.firstRow}>{firstRowImages}</div>
       <div className={classes.secondRow}>{secondRowImages}</div>
     </div>
