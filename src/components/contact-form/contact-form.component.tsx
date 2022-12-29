@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Button, Flex, Textarea, TextInput, Title } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 import { useStyles } from './contact-form.styles';
 
 const contactFormInputs = z.object({
@@ -32,6 +33,7 @@ type ContactFormInputs = z.infer<typeof contactFormInputs>;
 interface ContactFormProps extends React.ComponentPropsWithoutRef<'form'> {}
 
 const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
+  const { t } = useTranslation();
   const { classes, cx } = useStyles();
   const {
     handleSubmit,
@@ -55,7 +57,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
           marginBottom: '2rem',
         }}
       >
-        Contact Us
+        {t<string>('common:contact-form.contact-us')}
       </Title>
       <Flex justify="center" align="center" direction="column">
         <form
@@ -64,7 +66,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
           {...other}
         >
           <TextInput
-            label="Name"
+            label={t<string>('common:contact-form.name')}
             {...register('name')}
             error={errors.name?.message}
             styles={{
@@ -75,7 +77,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
             className={classes.gridItem}
           />
           <TextInput
-            label="email"
+            label={t<string>('common:contact-form.email')}
             {...register('email')}
             error={errors.email?.message}
             styles={{
@@ -86,7 +88,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
             className={classes.gridItem}
           />
           <TextInput
-            label="company"
+            label={t<string>('common:contact-form.company')}
             {...register('company')}
             error={errors.company?.message}
             styles={{
@@ -97,7 +99,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
             className={classes.gridItem4}
           />
           <TextInput
-            label="phone"
+            label={t<string>('common:contact-form.phone')}
             {...register('phone')}
             error={errors.phone?.message}
             styles={{
@@ -111,7 +113,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
             className={classes.gridItem}
           />
           <Textarea
-            label="message"
+            label={t<string>('common:contact-form.message')}
             minRows={6}
             {...register('message')}
             error={errors.message?.message}
