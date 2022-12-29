@@ -14,7 +14,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
 
     //hover
     '&:hover': {
-      color: theme.colors.green[9],
+      color: theme.colors.green[8],
       transform: 'translateY(-2px)',
       textDecoration: 'none',
     },

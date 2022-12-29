@@ -1,4 +1,4 @@
-import { Container, Flex } from '@mantine/core';
+import { Container, Flex, useMantineTheme } from '@mantine/core';
 import { useContext } from 'react';
 import { HeroContext } from 'src/context/hero/heroContextProvider';
 import Logo from '../logo/logo.component';
@@ -9,7 +9,8 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   const { classes } = useStyles();
-  const { navRef /*isIntersecting*/ } = useContext(HeroContext);
+  const { isIntersecting } = useContext(HeroContext);
+  const theme = useMantineTheme();
 
   return (
     <header>
@@ -17,9 +18,8 @@ const Navbar: React.FC<NavbarProps> = () => {
         fluid
         className={classes.navbar}
         style={{
-          backgroundColor: 'transparent',
+          backgroundColor: isIntersecting ? 'transparent' : theme.colors.blue[7],
         }}
-        ref={navRef}
       >
         <Flex justify="space-between" align="center">
           <Logo />
@@ -29,4 +29,5 @@ const Navbar: React.FC<NavbarProps> = () => {
     </header>
   );
 };
+
 export default Navbar;

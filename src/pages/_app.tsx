@@ -3,12 +3,18 @@ import { appWithTranslation } from 'next-i18next';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme } from '@mantine/core';
 import { mantineTheme } from 'mantine-theme';
+import { Roboto } from '@next/font/google';
 import MenuContextProvider from 'src/context/menu/menuContextProvider';
 import { ProjectsContextProvider } from 'src/context/projects/projects-context-provider.component';
 import { PageLoadContextProvider } from 'src/context/page-load-context-provider/page-load-context-provider';
 import { HeroContextProvider } from 'src/context/hero/heroContextProvider';
 import Layout from './layout';
 import nextI18NextConfig from '../../next-i18next.config';
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
 
 function _App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -26,7 +32,7 @@ function _App(props: AppProps & { colorScheme: ColorScheme }) {
           <HeroContextProvider>
             <ProjectsContextProvider projects={pageProps.projects || []}>
               <MenuContextProvider>
-                <Layout>
+                <Layout className={roboto.className}>
                   <Component {...pageProps} />
                 </Layout>
               </MenuContextProvider>

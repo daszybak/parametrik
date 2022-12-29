@@ -126,6 +126,7 @@ const Office: React.FC<OfficeProps> = () => {
           marginBottom: '3rem',
         }}
         className={classes.oemText}
+        transform="unset"
       >
         {t<string>('home:about-us.text5')}
       </Title>

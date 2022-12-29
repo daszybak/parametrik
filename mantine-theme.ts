@@ -50,45 +50,43 @@ export const mantineTheme: MantineThemeOverride = {
   },
   black: '#042144',
   white: '#fff',
-  fontFamily: 'Roboto',
+  fontFamily: 'Roboto, sans-serif',
   defaultGradient: {
     from: '#e9b7ce',
     to: '#d3f3f1',
     deg: 45,
   },
   headings: {
+    fontFamily: 'Roboto, sans-serif',
     sizes: {
       h1: {
         // 36px in rem
         fontSize: '2.25rem',
         // 45px in rem
-        lineHeight: '2.8125rem',
       },
       h2: {
         // 32px in rem
         fontSize: '2rem',
         // 32 * 1.2 in rem
-        lineHeight: '2.4rem',
       },
       h3: {
         // 19px in rem
-        fontSize: '1.1875rem',
+        fontSize: '1.575rem',
         // 23px in rem
-        lineHeight: '1.4375rem',
       },
       h4: {
         // 18px in rem
-        fontSize: '1.125rem',
+        fontSize: '1.375rem',
         // 22px in rem
-        lineHeight: '1.375rem',
+        fontWeight: 500,
       },
     },
   },
   fontSizes: {
     xl: 24,
-    lg: 18,
+    lg: 20,
     md: 18,
-    sm: 14,
+    sm: 16,
     xs: 14,
   },
   components: {
@@ -97,6 +95,7 @@ export const mantineTheme: MantineThemeOverride = {
       styles: (theme: MantineTheme) => ({
         label: {
           letterSpacing: '0.1em',
+          fontSize: '1.125rem',
         },
       }),
     },

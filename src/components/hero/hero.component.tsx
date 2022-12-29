@@ -9,11 +9,11 @@ import Title from './title/title.component';
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
-  const { heroRef } = useContext(HeroContext);
   const { classes } = useStyles();
+  const { heroRef } = useContext(HeroContext);
 
   return (
-    <SectionWithoutTransition id="Hero" first ref={heroRef}>
+    <SectionWithoutTransition id="Hero" first>
       <Flex direction="column" align="center">
         <Image
           className={classes.backgroundImage}
@@ -21,6 +21,8 @@ const Hero: React.FC<HeroProps> = () => {
           alt="Futuristic car"
           width={2238}
           height={1340}
+          ref={heroRef}
+          id="heroImage"
         />
         <Title />
       </Flex>

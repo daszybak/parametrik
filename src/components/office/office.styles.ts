@@ -4,10 +4,11 @@ import { createStyles, MantineTheme } from '@mantine/core';
 export const useStyles = createStyles((theme: MantineTheme) => ({
   oemText: {
     position: 'relative',
+    textTransform: 'none',
     '&::after': {
       content: '""',
       // highlight backround with red color and slightly tilted
-      background: theme.colors.gray[7],
+      background: theme.colors.green[4],
       // set the background to cover the entire element
       backgroundSize: '100% 100%',
       // set the background to repeat

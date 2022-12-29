@@ -7,7 +7,7 @@ const Copyright = () => (
         marginBottom: '1rem',
       }}
     />
-    <Text size="sm" align="center">
+    <Text size="xs" align="center">
       Parametrik Engineering, 2023. Sva prava pridržana. | Design by
       <Anchor href="https://www.karlodelmis.com/" target="_blank" rel="noopener noreferrer">
         {' '}

@@ -8,13 +8,14 @@ import { PageLoadContext } from 'src/context/page-load-context-provider/page-loa
 
 interface LayoutProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, className }) => {
   const { loaded } = useContext(PageLoadContext);
 
   return (
-    <>
+    <main className={className}>
       {loaded ? (
         <>
           <Shine>
@@ -28,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Transition transition="fade" mounted={!loaded}>
         {(styles) => <LoadingScreen style={styles} />}
       </Transition>
-    </>
+    </main>
   );
 };
 
