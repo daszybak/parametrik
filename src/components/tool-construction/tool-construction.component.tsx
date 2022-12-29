@@ -61,7 +61,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
             transform="capitalize"
             className={cx(classes.marginB2, classes.itemTitle)}
           >
-            {t<string>('home:tool-construction-process.creating-post')}
+            {t<string>('home:tool-construction-process.creating-parts')}
           </Title>
           <Flex
             justify="center"

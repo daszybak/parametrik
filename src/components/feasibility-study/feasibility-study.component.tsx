@@ -166,6 +166,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
+          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"
