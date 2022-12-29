@@ -1,8 +1,9 @@
 import { Burger, Flex, Transition } from '@mantine/core';
 import Link from 'next/link';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import Language from 'src/components/language/language.component';
 import { HeroContext } from 'src/context/hero/heroContextProvider';
+import { MenuContext } from 'src/context/menu/menuContextProvider';
 import { useLinks } from 'src/links';
 import { useStyles } from './menu.styles';
 
@@ -10,13 +11,9 @@ interface MenuProps {}
 
 const Menu: React.FC<MenuProps> = () => {
   const { classes, theme } = useStyles();
-  const [open, setOpen] = useState(false);
+  const { handleMenu, isOpen } = useContext(MenuContext);
   const links = useLinks();
   const { isIntersecting } = useContext(HeroContext);
-
-  const handleToggleMenu = () => {
-    setOpen((opened) => !opened);
-  };
 
   const renderedLinks = links.map(({ href, title }) => (
     <Link key={href} href={href} className={classes.link} data-intersecting={isIntersecting}>
@@ -26,7 +23,7 @@ const Menu: React.FC<MenuProps> = () => {
 
   return (
     <>
-      <Transition mounted={open} transition="slide-left" timingFunction="ease">
+      <Transition mounted={isOpen} transition="slide-left" timingFunction="ease">
         {(styles) => (
           <nav>
             <Flex style={{ ...styles }} justify="space-between" gap="2rem" align="center">
@@ -43,7 +40,12 @@ const Menu: React.FC<MenuProps> = () => {
           </nav>
         )}
       </Transition>
-      <Burger onClick={handleToggleMenu} opened={open} color={theme.colors.green[4]} size="lg" />
+      <Burger
+        onClick={() => handleMenu('toggle')}
+        opened={isOpen}
+        color={theme.colors.green[4]}
+        size="lg"
+      />
     </>
   );
 };

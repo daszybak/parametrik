@@ -1,4 +1,5 @@
-import { useReducer, createContext } from 'react';
+import { useRouter } from 'next/router';
+import { useReducer, createContext, useEffect } from 'react';
 
 export type ActionTypes = 'close' | 'open' | 'toggle';
 
@@ -50,6 +51,15 @@ const menuReducer = (state: State, action: Action) => {
 
 const MenuContextProvider = ({ children }: Children) => {
   const [menu, dispatchMenu] = useReducer(menuReducer, menuInitialState);
+  const { events } = useRouter();
+
+  useEffect(() => {
+    events.on('routeChangeStart', () => {
+      console.log('routeChangeStart');
+
+      dispatchMenu({ type: 'close' });
+    });
+  }, []);
 
   const handleMenu = (type: ActionTypes) => {
     dispatchMenu({ type });
