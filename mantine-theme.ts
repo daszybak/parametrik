@@ -106,6 +106,19 @@ export const mantineTheme: MantineThemeOverride = {
           letterSpacing: '0.1em',
           fontSize: '1.125rem',
         },
+        root: {
+          borderRadius: '32px',
+          cursor: 'pointer',
+          transition: 'all 0.1s ease-in-out',
+          backgroundColor: theme.colors.green[4],
+          color: theme.white,
+          boxShadow: '-6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2)',
+
+          '&:hover': {
+            boxShadow: '-6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2)',
+            opacity: 0.4,
+          },
+        },
       }),
     },
     Container: {
