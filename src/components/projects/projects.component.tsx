@@ -14,10 +14,19 @@ const Projects: React.FC<ProjectsProps> = () => {
   ));
 
   return (
-    <Section first id="Projects">
-      <SectionTitle>Projects</SectionTitle>
-      {renderedProjects}
-    </Section>
+    <>
+      <Section first id="Projects">
+        <SectionTitle>Projects</SectionTitle>
+        <SectionTitle align="center">Construction</SectionTitle>
+        {renderedProjects}
+      </Section>
+      <Section id="Feasibility">
+        <SectionTitle align="center">Feasibility</SectionTitle>
+      </Section>
+      <Section id="Method">
+        <SectionTitle align="center">Method</SectionTitle>
+      </Section>
+    </>
   );
 };
 

@@ -32,4 +32,10 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
       textDecoration: 'none',
     },
   },
+  mobileMenu: {
+    display: 'none',
+    '@media (max-width: 1100px)': {
+      display: 'block',
+    },
+  },
 }));

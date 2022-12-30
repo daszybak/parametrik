@@ -1,6 +1,7 @@
 import { Container, Flex, Transition, useMantineTheme } from '@mantine/core';
 import { useContext, useEffect, useState } from 'react';
 import { HeroContext } from 'src/context/hero/heroContextProvider';
+import { MenuContext } from 'src/context/menu/menuContextProvider';
 import Logo from '../logo/logo.component';
 import Menu from './menu/menu.component';
 import { useStyles } from './navbar.styles';
@@ -13,11 +14,13 @@ const Navbar: React.FC<NavbarProps> = () => {
   const theme = useMantineTheme();
   const [lastScroll, setLastScroll] = useState<number>(0);
   const [show, setShow] = useState<boolean>(true);
+  const { handleMenu } = useContext(MenuContext);
 
   const controlNavbar = () => {
     if (window.scrollY > lastScroll) {
       // if scroll down hide the navbar
       setShow(false);
+      handleMenu('close');
     } else {
       // if scroll up show the navbar
       setShow(true);

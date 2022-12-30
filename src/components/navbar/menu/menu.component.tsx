@@ -26,12 +26,17 @@ const Menu: React.FC<MenuProps> = () => {
 
   return (
     <>
-      {width < 1050 ? (
-        <MobileMenu opened={isOpen} onClose={() => handleMenu('close')} />
-      ) : (
-        <Transition mounted={isOpen} transition="slide-left" timingFunction="ease">
-          {(styles) => (
-            <nav>
+      <Transition mounted={isOpen} transition="slide-left" timingFunction="ease">
+        {(styles) => (
+          <nav>
+            {width < 1100 ? (
+              <MobileMenu
+                opened={isOpen}
+                onClose={() => handleMenu('close')}
+                className={classes.mobileMenu}
+                style={{ ...styles, display: width < 1100 ? 'block' : 'none' }}
+              />
+            ) : (
               <Flex style={{ ...styles }} justify="space-between" gap="2rem" align="center">
                 <>
                   {renderedLinks}
@@ -43,10 +48,11 @@ const Menu: React.FC<MenuProps> = () => {
                   />
                 </>
               </Flex>
-            </nav>
-          )}
-        </Transition>
-      )}
+            )}
+          </nav>
+        )}
+      </Transition>
+
       <Burger
         onClick={() => handleMenu('toggle')}
         opened={isOpen}
