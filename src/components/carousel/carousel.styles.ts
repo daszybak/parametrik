@@ -42,7 +42,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   },
   embla: {
     position: 'relative',
-    maxWidth: `${200}px`,
+    maxWidth: `${300}px`,
     marginBottom: '1rem',
   },
   emblaViewport: {
@@ -146,7 +146,8 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     position: 'absolute',
     zIndex: 1,
     left: '0.25rem',
-    top: '0.25rem',
+    // top: '0.25rem',
+    top: '6rem',
   },
   close: {
     position: 'absolute',

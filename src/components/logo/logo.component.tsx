@@ -9,7 +9,12 @@ const Logo: React.FC<LogoProps> = () => {
 
   return (
     <Link href="/" className={classes.logo}>
-      <Image src="/logo.png" alt="Parametrik Engineering" fill />
+      <Image
+        src="/logo.png"
+        alt="Parametrik Engineering"
+        fill
+        sizes="(max-width: 900px) 190px, 318px"
+      />
     </Link>
   );
 };

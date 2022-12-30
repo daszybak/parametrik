@@ -33,7 +33,7 @@ const Location: React.FC<LocationProps> = () => {
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
           backgroundColor="rgba(0, 0, 0, 0)"
           width={width}
-          height={height < 768 ? height / 3 : height}
+          height={height < 768 ? (height < 400 ? height / 4 : height / 3) : height}
           onGlobeReady={() => {
             // eslint-disable-next-line max-len
             globeEl.current?.pointOfView(

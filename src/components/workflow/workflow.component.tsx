@@ -7,6 +7,8 @@ import { HiArrowDown, HiArrowUturnUp } from 'react-icons/hi2';
 import { useViewportSize } from '@mantine/hooks';
 import { useStyles } from './workflow.styles';
 
+const SIZES = '(max-width: 600px) 266px, (max-width: 900px) 400px, 600px';
+
 interface WorkflowProps {}
 
 const Workflow: React.FC<WorkflowProps> = () => {
@@ -51,6 +53,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
                 alt={t<string>('home:workflow-areas.feasibility-study')}
                 fill
                 className={classes.border}
+                sizes={SIZES}
               />
             </div>
             <HiArrowDown className={classes.arrow} />
@@ -65,6 +68,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
                 alt={t<string>('home:workflow-areas.detail-method-plan')}
                 fill
                 className={classes.border}
+                sizes={SIZES}
               />
             </div>
             <HiArrowDown className={classes.arrow} />
@@ -79,6 +83,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
                 alt={t<string>('home:workflow-areas.tool-construction')}
                 fill
                 className={classes.border}
+                sizes={SIZES}
               />
             </div>
             <HiArrowUturnUp className={classes.arrow} />
@@ -94,6 +99,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
                   alt={t<string>('home:workflow-areas.final-part')}
                   fill
                   className={classes.border}
+                  sizes={SIZES}
                 />
               </div>
             </div>
@@ -111,6 +117,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
                 src="/workflow/Pic9.jpg"
                 alt={t<string>('home:workflow-areas.final-part')}
                 fill
+                sizes={SIZES}
               />
             </div>
           </div>

@@ -2,6 +2,7 @@ import {
   ContainerStylesParams,
   MantineTheme,
   MantineThemeOverride,
+  TextStylesParams,
   TitleStylesParams,
 } from '@mantine/core';
 
@@ -127,6 +128,10 @@ export const mantineTheme: MantineThemeOverride = {
           letterSpacing: '0.05em',
         },
       }),
+    },
+    Text: {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      styles: (theme: MantineTheme, params: TextStylesParams) => ({}),
     },
   },
 };

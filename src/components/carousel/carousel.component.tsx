@@ -31,20 +31,20 @@ export const Carousel: React.FC<CarouselProps> = ({
 }) => {
   const { classes, cx } = useStyles();
   const [mainViewportRef, emblaSlides] = useEmblaCarousel({ skipSnaps: false, startIndex });
-  const [thumbViewportRef, emblaThumbs] = useEmblaCarousel({
+  const [, /*thumbViewportRef*/ emblaThumbs] = useEmblaCarousel({
     containScroll: 'keepSnaps',
     dragFree: true,
   });
-  const [slide, setSlide] = useState<number>(0);
+  const [, /*slide*/ setSlide] = useState<number>(0);
   const [slidesIsDragging, setSlidesIsDragging] = useState<boolean>(false);
 
-  const handleThumbOnClick = useCallback(
-    (index: number) => {
-      if (!emblaSlides || !emblaThumbs) return;
-      if (emblaThumbs.clickAllowed()) emblaSlides.scrollTo(index);
-    },
-    [emblaSlides, emblaThumbs]
-  );
+  // const handleThumbOnClick = useCallback(
+  //   (index: number) => {
+  //     if (!emblaSlides || !emblaThumbs) return;
+  //     if (emblaThumbs.clickAllowed()) emblaSlides.scrollTo(index);
+  //   },
+  //   [emblaSlides, emblaThumbs]
+  // );
 
   const handleOnSelect = useCallback(() => {
     if (!emblaSlides || !emblaThumbs) return;
@@ -70,7 +70,7 @@ export const Carousel: React.FC<CarouselProps> = ({
 
   const handleSlideOnClick = useCallback(
     (offset: number) => {
-      if (!emblaSlides || !emblaThumbs) return;
+      if (!emblaSlides /*|| !emblaThumbs*/) return;
       offset === 1 ? emblaSlides.scrollNext() : offset === -1 ? emblaSlides.scrollPrev() : null;
     },
     [emblaSlides, emblaThumbs]
@@ -98,25 +98,25 @@ export const Carousel: React.FC<CarouselProps> = ({
     </div>
   ));
 
-  const renderedThumbs = images.map((image, i) => (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-    <div
-      key={image.alt + i}
-      onClick={handleOnSelect}
-      className={cx(classes.slideThumb, {
-        [classes.selected]: slide === i,
-        [classes.paddingL05]: i !== 0,
-      })}
-    >
-      <Image
-        onClick={() => handleThumbOnClick(i)}
-        src={image.src}
-        alt={image.alt}
-        width={GALLERY_IMAGE.THUMB_WIDTH}
-        height={GALLERY_IMAGE.THUMB_HEIGHT}
-      />
-    </div>
-  ));
+  // const renderedThumbs = images.map((image, i) => (
+  //   // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+  //   <div
+  //     key={image.alt + i}
+  //     onClick={handleOnSelect}
+  //     className={cx(classes.slideThumb, {
+  //       [classes.selected]: slide === i,
+  //       [classes.paddingL05]: i !== 0,
+  //     })}
+  //   >
+  //     <Image
+  //       onClick={() => handleThumbOnClick(i)}
+  //       src={image.src}
+  //       alt={image.alt}
+  //       width={GALLERY_IMAGE.THUMB_WIDTH}
+  //       height={GALLERY_IMAGE.THUMB_HEIGHT}
+  //     />
+  //   </div>
+  // ));
 
   return (
     <div>
@@ -159,11 +159,11 @@ export const Carousel: React.FC<CarouselProps> = ({
         </div>
       </div>
 
-      <div className={cx(classes.embla)}>
+      {/* <div className={cx(classes.embla)}>
         <div className={classes.emblaViewport} ref={thumbViewportRef}>
           <div className={classes.emblaContainer}>{renderedThumbs}</div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
