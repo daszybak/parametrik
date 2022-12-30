@@ -15,7 +15,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
 
     '@media (max-width: 1250px)': {
       gridTemplateColumns: '1fr',
-      gridTemplateRows: 'repeat(6, 1fr)',
+      gridTemplateRows: 'repeat(6, auto)',
     },
 
     // innher borders nth-type selector

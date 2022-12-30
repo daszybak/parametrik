@@ -6,15 +6,22 @@ import SectionTitle from 'src/components/section-title/section-title.component';
 import Section from 'src/components/section/section.component';
 // import Arrow from '../arrow/arrow.component';
 import { links } from 'src/links';
+import { useViewportSize } from '@mantine/hooks';
 import { HiArrowUturnRight, HiArrowRight } from 'react-icons/hi2';
 import { useStyles } from './detail-concept-plan.styles';
 import Grid from '../grid/grid.component';
+
+export const BREAKPOINTS = {
+  xs: 1250,
+  md: 1500,
+};
 
 interface DetailConceptPlanProps {}
 
 const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
   const { classes, cx } = useStyles();
   const { t } = useTranslation();
+  const { width } = useViewportSize();
   const name = 'detail-method-plan';
 
   return (
@@ -23,7 +30,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
       <Text className={classes.marginB3}>{t<string>('home:detail-method-plan.text3')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -47,7 +54,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.md ? (
+            <HiArrowRight className={classes.arrow} />
+          ) : width > BREAKPOINTS.xs ? (
+            <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          ) : null}
           <Title
             order={4}
             transform="capitalize"
@@ -72,7 +83,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -87,7 +98,15 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
               height: '100%',
             }}
           >
-            <Flex align="center" gap="2rem">
+            <Flex
+              align="center"
+              gap="2rem"
+              sx={{
+                '@media (max-width: 550px)': {
+                  flexDirection: 'column',
+                },
+              }}
+            >
               <Image
                 src="/detail-concept-plan/Serijskametoda-03_KreiranjeBlechhaltera.JPG"
                 alt={t<string>('home:detail-method-plan.creating-punch')}
@@ -106,7 +125,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.md ? (
+            <HiArrowRight className={classes.arrow} />
+          ) : width > BREAKPOINTS.xs ? (
+            <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          ) : null}
           <Title
             order={4}
             transform="capitalize"
@@ -131,7 +154,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -146,7 +169,15 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
               height: '100%',
             }}
           >
-            <Flex align="center" gap="2rem">
+            <Flex
+              align="center"
+              gap="2rem"
+              sx={{
+                '@media (max-width: 550px)': {
+                  flexDirection: 'column',
+                },
+              }}
+            >
               <Image
                 src="/detail-concept-plan/Serijskametoda-05_Definiranje_Platine.JPG"
                 alt={t<string>('home:detail-method-plan.defining-blank-size')}
@@ -179,7 +210,15 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
               height: '100%',
             }}
           >
-            <Flex align="center" gap="2rem">
+            <Flex
+              align="center"
+              gap="2rem"
+              sx={{
+                '@media (max-width: 550px)': {
+                  flexDirection: 'column',
+                },
+              }}
+            >
               <Image
                 src="/detail-concept-plan/Serijskametoda-07_Trimplan.JPG"
                 alt={t<string>('home:detail-method-plan.trim-plan')}

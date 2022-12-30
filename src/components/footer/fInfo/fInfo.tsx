@@ -26,9 +26,18 @@ const FInfo: React.FC<FInfoProps> = () => (
         <Title order={4} className={styles.title}>
           FIND US ON
         </Title>
-        <Anchor href="https://www.linkedin.com/parametrik.hr">
-          <RiLinkedinBoxLine size={36} />
-        </Anchor>
+        <span>
+          <Anchor
+            href="https://www.linkedin.com/parametrik.hr"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline',
+            }}
+          >
+            <RiLinkedinBoxLine size={36} />
+          </Anchor>
+        </span>
       </div>
     </div>
   </div>

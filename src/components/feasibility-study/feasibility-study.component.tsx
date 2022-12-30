@@ -7,9 +7,11 @@ import Section from 'src/components/section/section.component';
 import Link from 'next/link';
 import { links } from 'src/links';
 import { HiArrowUturnRight, HiArrowRight } from 'react-icons/hi2';
+import { useViewportSize } from '@mantine/hooks';
 import { useStyles } from './feasibility-study.styles';
 import ImageGallery from '../image-gallery/image-gallery.component';
 import Grid from '../grid/grid.component';
+import { BREAKPOINTS } from '../detail-concept-plan/detail-concept-plan.component';
 
 const SIMULATION_AND_POST_PROCESS_ANALYSIS_PROPS = {
   width: 140,
@@ -22,6 +24,7 @@ interface FeasibilityStudyProps {}
 const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
   const { classes, cx } = useStyles();
   const { t } = useTranslation();
+  const { width } = useViewportSize();
   const name = 'feasibility-study';
 
   return (
@@ -30,7 +33,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
       <Text className={classes.marginB3}>{t<string>('home:feasibility-study-text.text2')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -54,7 +57,11 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.md ? (
+            <HiArrowRight className={classes.arrow} />
+          ) : width > BREAKPOINTS.xs ? (
+            <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          ) : null}
           <Title
             order={4}
             transform="capitalize"
@@ -79,7 +86,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -119,9 +126,12 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
             />
           </Flex>
         </Grid.Item>
-
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.md ? (
+            <HiArrowRight className={classes.arrow} />
+          ) : width > BREAKPOINTS.xs ? (
+            <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          ) : null}
           <Title
             order={4}
             transform="capitalize"
@@ -166,7 +176,7 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -206,7 +216,6 @@ const FeasibilityStudy: React.FC<FeasibilityStudyProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
           <Title
             order={4}
             transform="capitalize"

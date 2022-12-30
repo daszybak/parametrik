@@ -7,14 +7,17 @@ import Section from 'src/components/section/section.component';
 // import Arrow from '../arrow/arrow.component';
 import { links } from 'src/links';
 import { HiArrowUturnRight, HiArrowRight } from 'react-icons/hi2';
+import { useViewportSize } from '@mantine/hooks';
 import { useStyles } from './tool-construction.styles';
 import Grid from '../grid/grid.component';
+import { BREAKPOINTS } from '../detail-concept-plan/detail-concept-plan.component';
 
 interface DetailConceptPlanProps {}
 
 const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
   const { classes, cx } = useStyles();
   const { t } = useTranslation();
+  const { width } = useViewportSize();
   const name = 'tool-construction';
 
   return (
@@ -23,7 +26,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
       <Text className={classes.marginB3}>{t<string>('home:tool-construction.text4')}</Text>
       <Grid className={classes.marginB3}>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -38,7 +41,14 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
               height: '100%',
             }}
           >
-            <Flex gap="2rem">
+            <Flex
+              gap="2rem"
+              sx={{
+                '@media (max-width: 550px)': {
+                  flexDirection: 'column',
+                },
+              }}
+            >
               <Image
                 src="/tool-construction/01_CAD_Surfaces01.JPG"
                 alt={t<string>('home:tool-construction-process.usingCAD')}
@@ -55,7 +65,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.md ? (
+            <HiArrowRight className={classes.arrow} />
+          ) : width > BREAKPOINTS.xs ? (
+            <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          ) : null}
           <Title
             order={4}
             transform="capitalize"
@@ -80,7 +94,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
@@ -94,8 +108,21 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
             style={{
               height: '100%',
             }}
+            sx={{
+              '@media (max-width: 550px)': {
+                flexDirection: 'column',
+              },
+            }}
           >
-            <Flex align="center" gap="2rem">
+            <Flex
+              align="center"
+              gap="2rem"
+              sx={{
+                '@media (max-width: 550px)': {
+                  flexDirection: 'column',
+                },
+              }}
+            >
               <Image
                 src="/tool-construction/03_lower_upper_01.jpg"
                 alt={t<string>('home:tool-construction-process.creating-post')}
@@ -114,7 +141,11 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.md ? (
+            <HiArrowRight className={classes.arrow} />
+          ) : width > BREAKPOINTS.xs ? (
+            <HiArrowUturnRight className={cx(classes.arrow, classes.arrow2)} />
+          ) : null}
           <Title
             order={4}
             transform="capitalize"
@@ -129,7 +160,15 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
               height: '100%',
             }}
           >
-            <Flex align="center" gap="2rem">
+            <Flex
+              align="center"
+              gap="2rem"
+              sx={{
+                '@media (max-width: 550px)': {
+                  flexDirection: 'column',
+                },
+              }}
+            >
               <Image
                 src="/tool-construction/04_Lowerdie.jpg"
                 alt={t<string>('home:tool-construction-process.creating-post')}
@@ -148,7 +187,7 @@ const DetailConceptPlan: React.FC<DetailConceptPlanProps> = () => {
           </Flex>
         </Grid.Item>
         <Grid.Item>
-          <HiArrowRight className={classes.arrow} />
+          {width > BREAKPOINTS.xs ? <HiArrowRight className={classes.arrow} /> : null}
           <Title
             order={4}
             transform="capitalize"
