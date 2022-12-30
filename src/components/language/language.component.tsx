@@ -1,4 +1,5 @@
-import { Anchor, AnchorProps } from '@mantine/core';
+import { AnchorProps } from '@mantine/core';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const locales = [
@@ -12,10 +13,12 @@ const locales = [
   },
 ];
 
-interface LanguageProps extends AnchorProps {}
+interface LanguageProps extends AnchorProps {
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+}
 
 const Language: React.FC<LanguageProps> = (props) => {
-  const { asPath, locale, push } = useRouter();
+  const { asPath, locale } = useRouter();
 
   const setCookie = (l: string) => {
     document.cookie = `NEXT_LOCALE=${l}; max-age=31536000; path=/`;
@@ -25,22 +28,21 @@ const Language: React.FC<LanguageProps> = (props) => {
 
   const handleLanguageOnChange = () => {
     setCookie(newLocale?.code || '');
-    push(
-      {
-        pathname: asPath,
-      },
-      asPath,
-      {
-        locale: newLocale?.code || '',
-        shallow: false,
-      }
-    );
   };
 
   return (
-    <Anchor onClick={() => handleLanguageOnChange()} {...props}>
+    <Link
+      onClick={() => {
+        handleLanguageOnChange();
+        // props.onClick?.(e);
+      }}
+      {...props}
+      as={asPath}
+      locale={newLocale?.code}
+      href={asPath}
+    >
       {newLocale?.name}
-    </Anchor>
+    </Link>
   );
 };
 

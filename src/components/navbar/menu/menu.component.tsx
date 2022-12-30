@@ -26,12 +26,12 @@ const Menu: React.FC<MenuProps> = () => {
 
   return (
     <>
-      <Transition mounted={isOpen} transition="slide-left" timingFunction="ease">
-        {(styles) => (
-          <nav>
-            {width! < 900 ? (
-              <MobileMenu opened={isOpen} onClose={() => handleMenu('close')} />
-            ) : (
+      {width < 1050 ? (
+        <MobileMenu opened={isOpen} onClose={() => handleMenu('close')} />
+      ) : (
+        <Transition mounted={isOpen} transition="slide-left" timingFunction="ease">
+          {(styles) => (
+            <nav>
               <Flex style={{ ...styles }} justify="space-between" gap="2rem" align="center">
                 <>
                   {renderedLinks}
@@ -43,15 +43,15 @@ const Menu: React.FC<MenuProps> = () => {
                   />
                 </>
               </Flex>
-            )}
-          </nav>
-        )}
-      </Transition>
+            </nav>
+          )}
+        </Transition>
+      )}
       <Burger
         onClick={() => handleMenu('toggle')}
         opened={isOpen}
         color={theme.colors.green[4]}
-        size={width! < 900 ? 'md' : 'lg'}
+        size={width! < 1050 ? 'md' : 'lg'}
       />
     </>
   );

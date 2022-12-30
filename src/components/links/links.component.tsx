@@ -1,6 +1,7 @@
 import { Flex } from '@mantine/core';
 import Link, { LinkProps } from 'next/link';
 import { links } from 'src/links';
+import Language from '../language/language.component';
 import { useStyles } from './link.styles';
 
 interface LinksProps extends Omit<LinkProps, 'href'> {}
@@ -17,6 +18,7 @@ const Links: React.FC<LinksProps> = ({ ...other }) => {
           </Flex>
         </Link>
       ))}
+      <Language className={classes.link} {...other} />
     </>
   );
 };

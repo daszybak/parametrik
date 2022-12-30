@@ -17,7 +17,7 @@ export const useStyles = createStyles(
       minHeight: 'calc(100vh - 8rem)',
     },
     id: {
-      transform: 'translateY(-7rem)',
+      transform: 'translateY(2rem)',
     },
   })
 );
