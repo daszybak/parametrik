@@ -11,6 +11,15 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+
+    '@media (max-width: 900px)': {
+      width: '400px',
+      height: '400px',
+    },
+    '@media (max-width: 600px)': {
+      width: '266px',
+      height: '266px',
+    },
   },
   reactPlayer: {
     position: 'absolute',

@@ -1,10 +1,12 @@
 import { Burger, Flex, Transition } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import Link from 'next/link';
 import { useContext } from 'react';
 import Language from 'src/components/language/language.component';
 import { HeroContext } from 'src/context/hero/heroContextProvider';
 import { MenuContext } from 'src/context/menu/menuContextProvider';
 import { useLinks } from 'src/links';
+import MobileMenu from '../mobile-menu/mobile-menu.component';
 import { useStyles } from './menu.styles';
 
 interface MenuProps {}
@@ -14,6 +16,7 @@ const Menu: React.FC<MenuProps> = () => {
   const { handleMenu, isOpen } = useContext(MenuContext);
   const links = useLinks();
   const { isIntersecting } = useContext(HeroContext);
+  const { width } = useViewportSize();
 
   const renderedLinks = links.map(({ href, title }) => (
     <Link key={href} href={href} className={classes.link} data-intersecting={isIntersecting}>
@@ -26,17 +29,21 @@ const Menu: React.FC<MenuProps> = () => {
       <Transition mounted={isOpen} transition="slide-left" timingFunction="ease">
         {(styles) => (
           <nav>
-            <Flex style={{ ...styles }} justify="space-between" gap="2rem" align="center">
-              <>
-                {renderedLinks}
-                <Language
-                  size="lg"
-                  className={classes.link}
-                  transform="uppercase"
-                  data-intersecting={isIntersecting}
-                />
-              </>
-            </Flex>
+            {width! < 900 ? (
+              <MobileMenu opened={isOpen} onClose={() => handleMenu('close')} />
+            ) : (
+              <Flex style={{ ...styles }} justify="space-between" gap="2rem" align="center">
+                <>
+                  {renderedLinks}
+                  <Language
+                    size="lg"
+                    className={classes.link}
+                    transform="uppercase"
+                    data-intersecting={isIntersecting}
+                  />
+                </>
+              </Flex>
+            )}
           </nav>
         )}
       </Transition>
@@ -44,7 +51,7 @@ const Menu: React.FC<MenuProps> = () => {
         onClick={() => handleMenu('toggle')}
         opened={isOpen}
         color={theme.colors.green[4]}
-        size="lg"
+        size={width! < 900 ? 'md' : 'lg'}
       />
     </>
   );

@@ -20,4 +20,9 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
   title: {
     color: theme.white,
   },
+  marginB3: {
+    '@media (max-width: 900px)': {
+      marginTop: '3rem',
+    },
+  },
 }));

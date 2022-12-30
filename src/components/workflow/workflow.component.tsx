@@ -16,8 +16,8 @@ const Workflow: React.FC<WorkflowProps> = () => {
   const { width } = useViewportSize();
 
   const videoSize = {
-    width: width < 900 ? 400 : 600,
-    height: width < 900 ? 400 : 600,
+    width: width < 900 ? (width < 600 ? 266 : 400) : 600,
+    height: width < 900 ? (width < 600 ? 266 : 400) : 600,
   };
 
   return (
@@ -90,7 +90,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
             <div>
               <div className={classes.image}>
                 <Image
-                  src="/workflow/Picture5.png"
+                  src="/workflow/Picture5.jpg"
                   alt={t<string>('home:workflow-areas.final-part')}
                   fill
                   className={classes.border}

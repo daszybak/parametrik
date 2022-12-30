@@ -1,36 +1,25 @@
-import { Anchor, Flex, FlexProps, Title } from '@mantine/core';
-import { links } from 'src/links';
+import { Flex, FlexProps, Title } from '@mantine/core';
+import Links from 'src/components/links/links.component';
 
 interface FnNavLinksProps extends FlexProps {}
 
-const FNavLinks: React.FC<FnNavLinksProps> = (props) => {
-  const renderedLinks = links.map(({ href, title, icon }) => (
-    <Anchor key={href} href={href} size="xl" transform="uppercase">
-      <Flex align="center" gap="md">
-        {icon}
-        {title}
+const FNavLinks: React.FC<FnNavLinksProps> = (props) => (
+  <>
+    <Title
+      order={3}
+      style={{
+        margin: '2rem 0',
+        marginTop: '5rem',
+      }}
+    >
+      Links
+    </Title>
+    <nav>
+      <Flex wrap="wrap" justify="center" gap="3rem" align="center" {...props}>
+        <Links />
       </Flex>
-    </Anchor>
-  ));
-
-  return (
-    <>
-      <Title
-        order={3}
-        style={{
-          margin: '2rem 0',
-          marginTop: '5rem',
-        }}
-      >
-        Links
-      </Title>
-      <nav>
-        <Flex wrap="wrap" justify="center" gap="3rem" align="center" {...props}>
-          {renderedLinks}
-        </Flex>
-      </nav>
-    </>
-  );
-};
+    </nav>
+  </>
+);
 
 export default FNavLinks;

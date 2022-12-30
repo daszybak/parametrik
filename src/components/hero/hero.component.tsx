@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = () => {
 
   return (
     <SectionWithoutTransition id="Hero" first>
-      <Flex direction="column" align="center">
+      <Flex direction="column" align="center" className={classes.marginB3}>
         <Image
           className={classes.backgroundImage}
           src="/hero.jpg"

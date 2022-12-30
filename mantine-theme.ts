@@ -10,7 +10,10 @@ export const mantineTheme: MantineThemeOverride = {
   globalStyles: (theme: MantineTheme) => ({
     html: {
       '@media (max-width: 900px)': {
-        fontSize: '14px',
+        fontSize: '12px',
+      },
+      '@media (max-width: 400px)': {
+        fontSize: '10px',
       },
     },
     body: {
