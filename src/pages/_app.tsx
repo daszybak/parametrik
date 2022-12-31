@@ -23,8 +23,20 @@ function _App(props: AppProps & { colorScheme: ColorScheme }) {
     <>
       <Head>
         <title>Parametrik Engineering</title>
+        <meta charSet="utf-8" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <meta name="description" content="Parametrik Engineering" />
+        <meta
+          name="keywords"
+          content="tool, construction, automotive, OEM, metal, sheet, forming, simulation, method, company"
+        />
+        <meta name="author" content="Parametrik Engineering" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="nositelinkssearchbox" />
+        <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>

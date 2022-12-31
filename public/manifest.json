@@ -1,0 +1,35 @@
+{
+  "name": "Parametrik Engineering",
+  "short_name": "Parametrik",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#327E7B",
+  "background_color": "linear-gradient(to bottom right, transparent 40%, #a8a9ad 50%, transparent 60%)",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/mstile-150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/safari-pinned-tab.svg",
+      "sizes": "safari-pinned-tab",
+      "type": "image/svg+xml"
+    }
+  ]
+}

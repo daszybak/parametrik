@@ -26,8 +26,8 @@ const Project: React.FC<ProjectProps> = ({ project, className, ...other }) => {
             {...firstImage}
             alt={title?.[locale!] ?? 'Title'}
             style={{ width: '100%', height: 'auto' }} // layout="responsive" prior to Next 13.0.0
-            width={400}
-            height={300}
+            width={266}
+            height={200}
           />
         ) : (
           <ImagePlaceholder />
