@@ -3,7 +3,7 @@ import { appWithTranslation } from 'next-i18next';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme } from '@mantine/core';
 import { mantineTheme } from 'mantine-theme';
-import { Roboto } from '@next/font/google';
+import { Roboto_Flex } from 'next/font/google';
 import MenuContextProvider from 'src/context/menu/menuContextProvider';
 import { ProjectsContextProvider } from 'src/context/projects/projects-context-provider.component';
 import { PageLoadContextProvider } from 'src/context/page-load-context-provider/page-load-context-provider';
@@ -11,9 +11,9 @@ import { HeroContextProvider } from 'src/context/hero/heroContextProvider';
 import Layout from './layout';
 import nextI18NextConfig from '../../next-i18next.config';
 
-const roboto = Roboto({
+const roboto = Roboto_Flex({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  variable: '--font-roboto_flex',
 });
 
 function _App(props: AppProps & { colorScheme: ColorScheme }) {

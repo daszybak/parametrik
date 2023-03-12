@@ -13,6 +13,12 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
     backgroundColor: 'transparent',
     // add cool blur
     opacity: 0.95,
+    padding: '0 4.5rem 0 3rem',
+
+    '@media (max-width: 900px)': {
+      paddingLeft: '1rem',
+      paddingRight: '2rem',
+    },
   },
 }));
 

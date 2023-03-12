@@ -59,14 +59,14 @@ export const mantineTheme: MantineThemeOverride = {
   },
   black: '#042144',
   white: '#fff',
-  fontFamily: 'Roboto, sans-serif',
   defaultGradient: {
     from: '#e9b7ce',
     to: '#d3f3f1',
     deg: 45,
   },
+  fontFamily: 'var(--font-roboto_flex)',
   headings: {
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily: 'var(--font-roboto_flex)',
     sizes: {
       h1: {
         // 36px in rem
@@ -88,6 +88,7 @@ export const mantineTheme: MantineThemeOverride = {
         fontSize: '1.255rem',
         // 22px in rem
         fontWeight: 500,
+        lineHeight: 2,
       },
     },
   },
@@ -129,6 +130,10 @@ export const mantineTheme: MantineThemeOverride = {
           '@media (max-width: 900px)': {
             paddingLeft: '2rem',
             paddingRight: '2rem',
+          },
+          '@media (max-width: 350px)': {
+            paddingLeft: '0.5rem',
+            paddingRight: '0.5rem',
           },
         },
       }),

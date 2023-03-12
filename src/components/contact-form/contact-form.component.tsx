@@ -75,6 +75,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
               },
             }}
             className={classes.gridItem}
+            classNames={{
+              label: classes.label,
+              input: classes.input,
+            }}
           />
           <TextInput
             label={t<string>('common:contact-form.email')}
@@ -86,6 +90,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
               },
             }}
             className={classes.gridItem}
+            classNames={{
+              label: classes.label,
+              input: classes.input,
+            }}
           />
           <TextInput
             label={t<string>('common:contact-form.company')}
@@ -97,6 +105,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
               },
             }}
             className={classes.gridItem4}
+            classNames={{
+              label: classes.label,
+              input: classes.input,
+            }}
           />
           <TextInput
             label={t<string>('common:contact-form.phone')}
@@ -111,6 +123,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
               alignSelf: 'end',
             }}
             className={classes.gridItem}
+            classNames={{
+              label: classes.label,
+              input: classes.input,
+            }}
           />
           <Textarea
             label={t<string>('common:contact-form.message')}
@@ -122,6 +138,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className, ...other }) => {
               error: {
                 position: 'absolute',
               },
+            }}
+            classNames={{
+              label: classes.label,
+              input: classes.input,
             }}
           />
           <Button

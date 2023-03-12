@@ -24,6 +24,7 @@ export const useStyles = createStyles((theme: MantineTheme) => ({
       textShadow: '0px 1px 1px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(255, 255, 255, 0.5)',
       color: theme.colors.green[4],
       letterSpacing: '0.1em',
+      fontWeight: 600,
     },
   },
   gridItem: {
